@@ -30,8 +30,8 @@ targets:
         - /opt/occlum/glibc/lib/libnss_files.so.2
         - /opt/occlum/glibc/lib/libnss_dns.so.2
         - /opt/occlum/glibc/lib/libresolv.so.2
-  - target: /root
-    copy:
-      - files:
-          - /tmp/pytorch_ray.py
+          #  - target: /root
+          #copy:
+          #- files:
+          #- /tmp/pytorch_ray.py
 
