@@ -38,13 +38,14 @@ def _draw_train_process(title,iters,costs,accs,label_cost,lable_acc):
 
 
 def _prepare_train_data():
+    print("[torch-ray]Start to download train data")
     transform = transforms.Compose([transforms.ToTensor(),
                                transforms.Normalize(mean=[0.5],std=[0.5])])
     train_data = datasets.MNIST(root = "/tmp/raytrain_demo/data/",
                                 transform=transform,
                                 train = True,
                                 download = True)
-
+    print("[torch-ray]Done download train data.")
     train_loader = DataLoader(train_data, batch_size=16)
     train_loader = train.torch.prepare_data_loader(train_loader)
     return train_loader    
@@ -81,10 +82,12 @@ class CNN(nn.Module):
         return x
 
 def train_func(config):
+    print("[torch-ray]Start train_func")
     train_loader = _prepare_train_data()
-    
+    print("[torch-ray]Done prepare train data, start to prepare CNN model.") 
     cnn_net = CNN()
     cnn_net = train.torch.prepare_model(cnn_net)
+    print("[torch-day]Done prepare CNN model.")
 
     # 3. Define the loss function.
     criterion = nn.CrossEntropyLoss()
@@ -101,12 +104,15 @@ def train_func(config):
 
     for epoch in range(4):
         running_loss = 0.0
+        print(f"[torch-ray] Current epoch: {epoch}")
         for i,data in enumerate(train_loader, 0):
+            print(f"[torch-ray] Epoch {epoch} iterate {i}")
             inputs,labels = data
             # Cleanup the data of the last batch
             optimizer.zero_grad()         
             # forward, backward, optimizing
             outputs = net(inputs)
+            print(f"[torch-ray] Network output: {outputs}")
             loss = criterion(outputs,labels)
             loss.backward()
             optimizer.step()
@@ -115,6 +121,7 @@ def train_func(config):
             if i % 100 == 99:
                 print("[%d,%5d] loss :%.3f" %
                     (epoch+1,i+1,running_loss/100))
+                logger.info(f"[{epoch+1}, {i+1}] loss: {running_loss/100}")
                 running_loss = 0.0
             train_loss.append(loss.item())
             
@@ -126,17 +133,22 @@ def train_func(config):
             train_accs.append(100*correct/total) 
 
     print("Finished Training")
+    logger.info("Finished Training")
     return net.module
 
 
 def _prepare_data_and_train():
     start_time = time.time()    
+    print("[torch-ray] Start to init `Trainer`")
     trainer = Trainer(backend="torch", num_workers=4)
+    print("[torch-ray] Done init `Trainer`, prepare to start")
     trainer.start() # set up resources
+    print("[torch-ray] Started trainer, prepare to run")
     trainer.run(train_func)
     trainer.shutdown() # clean up resources
     end_time = time.time()
     print("========It took ", end_time - start_time)
+    logger.info(f"========It took {end_time - start_time}")
 
     # trained_net = _train_my_model(cnn_net, train_loader, sgd_optimizer, criterion)
     # path_to_save = "/tmp//raytrain_demo/trainedmodel"
@@ -153,12 +165,13 @@ def _load_model_and_predict():
     test_out = test_net(images)
 
     print(test_out)
+    logger.info(f"test output: {test_out}")
     _, predicted = torch.max(test_out, dim=1)
     print("Predicted: ", " ".join("%d" % predicted[j]
                                 for j in range(64)))
                   
 ray.init(
-    object_store_memory=100 * 1024 * 1024,
+    object_store_memory=500 * 1024 * 1024,
     _temp_dir="/host/tmp/ray",
 )
 
