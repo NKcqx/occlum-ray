@@ -1,0 +1,38 @@
+File descriptor limit 1024 is too low for production servers and may result in connection errors. At least 8192 is recommended. --- Fix with 'ulimit -n 8192'
+2022-12-07 07:40:06,855	INFO services.py:778 -- Starting process with command: ['/lib/python3.8/site-packages/ray/core/src/ray/gcs/gcs_server', '--log_dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/logs', '--config_list=eyJvYmplY3Rfc3BpbGxpbmdfY29uZmlnIjogIntcInR5cGVcIjogXCJmaWxlc3lzdGVtXCIsIFwicGFyYW1zXCI6IHtcImRpcmVjdG9yeV9wYXRoXCI6IFwiL2hvc3QvdG1wL3JheS9zZXNzaW9uXzIwMjItMTItMDdfMDctNDAtMDZfODQyMzQ3XzJcIn19IiwgImlzX2V4dGVybmFsX3N0b3JhZ2VfdHlwZV9mcyI6IHRydWV9', '--gcs_server_port=60956', '--metrics-agent-port=43726', '--node-ip-address=172.17.0.2', '--redis_password=5241590000000000']
+/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_pslinux.py:513: RuntimeWarning: buffers, cached, shared, active, inactive memory stats couldn't be determined and were set to 0
+  warnings.warn(msg, RuntimeWarning)
+system_memory: 6442450944
+avail_memory: 5198430208
+redis_max_memory: None
+object_store_memory: 104857600
+memory: 4573729588
+shm_avail: 0
+2022-12-07 07:40:07,988	WARNING services.py:2003 -- WARNING: The object store is using /tmp instead of /dev/shm because /dev/shm has only 0 bytes available. This will harm performance! You may be able to free up space by deleting files in /dev/shm. If you are inside a Docker container, you can increase /dev/shm size by passing '--shm-size=0.11gb' to 'docker run' (or add it to the run_options list in a Ray cluster config). Make sure to set this to more than 30% of available RAM.
+2022-12-07 07:40:08,026	INFO services.py:778 -- Starting process with command: ['/lib/python3.8/site-packages/ray/core/src/ray/raylet/raylet', '--raylet_socket_name=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/sockets/raylet', '--store_socket_name=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/sockets/plasma_store', '--object_manager_port=0', '--min_worker_port=0', '--max_worker_port=0', '--node_manager_port=0', '--node_ip_address=172.17.0.2', '--maximum_startup_concurrency=8', '--static_resource_list=node:172.17.0.2,1.0,CPU,8,memory,4573729588,object_store_memory,104857600', '--python_worker_command=/bin/python3.8 /lib/python3.8/site-packages/ray/workers/setup_worker.py /lib/python3.8/site-packages/ray/workers/default_worker.py --node-ip-address=172.17.0.2 --node-manager-port=RAY_NODE_MANAGER_PORT_PLACEHOLDER --object-store-name=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/sockets/raylet --redis-address=None --storage=None --temp-dir=/host/tmp/ray --metrics-agent-port=43726 --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:60956 RAY_WORKER_DYNAMIC_OPTION_PLACEHOLDER --redis-password=5241590000000000', '--java_worker_command=', '--cpp_worker_command=', '--native_library_path=/lib/python3.8/site-packages/ray/cpp/lib', '--redis_password=5241590000000000', '--temp_dir=/host/tmp/ray', '--session_dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2', '--log_dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/logs', '--resource_dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/runtime_resources', '--metrics-agent-port=43726', '--metrics_export_port=52137', '--object_store_memory=104857600', '--plasma_directory=/tmp', '--ray-debugger-external=0', '--gcs-address=172.17.0.2:60956', '--agent_command=/bin/python3.8 -u /lib/python3.8/site-packages/ray/dashboard/agent.py --node-ip-address=172.17.0.2 --metrics-export-port=52137 --dashboard-agent-port=43726 --listen-port=0 --node-manager-port=RAY_NODE_MANAGER_PORT_PLACEHOLDER --object-store-name=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/sockets/raylet --temp-dir=/host/tmp/ray --session-dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2 --runtime-env-dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/runtime_resources --log-dir=/host/tmp/ray/session_2022-12-07_07-40-06_842347_2/logs --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:60956 --minimal']
+start_ray_processes end
+_initialize_global_state start
+_initialize_global_state end
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 0
+clients: 1
+wait_for_node end
+get_node_to_connect_for_driver end
+Create node end
+_initialize_internal_kv end
+_initialize_global_state end
+Create CoreWorker...
+[2022-12-07 07:40:09,604 I 2 2] logging.cc:194: Set ray log level from environment variable RAY_BACKEND_LOG_LEVEL to -1
+Create CoreWorker end
+notify_raylet end
+Result data is: 2
+[0m

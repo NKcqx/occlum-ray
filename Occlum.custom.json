@@ -1,0 +1,22 @@
+{
+    "resource_limits": {
+        "user_space_size": "6144MB",
+        "kernel_space_heap_size": "512MB",
+        "max_num_of_threads": 512
+    },
+    "env": {
+        "default": [
+            "OCCLUM=yes",
+            "PYTHONHOME=/",
+            "PATH=/bin",
+            "RAY_BACKEND_LOG_LEVEL=debug",
+            "RAY_agent_register_timeout_ms=300000",
+            "RAY_worker_register_timeout_seconds=300",
+	    "HOME=/root"
+        ]
+    },
+    "entry_points": [
+        "/bin"
+    ]
+}
+
