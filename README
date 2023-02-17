@@ -10,8 +10,8 @@ pushd /root/codes/occlum_ray/occlum-ray-docker
 docker build -t occlum_ray .
 echo "done."
 
-# To run the container with SGX
-# docker run -it --device /dev/sgx/enclave --device /dev/sgx/provision --shm-size=512m occlum_ray:latest
+# To run the container with SGX, small memory can incur bizarr errors like 'xx.so failed to map segment from shared object' or worker process hanged somewhere
+# docker run -it --device /dev/sgx/enclave --device /dev/sgx/provision --shm-size=2g --memory=16g occlum_ray:latest
 
 # Enter container
 # docker exec -it {container_id} bash

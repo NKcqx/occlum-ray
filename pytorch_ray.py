@@ -41,11 +41,11 @@ def _prepare_train_data():
     print("[torch-ray]Start to download train data")
     transform = transforms.Compose([transforms.ToTensor(),
                                transforms.Normalize(mean=[0.5],std=[0.5])])
-    train_data = datasets.MNIST(root = "/tmp/raytrain_demo/data/",
+    train_data = datasets.MNIST(root = "/root/data/",
                                 transform=transform,
                                 train = True,
-                                download = True)
-    print("[torch-ray]Done download train data.")
+                                download = False)
+    print("[torch-ray]Done load train data.")
     train_loader = DataLoader(train_data, batch_size=16)
     train_loader = train.torch.prepare_data_loader(train_loader)
     return train_loader    
@@ -53,7 +53,7 @@ def _prepare_train_data():
 def _prepare_test_data():
     transform = transforms.Compose([transforms.ToTensor(),
                                transforms.Normalize(mean=[0.5],std=[0.5])])
-    test_data = datasets.MNIST(root="/tmp/raytrain_demo/data/",
+    test_data = datasets.MNIST(root="/root/data/",
                             transform = transform,
                             train = False)
     test_loader = torch.utils.data.DataLoader(test_data,batch_size=16,
@@ -140,15 +140,16 @@ def train_func(config):
 def _prepare_data_and_train():
     start_time = time.time()    
     print("[torch-ray] Start to init `Trainer`")
-    trainer = Trainer(backend="torch", num_workers=4)
-    print("[torch-ray] Done init `Trainer`, prepare to start")
+    print(f"Start mem usage: {start_rss} bytes.")
+    trainer = Trainer(backend="torch", num_workers=3)
+    print(f"[torch-ray] Done init `Trainer`, prepare to start, mem usage: {(end_rss - start_rss) / 1024} KB.")
     trainer.start() # set up resources
     print("[torch-ray] Started trainer, prepare to run")
-    trainer.run(train_func)
-    trainer.shutdown() # clean up resources
-    end_time = time.time()
-    print("========It took ", end_time - start_time)
-    logger.info(f"========It took {end_time - start_time}")
+    #trainer.run(train_func)
+    #trainer.shutdown() # clean up resources
+    #end_time = time.time()
+    #print("========It took ", end_time - start_time)
+    #logger.info(f"========It took {end_time - start_time}")
 
     # trained_net = _train_my_model(cnn_net, train_loader, sgd_optimizer, criterion)
     # path_to_save = "/tmp//raytrain_demo/trainedmodel"
@@ -161,7 +162,7 @@ def _load_model_and_predict():
 
     print("GroundTruth: ", " ".join("%d" % labels[j] for j in range(64)))
     test_net = CNN()
-    test_net.load_state_dict(torch.load("/tmp//raytrain_demo/trainedmodel"))
+    test_net.load_state_dict(torch.load("/root/trainedmodel"))
     test_out = test_net(images)
 
     print(test_out)
@@ -169,7 +170,7 @@ def _load_model_and_predict():
     _, predicted = torch.max(test_out, dim=1)
     print("Predicted: ", " ".join("%d" % predicted[j]
                                 for j in range(64)))
-                  
+
 ray.init(
     object_store_memory=500 * 1024 * 1024,
     _temp_dir="/host/tmp/ray",

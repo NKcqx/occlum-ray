@@ -11,10 +11,15 @@ RUN rm ray-1.13.0-cp38-cp38-linux_x86_64.whl
 
 FROM base
 COPY --from=python / /root/image
+RUN sed -i 's/#!\/usr\/local\/bin\/python/#!\/bin\/python3.8/g' /root/image/usr/local/bin/ray
 RUN occlum new occlum_instance
+# RUN apt-get update -y
+# RUN apt-get install -y  pstack
 WORKDIR /root/occlum_instance
 COPY python-ray.yaml /tmp/python-ray.yaml
 COPY pytorch_ray.py /tmp/pytorch_ray.py
+COPY demo.py /tmp/demo.py
+COPY data /tmp/data
 RUN rm -rf image && copy_bom -f /tmp/python-ray.yaml --root image --include-dir /opt/occlum/etc/template
 COPY Occlum.custom.json /tmp/Occlum.custom.json
 RUN jq -s '.[0] * .[1]' Occlum.json /tmp/Occlum.custom.json > Occlum.new.json && mv Occlum.new.json Occlum.json

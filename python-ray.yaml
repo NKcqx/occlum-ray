@@ -6,6 +6,7 @@ targets:
       - from: /root/image/usr/local/bin
         files:
           - python3.8
+          - ray
   - target: /lib
     copy:
       - from: /root/image/usr/local/lib
@@ -34,4 +35,7 @@ targets:
     copy:
      - files:
         - /tmp/pytorch_ray.py
+        - /tmp/demo.py
+     - dirs:
+        - /tmp/data
 
