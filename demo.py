@@ -31,11 +31,6 @@ def async_timeout(seconds, coro):
 
 
 print("Calling ray.init")
-# Not working, wait for IO, causing all fibers wait
-# async_timeout(100, ray.init(
-#     object_store_memory=100 * 1024 * 1024,
-#     _temp_dir="/host/tmp/ray",
-# ))
 
 # Print pstack in another thread every 5 seconds
 def print_pstack_thread():
@@ -46,7 +41,9 @@ def print_pstack_thread():
         for thread_id, stack in stacks.items():
             print(f"Thread ID: {thread_id}")
             traceback.print_stack(stack)
+            print("....")
         print()
+        print("... Sleep for 5 seconds ...")
         print()
         time.sleep(5)
 
@@ -85,11 +82,10 @@ print("Calling ray.get")
 value = ray.get(ray.get(foo.remote(1)))
 print(value)
 assert value == "Result data is: 2"
-
+owner = Owner.remote()
 # wait_cmd_to_pstack()
-obj = async_timeout(100, ray.get(owner.warmup.remote()))
+# obj = async_timeout(100, ray.get(owner.warmup.remote()))
 for idx in range(20):
     owner = Owner.remote()
     obj = ray.get(owner.warmup.remote())
     print(f"idx {idx}: {obj}")
-

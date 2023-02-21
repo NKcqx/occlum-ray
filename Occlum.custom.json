@@ -1,6 +1,6 @@
 {
     "resource_limits": {
-        "user_space_size": "10GB",
+        "user_space_size": "28GB",
         "kernel_space_heap_size": "512MB",
         "max_num_of_threads": 512
     },
