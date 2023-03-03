@@ -20,11 +20,33 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, DistributedSampler
 
 # For Ray
+import ray
 from ray import train
 import ray.train.torch
 from ray.train import Trainer
 from ray.train.torch import TorchConfig
 
+import sys
+import traceback
+import threading
+def print_pstack_thread():
+    while(True):
+        avail_mem = ray._private.utils.estimate_available_memory()
+        print(f"Current available memory: {avail_mem}")
+        stacks = sys._current_frames()
+        i = 1
+        for thread_id, stack in stacks.items():
+            print(f"[{i} / {len(stacks.items())}]Thread ID: {thread_id}")
+            i+=1
+            traceback.print_stack(stack)
+            print("....")
+        print()
+        print("... Sleep for 5 seconds ...")
+        print()
+        time.sleep(60)
+
+# t = threading.Thread(target=print_pstack_thread)
+# t.start()
 
 def _draw_train_process(title,iters,costs,accs,label_cost,lable_acc):
     plt.title(title, fontsize=24)
@@ -41,14 +63,14 @@ def _prepare_train_data():
     print("[torch-ray]Start to download train data")
     transform = transforms.Compose([transforms.ToTensor(),
                                transforms.Normalize(mean=[0.5],std=[0.5])])
-    train_data = datasets.MNIST(root = "/root/data/",
+    train_data = datasets.MNIST(root = "/root/data", # data path in Occlum, instead of the host
                                 transform=transform,
                                 train = True,
                                 download = False)
     print("[torch-ray]Done load train data.")
     train_loader = DataLoader(train_data, batch_size=16)
     train_loader = train.torch.prepare_data_loader(train_loader)
-    return train_loader    
+    return train_loader
 
 def _prepare_test_data():
     transform = transforms.Compose([transforms.ToTensor(),
@@ -140,16 +162,16 @@ def train_func(config):
 def _prepare_data_and_train():
     start_time = time.time()    
     print("[torch-ray] Start to init `Trainer`")
-    print(f"Start mem usage: {start_rss} bytes.")
     trainer = Trainer(backend="torch", num_workers=3)
-    print(f"[torch-ray] Done init `Trainer`, prepare to start, mem usage: {(end_rss - start_rss) / 1024} KB.")
+    print(f"[torch-ray] Done init `Trainer`, prepare to start")
     trainer.start() # set up resources
     print("[torch-ray] Started trainer, prepare to run")
-    #trainer.run(train_func)
-    #trainer.shutdown() # clean up resources
-    #end_time = time.time()
-    #print("========It took ", end_time - start_time)
-    #logger.info(f"========It took {end_time - start_time}")
+
+    trainer.run(train_func)
+    trainer.shutdown() # clean up resources
+    end_time = time.time()
+    print("========It took ", end_time - start_time)
+    logger.info(f"========It took {end_time - start_time}")
 
     # trained_net = _train_my_model(cnn_net, train_loader, sgd_optimizer, criterion)
     # path_to_save = "/tmp//raytrain_demo/trainedmodel"
