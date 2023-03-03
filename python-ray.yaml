@@ -7,6 +7,8 @@ targets:
         files:
           - python3.8
           - ray
+      - files:
+        - /opt/occlum/toolchains/bash/glibc/bash
   - target: /lib
     copy:
       - from: /root/image/usr/local/lib

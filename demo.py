@@ -28,8 +28,6 @@ def async_timeout(seconds, coro):
 
     return result
 
-
-
 print("Calling ray.init")
 
 # Print pstack in another thread every 5 seconds
@@ -47,12 +45,13 @@ def print_pstack_thread():
         print()
         time.sleep(5)
 
-t = threading.Thread(target=print_pstack_thread)
-t.start()
+# t = threading.Thread(target=print_pstack_thread)
+# t.start()
 
 ray.init(
     object_store_memory=100 * 1024 * 1024,
     _temp_dir="/host/tmp/ray",
+    _plasma_directory="/tmp"
 )
 
 def wait_cmd_to_pstack():

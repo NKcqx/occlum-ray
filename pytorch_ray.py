@@ -196,6 +196,7 @@ def _load_model_and_predict():
 ray.init(
     object_store_memory=500 * 1024 * 1024,
     _temp_dir="/host/tmp/ray",
+    _plasma_directory="/tmp"
 )
 
 _prepare_data_and_train()

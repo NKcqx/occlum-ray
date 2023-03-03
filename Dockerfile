@@ -1,4 +1,4 @@
-FROM occlum/occlum:0.29.2-ubuntu20.04 as base
+FROM occlum/occlum:0.29.5-ubuntu20.04 as base
 
 
 FROM python:3.8.13 as python
@@ -15,12 +15,9 @@ COPY --from=python / /root/image
 # the one used during package stage. Need to modify it manully to the path in Occlum.
 RUN sed -i 's/#!\/usr\/local\/bin\/python/#!\/bin\/python3.8/g' /root/image/usr/local/bin/ray
 RUN occlum new occlum_instance
-# RUN apt-get update -y
-# RUN apt-get install -y  pstack
+RUN apt-get update -y && apt-get install -y lsof net-tools pstack
 WORKDIR /root/occlum_instance
-COPY python-ray.yaml /tmp/python-ray.yaml
-COPY pytorch_ray.py /tmp/pytorch_ray.py
-COPY demo.py /tmp/demo.py
+COPY python-ray.yaml pytorch_ray.py demo.py /tmp/
 COPY data /tmp/data
 RUN rm -rf image && copy_bom -f /tmp/python-ray.yaml --root image --include-dir /opt/occlum/etc/template
 COPY Occlum.custom.json /tmp/Occlum.custom.json
