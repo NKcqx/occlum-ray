@@ -1,0 +1,818 @@
+[2023-03-03 02:53:48,172 I 104 104] core_worker_process.cc:120: Constructing CoreWorkerProcess. pid: 104
+[2023-03-03 02:53:48,189 D 104 112] core_worker_process.cc:200: Getting system config from raylet, remaining retries = 100
+[2023-03-03 02:53:48,190 D 104 104] ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-03_02-53-39_842068_2\"}}",
+[2023-03-03 02:53:48,190 D 104 104] core_worker.cc:88: Constructing CoreWorker, worker_id: 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:48,190 I 104 104] core_worker.cc:119: Connecting to local Raylet.
+[2023-03-03 02:53:48,190 I 104 104] raylet_client.cc:116: Creating RayletConnection.
+[2023-03-03 02:53:48,190 I 104 104] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/raylet 0
+[2023-03-03 02:53:48,191 I 104 104] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/raylet 0. OK
+[2023-03-03 02:53:48,191 I 104 104] raylet_client.cc:118: Created RayletConnection.
+[2023-03-03 02:53:48,191 I 104 104] raylet_client.cc:138: Begin AtomicRequestReply RegisterClientRequest
+[2023-03-03 02:53:48,192 I 104 104] raylet_client.cc:141: End AtomicRequestReply RegisterClientRequest. Status: OK
+[2023-03-03 02:53:48,192 I 104 104] core_worker.cc:135: Connected to local Raylet.
+[2023-03-03 02:53:48,192 I 104 104] core_worker.cc:164: Starting GRPC server.
+[2023-03-03 02:53:48,192 I 104 104] grpc_server.cc:105: worker server started, listening on port 45931.
+[2023-03-03 02:53:48,194 I 104 104] core_worker.cc:171: Started GRPC server.
+[2023-03-03 02:53:48,194 I 104 104] core_worker.cc:179: Initializing worker at address: 172.17.0.3:45931, worker ID 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a, raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832
+[2023-03-03 02:53:48,207 I 104 123] gcs_server_address_updater.cc:32: GCS Server updater thread id: 139926553237248
+[2023-03-03 02:53:48,299 D 104 104] gcs_client.cc:165: GcsClient connected.
+[2023-03-03 02:53:48,299 I 104 104] core_worker.cc:205: GCS client created.
+[2023-03-03 02:53:48,299 I 104 104] core_worker.cc:207: Registered to GCS.
+[2023-03-03 02:53:48,300 D 104 104] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:48,300 I 104 104] core_worker.cc:267: Creating CoreWorkerPlasmaStoreProvider
+[2023-03-03 02:53:48,300 I 104 104] client.cc:762: Before ConnectSocketRetry
+[2023-03-03 02:53:48,300 I 104 104] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/plasma_store 0
+[2023-03-03 02:53:48,301 I 104 104] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/plasma_store 0. OK
+[2023-03-03 02:53:48,301 I 104 104] client.cc:764: After ConnectSocketRetry
+[2023-03-03 02:53:48,301 I 104 104] client.cc:766: After new StoreConn
+[2023-03-03 02:53:48,301 I 104 104] client.cc:769: After SendConnectRequest
+[2023-03-03 02:53:48,301 I 104 104] client.cc:772: After PlasmaReceive
+[2023-03-03 02:53:48,301 I 104 104] client.cc:774: After ReadConnectReply
+[2023-03-03 02:53:48,301 D 104 104] client.cc:392: called plasma_create on conn 30 with size 8 and metadata size 0
+[2023-03-03 02:53:48,301 I 104 104] protocol.cc:219: After CreatePlasmaCreateRequest, prepare to send
+[2023-03-03 02:53:48,301 I 104 104] protocol.cc:221: After PlasmaSend, status: 1
+[2023-03-03 02:53:48,302 I 104 104] client.cc:402: After SendCreateRequest
+[2023-03-03 02:53:48,302 I 104 104] client.cc:311: Before PlasmaReceive
+[2023-03-03 02:53:48,302 I 104 104] client.cc:313: After PlasmaReceive buffer size: 160
+[2023-03-03 02:53:48,302 I 104 104] client.cc:327: After RreadCreateReply, retry count: 0
+[2023-03-03 02:53:48,302 I 104 104] client.cc:355: After create PlasmaMutableBuffer
+[2023-03-03 02:53:48,302 I 104 104] client.cc:404: After HandleCreateReply
+[2023-03-03 02:53:48,302 I 104 104] core_worker.cc:277: Created CoreWorkerPlasmaStoreProvider
+[2023-03-03 02:53:48,305 D 104 104] core_worker_process.cc:276: Worker 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a is created.
+[2023-03-03 02:53:48,305 D 104 104] core_worker_process.cc:132: Stats setup in core worker.
+[2023-03-03 02:53:48,305 D 104 104] stats.h:75: Initialized stats
+[2023-03-03 02:53:48,306 I 104 104] io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-03 02:53:48,306 I 104 126] core_worker.cc:502: Event stats:
+
+
+Global stats: 16 total (11 active)
+Queueing time: mean = 1.749 ms, max = 6.961 ms, min = 3.687 ms, total = 27.979 ms
+Execution time:  mean = 35.411 us, total = 566.583 us
+Event stats:
+	PeriodicalRunner.RunFnPeriodically - 7 total (2 active, 1 running), CPU time: mean = 80.940 us, total = 566.583 us
+	UNKNOWN - 3 total (3 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsClient.deadline_timer.check_gcs_connection - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	CoreWorker.deadline_timer.flush_profiling_events - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-03 02:53:48,307 D 104 126] accessor.cc:487: Getting information of all nodes.
+[2023-03-03 02:53:48,308 I 104 126] accessor.cc:599: Received notification for node id = 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832, IsAlive = 1
+[2023-03-03 02:53:48,308 D 104 126] accessor.cc:497: Finished getting information of all nodes, status = OK
+[2023-03-03 02:53:48,313 D 104 104] metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:52343
+[2023-03-03 02:53:48,317 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:53:48,349 D 104 104] core_worker.cc:2273: Executing task, task info = Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=__init__, function_hash=1c90dc7fdaf84f3d9838ed0d865fae80}, task_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, task_name=BackendExecutor.__init__(), job_id=01000000, num_args=12, num_returns=1, depth=1, actor_creation_task_spec={actor_id=39c45fc19653a2ee38e7644501000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-03 02:53:48,349 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffff39c45fc19653a2ee38e764450100000001000000
+[2023-03-03 02:53:48,349 D 104 104] reference_count.cc:243: REF ffffffffffffffff39c45fc19653a2ee38e764450100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:48,349 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 39c45fc19653a2ee38e7644501000000
+[2023-03-03 02:53:48,349 D 104 104] direct_actor_task_submitter.cc:169: Connecting to actor 39c45fc19653a2ee38e7644501000000 at worker 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:48,349 D 104 104] core_worker_client_pool.cc:42: Connected to 172.17.0.3:45931
+[2023-03-03 02:53:48,349 D 104 104] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor 39c45fc19653a2ee38e7644501000000 from 0 to 0
+[2023-03-03 02:53:48,349 I 104 104] direct_actor_task_submitter.cc:217: Connecting to actor 39c45fc19653a2ee38e7644501000000 at worker 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:48,349 D 104 104] reference_count.cc:106: Adding borrowed object ffffffffffffffff39c45fc19653a2ee38e764450100000001000000
+[2023-03-03 02:53:48,349 I 104 104] core_worker.cc:2330: Creating actor: 39c45fc19653a2ee38e7644501000000
+[2023-03-03 02:53:50,999 D 104 104] core_worker.cc:2407: Finished executing task ffffffffffffffff39c45fc19653a2ee38e7644501000000, status=OK
+[2023-03-03 02:53:50,999 I 104 104] direct_actor_transport.cc:144: Actor creation task finished, task_id: ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_id: 39c45fc19653a2ee38e7644501000000
+[2023-03-03 02:53:50,999 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:53:51,002 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:53:51,002 D 104 104] actor_scheduling_queue.cc:89: Enqueue 0 cur seqno 0
+[2023-03-03 02:53:51,002 D 104 104] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=start, function_hash=}, task_id=16310a0f0a45af5c39c45fc19653a2ee38e7644501000000, task_name=BackendExecutor.start(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=39c45fc19653a2ee38e7644501000000, actor_caller_id=ffffffffffffffffffffffffffffffffffffffff01000000, actor_counter=0}
+[2023-03-03 02:53:51,003 I 104 104] core_worker.cc:1907: Submitting Placement Group creation to GCS: ac4954484388251a94d8820fca1a01000000
+[2023-03-03 02:53:51,003 D 104 104] accessor.cc:929: Sending SyncCreatePlacementGroup.
+[2023-03-03 02:53:51,004 D 104 104] accessor.cc:933: Finished registering placement group. placement group id = ac4954484388251a94d8820fca1a01000000
+[2023-03-03 02:53:51,106 D 104 104] gcs_client.cc:165: GcsClient connected.
+[2023-03-03 02:53:51,106 D 104 104] accessor.cc:955: Getting placement group info, placement group id = ac4954484388251a94d8820fca1a01000000
+[2023-03-03 02:53:51,112 D 104 135] accessor.cc:968: Finished getting placement group info, placement group id = ac4954484388251a94d8820fca1a01000000
+[2023-03-03 02:53:51,115 D 104 104] core_worker.cc:1705: Submitting normal task Type=NORMAL_TASK, Language=PYTHON, Resources: {bundle_group_ac4954484388251a94d8820fca1a01000000: 0.001, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.util.placement_group, class_name=, function_name=_export_bundle_reservation_check_method_if_needed.<locals>.bundle_reservation_check_func, function_hash=f99ba8c9917a452aa7ae80e1df87e15a}, task_id=fb63804cbf27174effffffffffffffffffffffff01000000, task_name=bundle_reservation_check_func(), job_id=01000000, num_args=2, num_returns=1, depth=1
+[2023-03-03 02:53:51,115 D 104 104] task_manager.cc:36: Adding pending task fb63804cbf27174effffffffffffffffffffffff01000000 with 3 retries
+[2023-03-03 02:53:51,116 D 104 104] reference_count.cc:183: Adding owned object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:51,116 D 104 126] direct_task_transport.cc:23: Submit task fb63804cbf27174effffffffffffffffffffffff01000000
+[2023-03-03 02:53:51,116 D 104 126] direct_task_transport.cc:34: Task dependencies resolved fb63804cbf27174effffffffffffffffffffffff01000000
+[2023-03-03 02:53:51,116 D 104 126] direct_task_transport.cc:358: Requesting lease from raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832 for task d8890767a17fd05b1513190d0fa4c305833fc4d201000000
+[2023-03-03 02:53:51,116 I 104 104] core_worker.cc:1245: Calling memory_store_->Wait
+[2023-03-03 02:53:51,306 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:51,307 D 104 126] profiling.cc:87: Pushed 6 events to GCS.
+[2023-03-03 02:53:51,307 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:52,699 D 104 126] direct_task_transport.cc:450: Lease granted to task d8890767a17fd05b1513190d0fa4c305833fc4d201000000 from raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832 with worker 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9
+[2023-03-03 02:53:52,699 D 104 126] core_worker_client_pool.cc:42: Connected to 172.17.0.3:36653
+[2023-03-03 02:53:52,699 D 104 126] direct_task_transport.cc:527: Pushing task fb63804cbf27174effffffffffffffffffffffff01000000 to worker 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9 of raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832
+[2023-03-03 02:53:52,700 D 104 126] direct_task_transport.cc:214: Task queue is empty; canceling lease request
+[2023-03-03 02:53:52,749 D 104 126] direct_task_transport.cc:551: Task fb63804cbf27174effffffffffffffffffffffff01000000 finished from worker 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9 of raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832
+[2023-03-03 02:53:52,749 D 104 126] direct_task_transport.cc:132: Returning worker 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9 to raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832
+[2023-03-03 02:53:52,749 D 104 126] task_manager.cc:217: Completing task fb63804cbf27174effffffffffffffffffffffff01000000
+[2023-03-03 02:53:52,749 D 104 126] reference_count.cc:1367: Published message for fb63804cbf27174effffffffffffffffffffffff0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 244, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:52,749 D 104 126] task_manager.cc:240: Task return object fb63804cbf27174effffffffffffffffffffffff0100000001000000 has size 244
+[2023-03-03 02:53:52,749 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,749 D 104 126] task_manager.cc:305: Task fb63804cbf27174effffffffffffffffffffffff01000000 returned direct object fb63804cbf27174effffffffffffffffffffffff0100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:52,749 I 104 104] core_worker.cc:1252: memory_store_->Wait returned, ready num: 1
+[2023-03-03 02:53:52,749 D 104 126] task_manager.cc:311: Task fb63804cbf27174effffffffffffffffffffffff01000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:52,749 I 104 104] core_worker.cc:1280: Return OK
+[2023-03-03 02:53:52,749 D 104 126] reference_count.cc:1367: Published message for fb63804cbf27174effffffffffffffffffffffff0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 244, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:52,750 D 104 104] reference_count.cc:299: Remove local reference fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,750 D 104 104] reference_count.cc:300: REF fb63804cbf27174effffffffffffffffffffffff0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:52,750 D 104 104] reference_count.cc:525: Attempting to delete object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,750 D 104 104] reference_count.cc:531: REF fb63804cbf27174effffffffffffffffffffffff0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:52,750 D 104 104] reference_count.cc:568: Deleting Reference to object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,750 D 104 104] reference_count.cc:387: Releasing lineage for object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,750 D 104 104] task_manager.cc:534: No lineage for object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,750 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344011300
+[2023-03-03 02:53:52,750 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:52,756 D 104 104] reference_count.cc:183: Adding owned object ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:52,756 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:52,756 D 104 104] reference_count.cc:243: REF ffffffffffffffffa09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:52,756 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor a09871af71412d5d2458687701000000
+[2023-03-03 02:53:52,756 D 104 104] accessor.cc:327: Subscribing update operations of actor, actor id = a09871af71412d5d2458687701000000, job id = 01000000
+[2023-03-03 02:53:52,756 D 104 104] core_worker.cc:1825: Submitting actor creation task Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_ac4954484388251a94d8820fca1a01000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=08e13eb0812849feb722bba597b59a90}, task_id=ffffffffffffffffa09871af71412d5d2458687701000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=a09871af71412d5d2458687701000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-03 02:53:52,756 D 104 104] task_manager.cc:36: Adding pending task ffffffffffffffffa09871af71412d5d2458687701000000 with 3 retries
+[2023-03-03 02:53:52,756 D 104 126] util.h:287: First accessed in thread worker.io
+[2023-03-03 02:53:52,756 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=e453c7f725052c40a09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=0}
+[2023-03-03 02:53:52,756 D 104 104] task_manager.cc:36: Adding pending task e453c7f725052c40a09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:53:52,756 D 104 104] reference_count.cc:183: Adding owned object e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:52,757 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:52,757 D 104 104] direct_actor_task_submitter.cc:71: Submitting task e453c7f725052c40a09871af71412d5d2458687701000000
+[2023-03-03 02:53:52,757 D 104 126] accessor.cc:140: Getting actor info, actor id = a09871af71412d5d2458687701000000, job id = 01000000
+[2023-03-03 02:53:52,757 D 104 104] reference_count.cc:183: Adding owned object ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:52,757 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:52,757 D 104 104] reference_count.cc:243: REF ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:52,757 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:52,757 D 104 104] accessor.cc:327: Subscribing update operations of actor, actor id = be0a4a6dd72f131d2981551301000000, job id = 01000000
+[2023-03-03 02:53:52,757 D 104 104] core_worker.cc:1825: Submitting actor creation task Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_ac4954484388251a94d8820fca1a01000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=08e13eb0812849feb722bba597b59a90}, task_id=ffffffffffffffffbe0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-03 02:53:52,757 D 104 104] task_manager.cc:36: Adding pending task ffffffffffffffffbe0a4a6dd72f131d2981551301000000 with 3 retries
+[2023-03-03 02:53:52,758 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=0}
+[2023-03-03 02:53:52,758 D 104 104] task_manager.cc:36: Adding pending task 221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000 with 0 retries
+[2023-03-03 02:53:52,758 D 104 126] accessor.cc:140: Getting actor info, actor id = be0a4a6dd72f131d2981551301000000, job id = 01000000
+[2023-03-03 02:53:52,758 D 104 104] reference_count.cc:183: Adding owned object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:52,758 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:52,758 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:52,758 D 104 104] reference_count.cc:183: Adding owned object ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:52,758 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:52,758 D 104 104] reference_count.cc:243: REF ffffffffffffffff2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:52,758 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:52,758 D 104 104] accessor.cc:327: Subscribing update operations of actor, actor id = 2b63d5db96840938040a30cf01000000, job id = 01000000
+[2023-03-03 02:53:52,758 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:53:52,759 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:53:52,759 D 104 104] core_worker.cc:1825: Submitting actor creation task Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_ac4954484388251a94d8820fca1a01000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=08e13eb0812849feb722bba597b59a90}, task_id=ffffffffffffffff2b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=2b63d5db96840938040a30cf01000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-03 02:53:52,759 D 104 104] task_manager.cc:36: Adding pending task ffffffffffffffff2b63d5db96840938040a30cf01000000 with 3 retries
+[2023-03-03 02:53:52,759 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=2b63d5db96840938040a30cf01000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=0}
+[2023-03-03 02:53:52,759 D 104 104] task_manager.cc:36: Adding pending task b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000 with 0 retries
+[2023-03-03 02:53:52,759 D 104 104] reference_count.cc:183: Adding owned object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:52,759 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:52,759 D 104 104] direct_actor_task_submitter.cc:71: Submitting task b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:52,760 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: a09871af71412d5d2458687701000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,760 D 104 126] accessor.cc:152: Finished getting actor info, status = OK, actor id = a09871af71412d5d2458687701000000, job id = 01000000
+[2023-03-03 02:53:52,760 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,760 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,760 D 104 126] direct_task_transport.cc:23: Submit task ffffffffffffffffa09871af71412d5d2458687701000000
+[2023-03-03 02:53:52,760 D 104 126] direct_task_transport.cc:34: Task dependencies resolved ffffffffffffffffa09871af71412d5d2458687701000000
+[2023-03-03 02:53:52,760 D 104 126] direct_task_transport.cc:42: Creating actor via GCS actor id = : a09871af71412d5d2458687701000000
+[2023-03-03 02:53:52,761 D 104 126] core_worker.cc:2794: Received HandleWaitForActorOutOfScope for a09871af71412d5d2458687701000000
+[2023-03-03 02:53:52,761 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: be0a4a6dd72f131d2981551301000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,761 D 104 126] accessor.cc:152: Finished getting actor info, status = OK, actor id = be0a4a6dd72f131d2981551301000000, job id = 01000000
+[2023-03-03 02:53:52,761 D 104 126] direct_task_transport.cc:23: Submit task ffffffffffffffffbe0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:52,761 D 104 126] direct_task_transport.cc:34: Task dependencies resolved ffffffffffffffffbe0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:52,761 D 104 126] direct_task_transport.cc:42: Creating actor via GCS actor id = : be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:52,761 D 104 126] core_worker.cc:2789: Received HandleWaitForActorOutOfScope for be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:52,762 D 104 126] accessor.cc:140: Getting actor info, actor id = 2b63d5db96840938040a30cf01000000, job id = 01000000
+[2023-03-03 02:53:52,762 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:53:52,762 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: a09871af71412d5d2458687701000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,762 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,762 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,762 D 104 126] direct_task_transport.cc:23: Submit task ffffffffffffffff2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:52,762 D 104 126] direct_task_transport.cc:34: Task dependencies resolved ffffffffffffffff2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:52,762 D 104 126] direct_task_transport.cc:42: Creating actor via GCS actor id = : 2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:52,762 D 104 126] core_worker.cc:2789: Received HandleWaitForActorOutOfScope for 2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:52,763 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: be0a4a6dd72f131d2981551301000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,763 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 2b63d5db96840938040a30cf01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,763 D 104 126] accessor.cc:152: Finished getting actor info, status = OK, actor id = 2b63d5db96840938040a30cf01000000, job id = 01000000
+[2023-03-03 02:53:52,763 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,763 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,763 I 104 126] actor_manager.cc:246: received notification on actor, state: PENDING_CREATION, actor_id: a09871af71412d5d2458687701000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,763 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 2b63d5db96840938040a30cf01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,763 I 104 126] actor_manager.cc:246: received notification on actor, state: PENDING_CREATION, actor_id: be0a4a6dd72f131d2981551301000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:52,764 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,764 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:52,764 I 104 126] actor_manager.cc:246: received notification on actor, state: PENDING_CREATION, actor_id: 2b63d5db96840938040a30cf01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:53,307 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:53,307 D 104 126] profiling.cc:87: Pushed 6 events to GCS.
+[2023-03-03 02:53:53,357 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:55,657 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:55,657 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:55,657 D 104 126] direct_task_transport.cc:47: Created actor, actor id = be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:55,657 D 104 126] task_manager.cc:217: Completing task ffffffffffffffffbe0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:55,657 D 104 126] task_manager.cc:311: Task ffffffffffffffffbe0a4a6dd72f131d2981551301000000 now has 1 plasma returns in scope
+[2023-03-03 02:53:55,657 D 104 126] reference_count.cc:1367: Published message for ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: -1, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,657 I 104 126] actor_manager.cc:246: received notification on actor, state: ALIVE, actor_id: be0a4a6dd72f131d2981551301000000, ip address: 172.17.0.3, port: 35223, worker_id: b6b5801bfe699558d530e6ac02435bbf5eb3b412c3ad223e6b02f459, raylet_id: 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:55,658 D 104 126] direct_actor_task_submitter.cc:169: Connecting to actor be0a4a6dd72f131d2981551301000000 at worker b6b5801bfe699558d530e6ac02435bbf5eb3b412c3ad223e6b02f459
+[2023-03-03 02:53:55,658 D 104 126] core_worker_client_pool.cc:42: Connected to 172.17.0.3:35223
+[2023-03-03 02:53:55,658 D 104 126] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor be0a4a6dd72f131d2981551301000000 from 0 to 0
+[2023-03-03 02:53:55,658 I 104 126] direct_actor_task_submitter.cc:217: Connecting to actor be0a4a6dd72f131d2981551301000000 at worker b6b5801bfe699558d530e6ac02435bbf5eb3b412c3ad223e6b02f459
+[2023-03-03 02:53:55,658 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000 to actor be0a4a6dd72f131d2981551301000000 actor counter 0 seq no 0 num queued 0
+[2023-03-03 02:53:55,661 D 104 126] task_manager.cc:217: Completing task 221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:55,661 D 104 126] reference_count.cc:1367: Published message for 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 234, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,661 D 104 126] task_manager.cc:240: Task return object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000 has size 234
+[2023-03-03 02:53:55,661 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,661 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f43440059a0
+[2023-03-03 02:53:55,661 D 104 126] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,661 D 104 126] task_manager.cc:305: Task 221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000 returned direct object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,661 D 104 126] task_manager.cc:311: Task 221c2f25d2cfc33abe0a4a6dd72f131d2981551301000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,661 D 104 126] reference_count.cc:1367: Published message for 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 234, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,661 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,661 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,661 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor be0a4a6dd72f131d2981551301000000 with actor_counter 0 new queue.next_task_reply_position is 1 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,664 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:55,664 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:55,664 I 104 126] actor_manager.cc:246: received notification on actor, state: ALIVE, actor_id: 2b63d5db96840938040a30cf01000000, ip address: 172.17.0.3, port: 42251, worker_id: 1bca90eddd3b2d2e654282bfdde6963f066563da728b836297c0b890, raylet_id: 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:55,664 D 104 126] direct_actor_task_submitter.cc:169: Connecting to actor 2b63d5db96840938040a30cf01000000 at worker 1bca90eddd3b2d2e654282bfdde6963f066563da728b836297c0b890
+[2023-03-03 02:53:55,664 D 104 126] core_worker_client_pool.cc:42: Connected to 172.17.0.3:42251
+[2023-03-03 02:53:55,664 D 104 126] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor 2b63d5db96840938040a30cf01000000 from 0 to 0
+[2023-03-03 02:53:55,664 I 104 126] direct_actor_task_submitter.cc:217: Connecting to actor 2b63d5db96840938040a30cf01000000 at worker 1bca90eddd3b2d2e654282bfdde6963f066563da728b836297c0b890
+[2023-03-03 02:53:55,664 D 104 126] direct_actor_task_submitter.cc:395: Pushing task b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000 to actor 2b63d5db96840938040a30cf01000000 actor counter 0 seq no 0 num queued 0
+[2023-03-03 02:53:55,665 D 104 126] direct_task_transport.cc:47: Created actor, actor id = 2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:55,665 D 104 126] task_manager.cc:217: Completing task ffffffffffffffff2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:55,665 D 104 126] task_manager.cc:311: Task ffffffffffffffff2b63d5db96840938040a30cf01000000 now has 1 plasma returns in scope
+[2023-03-03 02:53:55,665 D 104 126] reference_count.cc:1367: Published message for ffffffffffffffff2b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: -1, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,667 D 104 126] task_manager.cc:217: Completing task b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:55,667 D 104 126] reference_count.cc:1367: Published message for b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 234, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,667 D 104 126] task_manager.cc:240: Task return object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000 has size 234
+[2023-03-03 02:53:55,667 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,667 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f434400c950
+[2023-03-03 02:53:55,667 D 104 126] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,667 D 104 126] task_manager.cc:305: Task b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000 returned direct object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,667 D 104 126] task_manager.cc:311: Task b5a2fc7fedbfc2cb2b63d5db96840938040a30cf01000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,667 D 104 126] reference_count.cc:1367: Published message for b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 234, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,667 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,668 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,668 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor 2b63d5db96840938040a30cf01000000 with actor_counter 0 new queue.next_task_reply_position is 1 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,674 D 104 126] subscriber.cc:365: Long polling request has replied from 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:55,674 D 104 126] subscriber.cc:348: Make a long polling request to 86114fe92d596b46e6f0132c19e3ea4019cbf225044bd157d33a0d2d
+[2023-03-03 02:53:55,674 I 104 126] actor_manager.cc:246: received notification on actor, state: ALIVE, actor_id: a09871af71412d5d2458687701000000, ip address: 172.17.0.3, port: 45785, worker_id: f315232835ec3ef57bdafa6e425890e2eb5203fd8bd1653137844c86, raylet_id: 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-03 02:53:55,674 D 104 126] direct_actor_task_submitter.cc:169: Connecting to actor a09871af71412d5d2458687701000000 at worker f315232835ec3ef57bdafa6e425890e2eb5203fd8bd1653137844c86
+[2023-03-03 02:53:55,674 D 104 126] core_worker_client_pool.cc:42: Connected to 172.17.0.3:45785
+[2023-03-03 02:53:55,675 D 104 126] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor a09871af71412d5d2458687701000000 from 0 to 0
+[2023-03-03 02:53:55,675 I 104 126] direct_actor_task_submitter.cc:217: Connecting to actor a09871af71412d5d2458687701000000 at worker f315232835ec3ef57bdafa6e425890e2eb5203fd8bd1653137844c86
+[2023-03-03 02:53:55,675 D 104 126] direct_actor_task_submitter.cc:395: Pushing task e453c7f725052c40a09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 0 seq no 0 num queued 0
+[2023-03-03 02:53:55,675 D 104 126] direct_task_transport.cc:47: Created actor, actor id = a09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,675 D 104 126] task_manager.cc:217: Completing task ffffffffffffffffa09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,675 D 104 126] task_manager.cc:311: Task ffffffffffffffffa09871af71412d5d2458687701000000 now has 1 plasma returns in scope
+[2023-03-03 02:53:55,675 D 104 126] reference_count.cc:1367: Published message for ffffffffffffffffa09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: -1, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,677 D 104 126] task_manager.cc:217: Completing task e453c7f725052c40a09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,677 D 104 126] reference_count.cc:1367: Published message for e453c7f725052c40a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 234, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,677 D 104 126] task_manager.cc:240: Task return object e453c7f725052c40a09871af71412d5d245868770100000001000000 has size 234
+[2023-03-03 02:53:55,677 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,678 D 104 126] task_manager.cc:305: Task e453c7f725052c40a09871af71412d5d2458687701000000 returned direct object e453c7f725052c40a09871af71412d5d245868770100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f43440059a0
+[2023-03-03 02:53:55,678 D 104 126] task_manager.cc:311: Task e453c7f725052c40a09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,678 D 104 126] reference_count.cc:1367: Published message for e453c7f725052c40a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 234, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434400c950
+[2023-03-03 02:53:55,678 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,678 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f43440221a0
+[2023-03-03 02:53:55,678 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor a09871af71412d5d2458687701000000 with actor_counter 0 new queue.next_task_reply_position is 1 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,678 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f43440221a0
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f43440059a0
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434400c950
+[2023-03-03 02:53:55,678 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:299: Remove local reference b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:300: REF b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:525: Attempting to delete object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:531: REF b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:568: Deleting Reference to object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:387: Releasing lineage for object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,679 D 104 104] task_manager.cc:534: No lineage for object b5a2fc7fedbfc2cb2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,679 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434400c950
+[2023-03-03 02:53:55,679 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:299: Remove local reference 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:300: REF 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:525: Attempting to delete object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:531: REF 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:568: Deleting Reference to object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:387: Releasing lineage for object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,679 D 104 104] task_manager.cc:534: No lineage for object 221c2f25d2cfc33abe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,679 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f43440059a0
+[2023-03-03 02:53:55,679 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:299: Remove local reference e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:300: REF e453c7f725052c40a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:525: Attempting to delete object e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,679 D 104 104] reference_count.cc:531: REF e453c7f725052c40a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,680 D 104 104] reference_count.cc:568: Deleting Reference to object e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,680 D 104 104] reference_count.cc:387: Releasing lineage for object e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,680 D 104 104] task_manager.cc:534: No lineage for object e453c7f725052c40a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,680 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f43440221a0
+[2023-03-03 02:53:55,680 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,680 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=68376281af699c9aa09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=1}
+[2023-03-03 02:53:55,680 D 104 104] task_manager.cc:36: Adding pending task 68376281af699c9aa09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:53:55,680 D 104 104] reference_count.cc:183: Adding owned object 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,680 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,680 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 68376281af699c9aa09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,681 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 68376281af699c9aa09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 1 seq no 1 num queued 0
+[2023-03-03 02:53:55,682 D 104 126] task_manager.cc:217: Completing task 68376281af699c9aa09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,682 D 104 126] reference_count.cc:1367: Published message for 68376281af699c9aa09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 69, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,682 D 104 126] task_manager.cc:240: Task return object 68376281af699c9aa09871af71412d5d245868770100000001000000 has size 69
+[2023-03-03 02:53:55,682 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,682 D 104 126] task_manager.cc:305: Task 68376281af699c9aa09871af71412d5d2458687701000000 returned direct object 68376281af699c9aa09871af71412d5d245868770100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,682 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4352420e00
+[2023-03-03 02:53:55,682 D 104 126] task_manager.cc:311: Task 68376281af699c9aa09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,682 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,682 D 104 126] reference_count.cc:1367: Published message for 68376281af699c9aa09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 69, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,682 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:53:55,682 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,682 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,682 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4352420e00
+[2023-03-03 02:53:55,682 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor a09871af71412d5d2458687701000000 with actor_counter 1 new queue.next_task_reply_position is 2 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,683 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,683 D 104 104] reference_count.cc:299: Remove local reference 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,683 D 104 104] reference_count.cc:300: REF 68376281af699c9aa09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,683 D 104 104] reference_count.cc:525: Attempting to delete object 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,683 D 104 104] reference_count.cc:531: REF 68376281af699c9aa09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,683 D 104 104] reference_count.cc:568: Deleting Reference to object 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,683 D 104 104] reference_count.cc:387: Releasing lineage for object 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,683 D 104 104] task_manager.cc:534: No lineage for object 68376281af699c9aa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,683 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4352420e00
+[2023-03-03 02:53:55,683 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-03 02:53:55,683 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=5bafded75d7c5df8a09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=6, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=2}
+[2023-03-03 02:53:55,683 D 104 104] task_manager.cc:36: Adding pending task 5bafded75d7c5df8a09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:53:55,684 D 104 104] reference_count.cc:183: Adding owned object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,684 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,684 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 5bafded75d7c5df8a09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,684 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 5bafded75d7c5df8a09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 2 seq no 2 num queued 0
+[2023-03-03 02:53:55,684 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=fba36d95a0618723be0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=6, num_returns=2, depth=0, actor_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=1}
+[2023-03-03 02:53:55,684 D 104 104] task_manager.cc:36: Adding pending task fba36d95a0618723be0a4a6dd72f131d2981551301000000 with 0 retries
+[2023-03-03 02:53:55,684 D 104 104] reference_count.cc:183: Adding owned object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,684 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,684 D 104 104] direct_actor_task_submitter.cc:71: Submitting task fba36d95a0618723be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:55,684 D 104 126] direct_actor_task_submitter.cc:395: Pushing task fba36d95a0618723be0a4a6dd72f131d2981551301000000 to actor be0a4a6dd72f131d2981551301000000 actor counter 1 seq no 1 num queued 0
+[2023-03-03 02:53:55,684 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=8755592a8a9e9f8c2b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=6, num_returns=2, depth=0, actor_task_spec={actor_id=2b63d5db96840938040a30cf01000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=1}
+[2023-03-03 02:53:55,685 D 104 104] task_manager.cc:36: Adding pending task 8755592a8a9e9f8c2b63d5db96840938040a30cf01000000 with 0 retries
+[2023-03-03 02:53:55,685 D 104 104] reference_count.cc:183: Adding owned object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,685 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,685 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 8755592a8a9e9f8c2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:55,685 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 8755592a8a9e9f8c2b63d5db96840938040a30cf01000000 to actor 2b63d5db96840938040a30cf01000000 actor counter 1 seq no 1 num queued 0
+[2023-03-03 02:53:55,685 D 104 126] task_manager.cc:217: Completing task 5bafded75d7c5df8a09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,685 D 104 126] reference_count.cc:1367: Published message for 5bafded75d7c5df8a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,685 D 104 126] task_manager.cc:240: Task return object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000 has size 15
+[2023-03-03 02:53:55,685 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,685 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f434403cb20
+[2023-03-03 02:53:55,685 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,685 D 104 126] task_manager.cc:305: Task 5bafded75d7c5df8a09871af71412d5d2458687701000000 returned direct object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,685 D 104 126] task_manager.cc:311: Task 5bafded75d7c5df8a09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,685 D 104 126] reference_count.cc:1367: Published message for 5bafded75d7c5df8a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,685 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,685 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,685 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor a09871af71412d5d2458687701000000 with actor_counter 2 new queue.next_task_reply_position is 3 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:217: Completing task fba36d95a0618723be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:55,686 D 104 126] reference_count.cc:1367: Published message for fba36d95a0618723be0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:240: Task return object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000 has size 15
+[2023-03-03 02:53:55,686 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,686 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f4344013210
+[2023-03-03 02:53:55,686 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:305: Task fba36d95a0618723be0a4a6dd72f131d2981551301000000 returned direct object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:311: Task fba36d95a0618723be0a4a6dd72f131d2981551301000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,686 D 104 126] reference_count.cc:1367: Published message for fba36d95a0618723be0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,686 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,686 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,686 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor be0a4a6dd72f131d2981551301000000 with actor_counter 1 new queue.next_task_reply_position is 2 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:217: Completing task 8755592a8a9e9f8c2b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:55,686 D 104 126] reference_count.cc:1367: Published message for 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:240: Task return object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000 has size 15
+[2023-03-03 02:53:55,686 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,686 D 104 126] task_manager.cc:305: Task 8755592a8a9e9f8c2b63d5db96840938040a30cf01000000 returned direct object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:53:55,686 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344013210
+[2023-03-03 02:53:55,687 D 104 126] task_manager.cc:311: Task 8755592a8a9e9f8c2b63d5db96840938040a30cf01000000 now has 0 plasma returns in scope
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,687 D 104 126] reference_count.cc:1367: Published message for 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028730
+[2023-03-03 02:53:55,687 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,687 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434403cb20
+[2023-03-03 02:53:55,687 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor 2b63d5db96840938040a30cf01000000 with actor_counter 1 new queue.next_task_reply_position is 2 and size of out_of_order_tasks set is 0
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,687 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434403cb20
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344013210
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028730
+[2023-03-03 02:53:55,687 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,687 D 104 104] reference_count.cc:299: Remove local reference 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,687 D 104 104] reference_count.cc:300: REF 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,687 D 104 104] reference_count.cc:525: Attempting to delete object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:531: REF 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:568: Deleting Reference to object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:387: Releasing lineage for object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,688 D 104 104] task_manager.cc:534: No lineage for object 8755592a8a9e9f8c2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,688 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028730
+[2023-03-03 02:53:55,688 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:299: Remove local reference fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:300: REF fba36d95a0618723be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:525: Attempting to delete object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:531: REF fba36d95a0618723be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:568: Deleting Reference to object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:387: Releasing lineage for object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,688 D 104 104] task_manager.cc:534: No lineage for object fba36d95a0618723be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,688 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344013210
+[2023-03-03 02:53:55,688 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:299: Remove local reference 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:300: REF 5bafded75d7c5df8a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:525: Attempting to delete object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:531: REF 5bafded75d7c5df8a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:568: Deleting Reference to object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,688 D 104 104] reference_count.cc:387: Releasing lineage for object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,688 D 104 104] task_manager.cc:534: No lineage for object 5bafded75d7c5df8a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,688 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434403cb20
+[2023-03-03 02:53:55,688 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:53:55,689 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=02a292de5e438e97a09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=12, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=3}
+[2023-03-03 02:53:55,689 D 104 104] task_manager.cc:36: Adding pending task 02a292de5e438e97a09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:53:55,689 D 104 104] reference_count.cc:183: Adding owned object 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,689 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:53:55,689 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 02a292de5e438e97a09871af71412d5d2458687701000000
+[2023-03-03 02:53:55,689 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 02a292de5e438e97a09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 3 seq no 3 num queued 0
+[2023-03-03 02:53:55,689 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=bf7737f8a95d2868be0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=12, num_returns=2, depth=0, actor_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=2}
+[2023-03-03 02:53:55,689 D 104 104] task_manager.cc:36: Adding pending task bf7737f8a95d2868be0a4a6dd72f131d2981551301000000 with 0 retries
+[2023-03-03 02:53:55,689 D 104 104] reference_count.cc:183: Adding owned object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,689 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:53:55,689 D 104 104] direct_actor_task_submitter.cc:71: Submitting task bf7737f8a95d2868be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:53:55,689 D 104 126] direct_actor_task_submitter.cc:395: Pushing task bf7737f8a95d2868be0a4a6dd72f131d2981551301000000 to actor be0a4a6dd72f131d2981551301000000 actor counter 2 seq no 2 num queued 0
+[2023-03-03 02:53:55,690 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=7efb28e1de4f6ef32b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=12, num_returns=2, depth=0, actor_task_spec={actor_id=2b63d5db96840938040a30cf01000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=2}
+[2023-03-03 02:53:55,690 D 104 104] task_manager.cc:36: Adding pending task 7efb28e1de4f6ef32b63d5db96840938040a30cf01000000 with 0 retries
+[2023-03-03 02:53:55,690 D 104 104] reference_count.cc:183: Adding owned object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,690 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:53:55,690 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 7efb28e1de4f6ef32b63d5db96840938040a30cf01000000
+[2023-03-03 02:53:55,690 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 7efb28e1de4f6ef32b63d5db96840938040a30cf01000000 to actor 2b63d5db96840938040a30cf01000000 actor counter 2 seq no 2 num queued 0
+[2023-03-03 02:53:56,307 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:53:56,308 D 104 126] profiling.cc:87: Pushed 7 events to GCS.
+[2023-03-03 02:53:57,283 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:54:00,301 W 104 127] metric_exporter.cc:207: [1] Export metrics to agent failed: GrpcUnknown: RPC Error message: Method not found!; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-03-03 02:54:01,038 D 104 126] task_manager.cc:217: Completing task 02a292de5e438e97a09871af71412d5d2458687701000000
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:1367: Published message for 02a292de5e438e97a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:240: Task return object 02a292de5e438e97a09871af71412d5d245868770100000001000000 has size 15
+[2023-03-03 02:54:01,039 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,039 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f4328006000
+[2023-03-03 02:54:01,039 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:305: Task 02a292de5e438e97a09871af71412d5d2458687701000000 returned direct object 02a292de5e438e97a09871af71412d5d245868770100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:311: Task 02a292de5e438e97a09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:1367: Published message for 02a292de5e438e97a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,039 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor a09871af71412d5d2458687701000000 with actor_counter 3 new queue.next_task_reply_position is 4 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:217: Completing task 7efb28e1de4f6ef32b63d5db96840938040a30cf01000000
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:1367: Published message for 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:240: Task return object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000 has size 15
+[2023-03-03 02:54:01,039 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,039 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f4344072780
+[2023-03-03 02:54:01,039 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:305: Task 7efb28e1de4f6ef32b63d5db96840938040a30cf01000000 returned direct object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:54:01,039 D 104 126] task_manager.cc:311: Task 7efb28e1de4f6ef32b63d5db96840938040a30cf01000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:1367: Published message for 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,039 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,040 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor 2b63d5db96840938040a30cf01000000 with actor_counter 2 new queue.next_task_reply_position is 3 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,040 D 104 126] task_manager.cc:217: Completing task bf7737f8a95d2868be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:54:01,040 D 104 126] reference_count.cc:1367: Published message for bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:54:01,040 D 104 126] task_manager.cc:240: Task return object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000 has size 15
+[2023-03-03 02:54:01,040 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,040 D 104 126] task_manager.cc:305: Task bf7737f8a95d2868be0a4a6dd72f131d2981551301000000 returned direct object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328006000
+[2023-03-03 02:54:01,040 D 104 126] task_manager.cc:311: Task bf7737f8a95d2868be0a4a6dd72f131d2981551301000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,040 D 104 126] reference_count.cc:1367: Published message for bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344043780
+[2023-03-03 02:54:01,040 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,040 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344072780
+[2023-03-03 02:54:01,040 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor be0a4a6dd72f131d2981551301000000 with actor_counter 2 new queue.next_task_reply_position is 3 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,040 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328006000
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344043780
+[2023-03-03 02:54:01,040 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,041 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344072780
+[2023-03-03 02:54:01,041 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:299: Remove local reference 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:300: REF 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:525: Attempting to delete object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:531: REF 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:568: Deleting Reference to object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:387: Releasing lineage for object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,041 D 104 104] task_manager.cc:534: No lineage for object 7efb28e1de4f6ef32b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,041 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344072780
+[2023-03-03 02:54:01,041 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:299: Remove local reference bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:300: REF bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:525: Attempting to delete object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:531: REF bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:568: Deleting Reference to object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:387: Releasing lineage for object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,041 D 104 104] task_manager.cc:534: No lineage for object bf7737f8a95d2868be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,041 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344043780
+[2023-03-03 02:54:01,041 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:299: Remove local reference 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:300: REF 02a292de5e438e97a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,041 D 104 104] reference_count.cc:525: Attempting to delete object 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,042 D 104 104] reference_count.cc:531: REF 02a292de5e438e97a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,042 D 104 104] reference_count.cc:568: Deleting Reference to object 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,042 D 104 104] reference_count.cc:387: Releasing lineage for object 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,042 D 104 104] task_manager.cc:534: No lineage for object 02a292de5e438e97a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,042 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328006000
+[2023-03-03 02:54:01,042 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,042 D 104 104] core_worker.cc:2232: Creating return object 16310a0f0a45af5c39c45fc19653a2ee38e764450100000001000000
+[2023-03-03 02:54:01,042 D 104 104] core_worker.cc:2424: Sealing return object 16310a0f0a45af5c39c45fc19653a2ee38e764450100000001000000
+[2023-03-03 02:54:01,042 D 104 104] core_worker.cc:2407: Finished executing task 16310a0f0a45af5c39c45fc19653a2ee38e7644501000000, status=OK
+[2023-03-03 02:54:01,042 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:54:01,052 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:54:01,052 D 104 104] actor_scheduling_queue.cc:89: Enqueue 1 cur seqno 1
+[2023-03-03 02:54:01,052 D 104 104] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=start_training, function_hash=}, task_id=c2668a65bda616c139c45fc19653a2ee38e7644501000000, task_name=BackendExecutor.start_training(), job_id=01000000, num_args=6, num_returns=2, depth=0, actor_task_spec={actor_id=39c45fc19653a2ee38e7644501000000, actor_caller_id=ffffffffffffffffffffffffffffffffffffffff01000000, actor_counter=1}
+[2023-03-03 02:54:01,229 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=02a3df899b8667a9a09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=16, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=4}
+[2023-03-03 02:54:01,229 D 104 104] task_manager.cc:36: Adding pending task 02a3df899b8667a9a09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:54:01,229 D 104 104] reference_count.cc:183: Adding owned object 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,229 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,230 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 02a3df899b8667a9a09871af71412d5d2458687701000000
+[2023-03-03 02:54:01,230 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 02a3df899b8667a9a09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 4 seq no 4 num queued 0
+[2023-03-03 02:54:01,235 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=70149b2bcd79fb33be0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=16, num_returns=2, depth=0, actor_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=3}
+[2023-03-03 02:54:01,235 D 104 104] task_manager.cc:36: Adding pending task 70149b2bcd79fb33be0a4a6dd72f131d2981551301000000 with 0 retries
+[2023-03-03 02:54:01,235 D 104 104] reference_count.cc:183: Adding owned object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,235 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,235 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 70149b2bcd79fb33be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:54:01,235 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 70149b2bcd79fb33be0a4a6dd72f131d2981551301000000 to actor be0a4a6dd72f131d2981551301000000 actor counter 3 seq no 3 num queued 0
+[2023-03-03 02:54:01,240 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=626d839cc22fbcd92b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=16, num_returns=2, depth=0, actor_task_spec={actor_id=2b63d5db96840938040a30cf01000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=3}
+[2023-03-03 02:54:01,240 D 104 104] task_manager.cc:36: Adding pending task 626d839cc22fbcd92b63d5db96840938040a30cf01000000 with 0 retries
+[2023-03-03 02:54:01,240 D 104 104] reference_count.cc:183: Adding owned object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,240 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,240 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 626d839cc22fbcd92b63d5db96840938040a30cf01000000
+[2023-03-03 02:54:01,240 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 626d839cc22fbcd92b63d5db96840938040a30cf01000000 to actor 2b63d5db96840938040a30cf01000000 actor counter 3 seq no 3 num queued 0
+[2023-03-03 02:54:01,240 I 104 104] core_worker.cc:1245: Calling memory_store_->Wait
+[2023-03-03 02:54:01,308 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:54:01,308 D 104 126] profiling.cc:87: Pushed 7 events to GCS.
+[2023-03-03 02:54:01,309 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:54:01,467 D 104 126] task_manager.cc:217: Completing task 02a3df899b8667a9a09871af71412d5d2458687701000000
+[2023-03-03 02:54:01,467 D 104 126] reference_count.cc:1367: Published message for 02a3df899b8667a9a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:54:01,467 D 104 126] task_manager.cc:240: Task return object 02a3df899b8667a9a09871af71412d5d245868770100000001000000 has size 15
+[2023-03-03 02:54:01,467 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,467 D 104 126] task_manager.cc:305: Task 02a3df899b8667a9a09871af71412d5d2458687701000000 returned direct object 02a3df899b8667a9a09871af71412d5d245868770100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:54:01,467 I 104 104] core_worker.cc:1252: memory_store_->Wait returned, ready num: 1
+[2023-03-03 02:54:01,467 D 104 126] task_manager.cc:311: Task 02a3df899b8667a9a09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,467 I 104 104] core_worker.cc:1280: Return OK
+[2023-03-03 02:54:01,467 D 104 126] reference_count.cc:1367: Published message for 02a3df899b8667a9a09871af71412d5d245868770100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:54:01,468 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,468 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,468 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor a09871af71412d5d2458687701000000 with actor_counter 4 new queue.next_task_reply_position is 5 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,468 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434402abd0
+[2023-03-03 02:54:01,468 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,468 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:54:01,468 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434402abd0
+[2023-03-03 02:54:01,468 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,468 I 104 104] core_worker.cc:1245: Calling memory_store_->Wait
+[2023-03-03 02:54:01,506 D 104 126] task_manager.cc:217: Completing task 626d839cc22fbcd92b63d5db96840938040a30cf01000000
+[2023-03-03 02:54:01,506 D 104 126] reference_count.cc:1367: Published message for 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:54:01,506 D 104 126] task_manager.cc:240: Task return object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000 has size 15
+[2023-03-03 02:54:01,506 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,506 D 104 126] task_manager.cc:305: Task 626d839cc22fbcd92b63d5db96840938040a30cf01000000 returned direct object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:54:01,506 I 104 104] core_worker.cc:1252: memory_store_->Wait returned, ready num: 1
+[2023-03-03 02:54:01,506 D 104 126] task_manager.cc:311: Task 626d839cc22fbcd92b63d5db96840938040a30cf01000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,506 I 104 104] core_worker.cc:1280: Return OK
+[2023-03-03 02:54:01,506 D 104 126] reference_count.cc:1367: Published message for 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:54:01,506 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,506 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,506 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor 2b63d5db96840938040a30cf01000000 with actor_counter 3 new queue.next_task_reply_position is 4 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,506 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028670
+[2023-03-03 02:54:01,506 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,506 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:54:01,506 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028670
+[2023-03-03 02:54:01,506 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,507 D 104 126] task_manager.cc:217: Completing task 70149b2bcd79fb33be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:54:01,507 D 104 126] reference_count.cc:1367: Published message for 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-03 02:54:01,507 I 104 104] core_worker.cc:1245: Calling memory_store_->Wait
+[2023-03-03 02:54:01,507 D 104 126] task_manager.cc:240: Task return object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000 has size 15
+[2023-03-03 02:54:01,507 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,507 D 104 126] task_manager.cc:305: Task 70149b2bcd79fb33be0a4a6dd72f131d2981551301000000 returned direct object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000, now has 1 plasma returns in scope
+[2023-03-03 02:54:01,507 I 104 104] core_worker.cc:1252: memory_store_->Wait returned, ready num: 1
+[2023-03-03 02:54:01,507 D 104 126] task_manager.cc:311: Task 70149b2bcd79fb33be0a4a6dd72f131d2981551301000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,507 I 104 104] core_worker.cc:1280: Return OK
+[2023-03-03 02:54:01,507 D 104 126] reference_count.cc:1367: Published message for 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 15, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-03 02:54:01,507 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,507 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,507 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor be0a4a6dd72f131d2981551301000000 with actor_counter 3 new queue.next_task_reply_position is 4 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328004720
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,507 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328004720
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434402abd0
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,507 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028670
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328004720
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,508 D 104 104] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434402abd0
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328004720
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028670
+[2023-03-03 02:54:01,508 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,508 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=9c47e7b0492e90ffa09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=5}
+[2023-03-03 02:54:01,508 D 104 104] task_manager.cc:36: Adding pending task 9c47e7b0492e90ffa09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:54:01,508 D 104 104] reference_count.cc:183: Adding owned object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,508 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,509 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 9c47e7b0492e90ffa09871af71412d5d2458687701000000
+[2023-03-03 02:54:01,509 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 9c47e7b0492e90ffa09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 5 seq no 5 num queued 0
+[2023-03-03 02:54:01,509 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=4}
+[2023-03-03 02:54:01,509 D 104 104] task_manager.cc:36: Adding pending task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000 with 0 retries
+[2023-03-03 02:54:01,509 D 104 104] reference_count.cc:183: Adding owned object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,509 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,509 D 104 104] direct_actor_task_submitter.cc:71: Submitting task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:54:01,509 D 104 126] direct_actor_task_submitter.cc:395: Pushing task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000 to actor be0a4a6dd72f131d2981551301000000 actor counter 4 seq no 4 num queued 0
+[2023-03-03 02:54:01,509 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=51ac9aa4f57022aa2b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=2b63d5db96840938040a30cf01000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=4}
+[2023-03-03 02:54:01,509 D 104 104] task_manager.cc:36: Adding pending task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000 with 0 retries
+[2023-03-03 02:54:01,509 D 104 104] reference_count.cc:183: Adding owned object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,509 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,510 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:299: Remove local reference 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,510 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000 to actor 2b63d5db96840938040a30cf01000000 actor counter 4 seq no 4 num queued 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:300: REF 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:525: Attempting to delete object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:531: REF 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:568: Deleting Reference to object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:387: Releasing lineage for object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,510 D 104 104] task_manager.cc:538: Plasma object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000 out of scope
+[2023-03-03 02:54:01,510 D 104 104] task_manager.cc:540: Task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000 has 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000 in scope
+[2023-03-03 02:54:01,510 D 104 104] task_manager.cc:543: Task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:299: Remove local reference a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:300: REF a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:525: Attempting to delete object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:531: REF a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:568: Deleting Reference to object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:387: Releasing lineage for object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,510 D 104 104] task_manager.cc:538: Plasma object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000 out of scope
+[2023-03-03 02:54:01,510 D 104 104] task_manager.cc:540: Task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000 has a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000 in scope
+[2023-03-03 02:54:01,510 D 104 104] task_manager.cc:543: Task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:299: Remove local reference 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:300: REF 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:525: Attempting to delete object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:531: REF 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,510 D 104 104] reference_count.cc:568: Deleting Reference to object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:387: Releasing lineage for object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,511 D 104 104] task_manager.cc:538: Plasma object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000 out of scope
+[2023-03-03 02:54:01,511 D 104 104] task_manager.cc:540: Task 9c47e7b0492e90ffa09871af71412d5d2458687701000000 has 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000 in scope
+[2023-03-03 02:54:01,511 D 104 104] task_manager.cc:543: Task 9c47e7b0492e90ffa09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:299: Remove local reference 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:300: REF 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:525: Attempting to delete object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:531: REF 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:568: Deleting Reference to object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:387: Releasing lineage for object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,511 D 104 104] task_manager.cc:534: No lineage for object 626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,511 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4344028670
+[2023-03-03 02:54:01,511 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:299: Remove local reference 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:300: REF 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:525: Attempting to delete object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:531: REF 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:568: Deleting Reference to object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:387: Releasing lineage for object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,511 D 104 104] task_manager.cc:534: No lineage for object 70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,511 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f4328004720
+[2023-03-03 02:54:01,511 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:299: Remove local reference 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:300: REF 02a3df899b8667a9a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:525: Attempting to delete object 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:531: REF 02a3df899b8667a9a09871af71412d5d245868770100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:568: Deleting Reference to object 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,511 D 104 104] reference_count.cc:387: Releasing lineage for object 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,512 D 104 104] task_manager.cc:534: No lineage for object 02a3df899b8667a9a09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,512 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7f434402abd0
+[2023-03-03 02:54:01,512 D 104 104] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,512 D 104 104] core_worker.cc:2232: Creating return object c2668a65bda616c139c45fc19653a2ee38e764450100000001000000
+[2023-03-03 02:54:01,512 D 104 104] core_worker.cc:2424: Sealing return object c2668a65bda616c139c45fc19653a2ee38e764450100000001000000
+[2023-03-03 02:54:01,512 D 104 104] core_worker.cc:2407: Finished executing task c2668a65bda616c139c45fc19653a2ee38e7644501000000, status=OK
+[2023-03-03 02:54:01,512 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:54:01,514 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 139925802936064::0, status: 1
+[2023-03-03 02:54:01,515 D 104 104] actor_scheduling_queue.cc:89: Enqueue 2 cur seqno 2
+[2023-03-03 02:54:01,515 D 104 104] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=get_next_results, function_hash=}, task_id=32d950ec0ccf9d2a39c45fc19653a2ee38e7644501000000, task_name=BackendExecutor.get_next_results(), job_id=01000000, num_args=0, num_returns=2, depth=0, actor_task_spec={actor_id=39c45fc19653a2ee38e7644501000000, actor_caller_id=ffffffffffffffffffffffffffffffffffffffff01000000, actor_counter=2}
+[2023-03-03 02:54:01,515 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=649fcb3273f4af8ba09871af71412d5d2458687701000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=a09871af71412d5d2458687701000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=6}
+[2023-03-03 02:54:01,515 D 104 104] task_manager.cc:36: Adding pending task 649fcb3273f4af8ba09871af71412d5d2458687701000000 with 0 retries
+[2023-03-03 02:54:01,516 D 104 104] reference_count.cc:183: Adding owned object 649fcb3273f4af8ba09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,516 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,516 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 649fcb3273f4af8ba09871af71412d5d2458687701000000
+[2023-03-03 02:54:01,516 D 104 126] direct_actor_task_submitter.cc:395: Pushing task 649fcb3273f4af8ba09871af71412d5d2458687701000000 to actor a09871af71412d5d2458687701000000 actor counter 6 seq no 6 num queued 1
+[2023-03-03 02:54:01,516 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=eea40188406253adbe0a4a6dd72f131d2981551301000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=be0a4a6dd72f131d2981551301000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=5}
+[2023-03-03 02:54:01,516 D 104 104] task_manager.cc:36: Adding pending task eea40188406253adbe0a4a6dd72f131d2981551301000000 with 0 retries
+[2023-03-03 02:54:01,516 D 104 104] reference_count.cc:183: Adding owned object eea40188406253adbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,516 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,516 D 104 104] direct_actor_task_submitter.cc:71: Submitting task eea40188406253adbe0a4a6dd72f131d2981551301000000
+[2023-03-03 02:54:01,516 D 104 126] direct_actor_task_submitter.cc:395: Pushing task eea40188406253adbe0a4a6dd72f131d2981551301000000 to actor be0a4a6dd72f131d2981551301000000 actor counter 5 seq no 5 num queued 1
+[2023-03-03 02:54:01,518 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=a5a13d526e093ff02b63d5db96840938040a30cf01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=2b63d5db96840938040a30cf01000000, actor_caller_id=ffffffffffffffff39c45fc19653a2ee38e7644501000000, actor_counter=5}
+[2023-03-03 02:54:01,518 D 104 104] task_manager.cc:36: Adding pending task a5a13d526e093ff02b63d5db96840938040a30cf01000000 with 0 retries
+[2023-03-03 02:54:01,518 D 104 104] reference_count.cc:183: Adding owned object a5a13d526e093ff02b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,518 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,518 D 104 104] direct_actor_task_submitter.cc:71: Submitting task a5a13d526e093ff02b63d5db96840938040a30cf01000000
+[2023-03-03 02:54:01,519 D 104 126] direct_actor_task_submitter.cc:395: Pushing task a5a13d526e093ff02b63d5db96840938040a30cf01000000 to actor 2b63d5db96840938040a30cf01000000 actor counter 5 seq no 5 num queued 1
+[2023-03-03 02:54:01,519 I 104 104] core_worker.cc:1245: Calling memory_store_->Wait
+[2023-03-03 02:54:01,538 D 104 126] task_manager.cc:217: Completing task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000
+[2023-03-03 02:54:01,538 D 104 126] task_manager.cc:240: Task return object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000 has size 15
+[2023-03-03 02:54:01,538 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,538 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f4344030f00
+[2023-03-03 02:54:01,538 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,538 D 104 126] task_manager.cc:305: Task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000 returned direct object 51ac9aa4f57022aa2b63d5db96840938040a30cf0100000001000000, now has 0 plasma returns in scope
+[2023-03-03 02:54:01,538 D 104 126] task_manager.cc:311: Task 51ac9aa4f57022aa2b63d5db96840938040a30cf01000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,538 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,538 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffff2b63d5db96840938040a30cf0100000001000000
+[2023-03-03 02:54:01,538 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor 2b63d5db96840938040a30cf01000000 with actor_counter 4 new queue.next_task_reply_position is 5 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:217: Completing task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:240: Task return object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000 has size 15
+[2023-03-03 02:54:01,539 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,539 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f4344029b70
+[2023-03-03 02:54:01,539 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:305: Task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000 returned direct object a5d0223c5a86b1f4be0a4a6dd72f131d298155130100000001000000, now has 0 plasma returns in scope
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:311: Task a5d0223c5a86b1f4be0a4a6dd72f131d2981551301000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,539 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,539 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffbe0a4a6dd72f131d298155130100000001000000
+[2023-03-03 02:54:01,539 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor be0a4a6dd72f131d2981551301000000 with actor_counter 4 new queue.next_task_reply_position is 5 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:217: Completing task 9c47e7b0492e90ffa09871af71412d5d2458687701000000
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:240: Task return object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000 has size 15
+[2023-03-03 02:54:01,539 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,539 D 104 126] ray_object.cc:108: Before parsing metadata: 0x7f4344029b70
+[2023-03-03 02:54:01,539 D 104 126] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:305: Task 9c47e7b0492e90ffa09871af71412d5d2458687701000000 returned direct object 9c47e7b0492e90ffa09871af71412d5d245868770100000001000000, now has 0 plasma returns in scope
+[2023-03-03 02:54:01,539 D 104 126] task_manager.cc:311: Task 9c47e7b0492e90ffa09871af71412d5d2458687701000000 now has 0 plasma returns in scope
+[2023-03-03 02:54:01,539 D 104 126] reference_count.cc:849: Merging ref ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,539 D 104 126] reference_count.cc:427: Releasing ref for submitted task argument ffffffffffffffffa09871af71412d5d245868770100000001000000
+[2023-03-03 02:54:01,539 D 104 126] sequential_actor_submit_queue.cc:116: Got PushTaskReply for actor a09871af71412d5d2458687701000000 with actor_counter 5 new queue.next_task_reply_position is 6 and size of out_of_order_tasks set is 0
+[2023-03-03 02:54:02,309 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:54:02,309 D 104 126] profiling.cc:87: Pushed 10 events to GCS.
+[2023-03-03 02:54:02,310 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = 961dcb9f0334c0f6be6a67704fc9d63cc9938ece6d01099952a9681a
+[2023-03-03 02:54:48,307 I 104 126] core_worker.cc:502: Event stats:
+
+
+Global stats: 989 total (11 active)
+Queueing time: mean = 1.123 ms, max = 970.208 ms, min = 28.415 us, total = 1.111 s
+Execution time:  mean = 1.065 ms, total = 1.053 s
+Event stats:
+	UNKNOWN - 712 total (5 active, 1 running), CPU time: mean = 1.420 ms, total = 1.011 s
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 60 total (0 active), CPU time: mean = 23.964 us, total = 1.438 ms
+	CoreWorker.deadline_timer.flush_profiling_events - 60 total (1 active), CPU time: mean = 49.883 us, total = 2.993 ms
+	GcsClient.deadline_timer.check_gcs_connection - 60 total (1 active), CPU time: mean = 24.495 us, total = 1.470 ms
+	CoreWorkerService.grpc_client.PushTask - 20 total (3 active), CPU time: mean = 488.906 us, total = 9.778 ms
+	CoreWorkerDirectActorTaskSubmitter::SubmitTask - 19 total (0 active), CPU time: mean = 619.253 us, total = 11.766 ms
+	Subscriber.HandlePublishedMessage_GCS_ACTOR_CHANNEL - 9 total (0 active), CPU time: mean = 312.437 us, total = 2.812 ms
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 8 total (1 active), CPU time: mean = 261.499 us, total = 2.092 ms
+	PeriodicalRunner.RunFnPeriodically - 7 total (0 active), CPU time: mean = 102.944 us, total = 720.607 us
+	StatsGcsService.grpc_client.AddProfileData - 5 total (0 active), CPU time: mean = 104.894 us, total = 524.471 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 4 total (0 active), CPU time: mean = 318.156 us, total = 1.273 ms
+	CoreWorkerService.grpc_server.PushTask - 4 total (0 active), CPU time: mean = 78.848 us, total = 315.391 us
+	ActorCreator.AsyncRegisterActor - 3 total (0 active), CPU time: mean = 331.636 us, total = 994.909 us
+	ActorInfoGcsService.grpc_client.CreateActor - 3 total (0 active), CPU time: mean = 224.203 us, total = 672.608 us
+	ActorInfoGcsService.grpc_client.GetActorInfo - 3 total (0 active), CPU time: mean = 665.139 us, total = 1.995 ms
+	ActorInfoGcsService.grpc_client.RegisterActor - 3 total (0 active), CPU time: mean = 385.076 us, total = 1.155 ms
+	CoreWorkerService.grpc_server.WaitForActorOutOfScope - 3 total (0 active), CPU time: mean = 29.788 us, total = 89.365 us
+	NodeInfoGcsService.grpc_client.GetAllNodeInfo - 1 total (0 active), CPU time: mean = 114.117 us, total = 114.117 us
+	NodeManagerService.grpc_client.ReturnWorker - 1 total (0 active), CPU time: mean = 13.935 us, total = 13.935 us
+	CoreWorker.SubmitTask - 1 total (0 active), CPU time: mean = 345.107 us, total = 345.107 us
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (0 active), CPU time: mean = 26.990 us, total = 26.990 us
+	NodeManagerService.grpc_client.RequestWorkerLease - 1 total (0 active), CPU time: mean = 930.399 us, total = 930.399 us
+	PlacementGroupInfoGcsService.grpc_client.CreatePlacementGroup - 1 total (0 active), CPU time: mean = 79.561 us, total = 79.561 us
+
+
+[2023-03-03 02:55:48,307 I 104 126] core_worker.cc:502: Event stats:
+
+
+Global stats: 1887 total (11 active)
+Queueing time: mean = 631.958 us, max = 970.208 ms, min = 28.415 us, total = 1.193 s
+Execution time:  mean = 580.609 us, total = 1.096 s
+Event stats:
+	UNKNOWN - 1431 total (5 active, 1 running), CPU time: mean = 733.854 us, total = 1.050 s
+	CoreWorker.deadline_timer.flush_profiling_events - 120 total (1 active), CPU time: mean = 32.523 us, total = 3.903 ms
+	GcsClient.deadline_timer.check_gcs_connection - 120 total (1 active), CPU time: mean = 24.247 us, total = 2.910 ms
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 119 total (0 active), CPU time: mean = 24.811 us, total = 2.953 ms
+	CoreWorkerService.grpc_client.PushTask - 20 total (3 active), CPU time: mean = 488.906 us, total = 9.778 ms
+	CoreWorkerDirectActorTaskSubmitter::SubmitTask - 19 total (0 active), CPU time: mean = 619.253 us, total = 11.766 ms
+	Subscriber.HandlePublishedMessage_GCS_ACTOR_CHANNEL - 9 total (0 active), CPU time: mean = 312.437 us, total = 2.812 ms
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 8 total (1 active), CPU time: mean = 261.499 us, total = 2.092 ms
+	PeriodicalRunner.RunFnPeriodically - 7 total (0 active), CPU time: mean = 102.944 us, total = 720.607 us
+	StatsGcsService.grpc_client.AddProfileData - 5 total (0 active), CPU time: mean = 104.894 us, total = 524.471 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 4 total (0 active), CPU time: mean = 318.156 us, total = 1.273 ms
+	CoreWorkerService.grpc_server.PushTask - 4 total (0 active), CPU time: mean = 78.848 us, total = 315.391 us
+	ActorCreator.AsyncRegisterActor - 3 total (0 active), CPU time: mean = 331.636 us, total = 994.909 us
+	ActorInfoGcsService.grpc_client.CreateActor - 3 total (0 active), CPU time: mean = 224.203 us, total = 672.608 us
+	ActorInfoGcsService.grpc_client.GetActorInfo - 3 total (0 active), CPU time: mean = 665.139 us, total = 1.995 ms
+	ActorInfoGcsService.grpc_client.RegisterActor - 3 total (0 active), CPU time: mean = 385.076 us, total = 1.155 ms
+	CoreWorkerService.grpc_server.WaitForActorOutOfScope - 3 total (0 active), CPU time: mean = 29.788 us, total = 89.365 us
+	NodeInfoGcsService.grpc_client.GetAllNodeInfo - 1 total (0 active), CPU time: mean = 114.117 us, total = 114.117 us
+	NodeManagerService.grpc_client.ReturnWorker - 1 total (0 active), CPU time: mean = 13.935 us, total = 13.935 us
+	CoreWorker.SubmitTask - 1 total (0 active), CPU time: mean = 345.107 us, total = 345.107 us
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (0 active), CPU time: mean = 26.990 us, total = 26.990 us
+	NodeManagerService.grpc_client.RequestWorkerLease - 1 total (0 active), CPU time: mean = 930.399 us, total = 930.399 us
+	PlacementGroupInfoGcsService.grpc_client.CreatePlacementGroup - 1 total (0 active), CPU time: mean = 79.561 us, total = 79.561 us
+
+

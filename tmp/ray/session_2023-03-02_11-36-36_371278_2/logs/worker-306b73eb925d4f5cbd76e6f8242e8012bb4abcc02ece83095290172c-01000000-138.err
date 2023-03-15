@@ -1,0 +1,5 @@
+:task_name:bundle_reservation_check_func
+[symbolize_elf.inc : 979] RAW: /proc/self/task/138/maps: errno=2
+[2023-03-02 11:38:20,025 C 138 175] gcs_client.cc:300: Couldn't reconnect to GCS server. The last attempted GCS server address was 172.17.0.2:37154
+*** StackTrace Information ***
+

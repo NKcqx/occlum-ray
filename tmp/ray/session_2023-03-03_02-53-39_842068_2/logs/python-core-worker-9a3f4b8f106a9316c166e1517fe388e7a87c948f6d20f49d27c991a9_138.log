@@ -1,0 +1,115 @@
+[2023-03-03 02:53:52,545 I 138 138] core_worker_process.cc:120: Constructing CoreWorkerProcess. pid: 138
+[2023-03-03 02:53:52,576 D 138 146] core_worker_process.cc:200: Getting system config from raylet, remaining retries = 100
+[2023-03-03 02:53:52,577 D 138 138] ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-03_02-53-39_842068_2\"}}",
+[2023-03-03 02:53:52,578 D 138 138] core_worker.cc:88: Constructing CoreWorker, worker_id: 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9
+[2023-03-03 02:53:52,578 I 138 138] core_worker.cc:119: Connecting to local Raylet.
+[2023-03-03 02:53:52,578 I 138 138] raylet_client.cc:116: Creating RayletConnection.
+[2023-03-03 02:53:52,579 I 138 138] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/raylet 0
+[2023-03-03 02:53:52,580 I 138 138] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/raylet 0. OK
+[2023-03-03 02:53:52,580 I 138 138] raylet_client.cc:118: Created RayletConnection.
+[2023-03-03 02:53:52,580 I 138 138] raylet_client.cc:138: Begin AtomicRequestReply RegisterClientRequest
+[2023-03-03 02:53:52,581 I 138 138] raylet_client.cc:141: End AtomicRequestReply RegisterClientRequest. Status: OK
+[2023-03-03 02:53:52,581 I 138 138] core_worker.cc:135: Connected to local Raylet.
+[2023-03-03 02:53:52,581 I 138 138] core_worker.cc:164: Starting GRPC server.
+[2023-03-03 02:53:52,581 I 138 138] grpc_server.cc:105: worker server started, listening on port 36653.
+[2023-03-03 02:53:52,584 I 138 138] core_worker.cc:171: Started GRPC server.
+[2023-03-03 02:53:52,584 I 138 138] core_worker.cc:179: Initializing worker at address: 172.17.0.3:36653, worker ID 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9, raylet 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832
+[2023-03-03 02:53:52,607 I 138 165] gcs_server_address_updater.cc:32: GCS Server updater thread id: 139928805582592
+[2023-03-03 02:53:52,688 D 138 138] gcs_client.cc:165: GcsClient connected.
+[2023-03-03 02:53:52,689 I 138 138] core_worker.cc:205: GCS client created.
+[2023-03-03 02:53:52,689 I 138 138] core_worker.cc:207: Registered to GCS.
+[2023-03-03 02:53:52,689 D 138 138] subscriber.cc:348: Make a long polling request to 5d496452df63d102f67654c188b87d563fa93078bdf7f3066087f98b
+[2023-03-03 02:53:52,689 I 138 138] core_worker.cc:267: Creating CoreWorkerPlasmaStoreProvider
+[2023-03-03 02:53:52,690 I 138 138] client.cc:762: Before ConnectSocketRetry
+[2023-03-03 02:53:52,690 I 138 138] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/plasma_store 0
+[2023-03-03 02:53:52,690 I 138 138] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-03_02-53-39_842068_2/sockets/plasma_store 0. OK
+[2023-03-03 02:53:52,690 I 138 138] client.cc:764: After ConnectSocketRetry
+[2023-03-03 02:53:52,690 I 138 138] client.cc:766: After new StoreConn
+[2023-03-03 02:53:52,690 I 138 138] client.cc:769: After SendConnectRequest
+[2023-03-03 02:53:52,691 I 138 138] client.cc:772: After PlasmaReceive
+[2023-03-03 02:53:52,691 I 138 138] client.cc:774: After ReadConnectReply
+[2023-03-03 02:53:52,691 D 138 138] client.cc:392: called plasma_create on conn 30 with size 8 and metadata size 0
+[2023-03-03 02:53:52,691 I 138 138] protocol.cc:219: After CreatePlasmaCreateRequest, prepare to send
+[2023-03-03 02:53:52,691 I 138 138] protocol.cc:221: After PlasmaSend, status: 1
+[2023-03-03 02:53:52,691 I 138 138] client.cc:402: After SendCreateRequest
+[2023-03-03 02:53:52,691 I 138 138] client.cc:311: Before PlasmaReceive
+[2023-03-03 02:53:52,691 I 138 138] client.cc:313: After PlasmaReceive buffer size: 160
+[2023-03-03 02:53:52,691 I 138 138] client.cc:327: After RreadCreateReply, retry count: 0
+[2023-03-03 02:53:52,691 I 138 138] client.cc:355: After create PlasmaMutableBuffer
+[2023-03-03 02:53:52,691 I 138 138] client.cc:404: After HandleCreateReply
+[2023-03-03 02:53:52,691 I 138 138] core_worker.cc:277: Created CoreWorkerPlasmaStoreProvider
+[2023-03-03 02:53:52,692 D 138 138] core_worker_process.cc:276: Worker 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9 is created.
+[2023-03-03 02:53:52,692 D 138 138] core_worker_process.cc:132: Stats setup in core worker.
+[2023-03-03 02:53:52,692 D 138 138] stats.h:75: Initialized stats
+[2023-03-03 02:53:52,692 I 138 138] io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-03 02:53:52,696 D 138 138] metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:52343
+[2023-03-03 02:53:52,696 I 138 172] core_worker.cc:502: Event stats:
+
+
+Global stats: 16 total (11 active)
+Queueing time: mean = 1.796 ms, max = 6.871 ms, min = 3.999 ms, total = 28.728 ms
+Execution time:  mean = 36.983 us, total = 591.736 us
+Event stats:
+	PeriodicalRunner.RunFnPeriodically - 7 total (2 active, 1 running), CPU time: mean = 84.534 us, total = 591.736 us
+	UNKNOWN - 3 total (3 active), CPU time: mean = 0.000 s, total = 0.000 s
+	CoreWorker.deadline_timer.flush_profiling_events - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsClient.deadline_timer.check_gcs_connection - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-03 02:53:52,697 D 138 172] accessor.cc:487: Getting information of all nodes.
+[2023-03-03 02:53:52,698 I 138 172] accessor.cc:599: Received notification for node id = 7a04dde0a4e4d25e710a1426e0c8a059ba4437f33523a5251b729832, IsAlive = 1
+[2023-03-03 02:53:52,698 D 138 172] accessor.cc:497: Finished getting information of all nodes, status = OK
+[2023-03-03 02:53:52,700 D 138 163] grpc_server.cc:146: Polled event from CQ, thead: 139928797185792::0, status: 1
+[2023-03-03 02:53:52,743 D 138 138] core_worker.cc:2273: Executing task, task info = Type=NORMAL_TASK, Language=PYTHON, Resources: {bundle_group_ac4954484388251a94d8820fca1a01000000: 0.001, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.util.placement_group, class_name=, function_name=_export_bundle_reservation_check_method_if_needed.<locals>.bundle_reservation_check_func, function_hash=f99ba8c9917a452aa7ae80e1df87e15a}, task_id=fb63804cbf27174effffffffffffffffffffffff01000000, task_name=bundle_reservation_check_func(), job_id=01000000, num_args=2, num_returns=1, depth=1
+[2023-03-03 02:53:52,748 D 138 138] core_worker.cc:2232: Creating return object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,748 D 138 138] core_worker.cc:2424: Sealing return object fb63804cbf27174effffffffffffffffffffffff0100000001000000
+[2023-03-03 02:53:52,748 D 138 138] core_worker.cc:2407: Finished executing task fb63804cbf27174effffffffffffffffffffffff01000000, status=OK
+[2023-03-03 02:53:52,748 D 138 163] grpc_server.cc:146: Polled event from CQ, thead: 139928797185792::0, status: 1
+[2023-03-03 02:53:53,696 D 138 172] accessor.cc:784: Adding profile data, component type = worker, node id = 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9
+[2023-03-03 02:53:53,696 D 138 172] profiling.cc:87: Pushed 4 events to GCS.
+[2023-03-03 02:53:53,697 D 138 172] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = 9a3f4b8f106a9316c166e1517fe388e7a87c948f6d20f49d27c991a9
+[2023-03-03 02:54:02,725 W 138 173] metric_exporter.cc:207: [1] Export metrics to agent failed: GrpcUnknown: RPC Error message: Method not found!; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-03-03 02:54:52,696 I 138 172] core_worker.cc:502: Event stats:
+
+
+Global stats: 887 total (8 active)
+Queueing time: mean = 6.880 ms, max = 1.523 s, min = -0.100 s, total = 6.102 s
+Execution time:  mean = 2.770 ms, total = 2.457 s
+Event stats:
+	UNKNOWN - 697 total (5 active, 1 running), CPU time: mean = 3.516 ms, total = 2.451 s
+	CoreWorker.deadline_timer.flush_profiling_events - 59 total (1 active), CPU time: mean = 23.703 us, total = 1.398 ms
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 59 total (0 active), CPU time: mean = 24.894 us, total = 1.469 ms
+	GcsClient.deadline_timer.check_gcs_connection - 59 total (1 active), CPU time: mean = 28.060 us, total = 1.656 ms
+	PeriodicalRunner.RunFnPeriodically - 7 total (0 active), CPU time: mean = 115.886 us, total = 811.202 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeInfoGcsService.grpc_client.GetAllNodeInfo - 1 total (0 active), CPU time: mean = 134.608 us, total = 134.608 us
+	CoreWorkerService.grpc_server.PushTask - 1 total (0 active), CPU time: mean = 71.846 us, total = 71.846 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (0 active), CPU time: mean = 405.018 us, total = 405.018 us
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (0 active), CPU time: mean = 29.878 us, total = 29.878 us
+	StatsGcsService.grpc_client.AddProfileData - 1 total (0 active), CPU time: mean = 72.489 us, total = 72.489 us
+
+
+[2023-03-03 02:55:52,697 I 138 172] core_worker.cc:502: Event stats:
+
+
+Global stats: 1787 total (8 active)
+Queueing time: mean = 3.460 ms, max = 1.523 s, min = -0.100 s, total = 6.183 s
+Execution time:  mean = 1.396 ms, total = 2.495 s
+Event stats:
+	UNKNOWN - 1417 total (5 active, 1 running), CPU time: mean = 1.754 ms, total = 2.485 s
+	CoreWorker.deadline_timer.flush_profiling_events - 119 total (1 active), CPU time: mean = 18.730 us, total = 2.229 ms
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 119 total (0 active), CPU time: mean = 24.151 us, total = 2.874 ms
+	GcsClient.deadline_timer.check_gcs_connection - 119 total (1 active), CPU time: mean = 27.885 us, total = 3.318 ms
+	PeriodicalRunner.RunFnPeriodically - 7 total (0 active), CPU time: mean = 115.886 us, total = 811.202 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeInfoGcsService.grpc_client.GetAllNodeInfo - 1 total (0 active), CPU time: mean = 134.608 us, total = 134.608 us
+	CoreWorkerService.grpc_server.PushTask - 1 total (0 active), CPU time: mean = 71.846 us, total = 71.846 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (0 active), CPU time: mean = 405.018 us, total = 405.018 us
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (0 active), CPU time: mean = 29.878 us, total = 29.878 us
+	StatsGcsService.grpc_client.AddProfileData - 1 total (0 active), CPU time: mean = 72.489 us, total = 72.489 us
+
+

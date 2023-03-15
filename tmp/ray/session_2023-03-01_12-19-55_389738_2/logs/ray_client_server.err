@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/lib/python3.8/site-packages/ray/workers/setup_worker.py", line 33, in <module>
+    runtime_env_context.exec_worker(remaining_args, Language.Value(args.language))
+  File "/lib/python3.8/site-packages/ray/_private/runtime_env/context.py", line 65, in exec_worker
+    os.execvp("bash", args=["bash", "-c", command_str])
+  File "/lib/python3.8/os.py", line 568, in execvp
+    _execvpe(file, args)
+  File "/lib/python3.8/os.py", line 610, in _execvpe
+    raise last_exc
+  File "/lib/python3.8/os.py", line 601, in _execvpe
+    exec_func(fullname, *argrest)
+FileNotFoundError: [Errno 2] No such file or directory

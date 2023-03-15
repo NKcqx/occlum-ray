@@ -1,0 +1,4 @@
+:actor_name:BaseWorkerMixin
+2023-03-03 02:54:00,985	INFO torch.py:346 -- Setting up process group for: env:// [rank=2, world_size=3]
+2023-03-03 02:54:02,133	INFO torch.py:98 -- Moving model to device: cpu
+2023-03-03 02:54:02,134	INFO torch.py:132 -- Wrapping provided model in DDP.

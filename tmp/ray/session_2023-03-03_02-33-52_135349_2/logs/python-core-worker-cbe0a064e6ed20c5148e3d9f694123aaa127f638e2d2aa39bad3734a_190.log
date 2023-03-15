@@ -1,0 +1,160 @@
+[2023-03-03 02:34:06,704 I 190 190] core_worker_process.cc:120: Constructing CoreWorkerProcess. pid: 190
+[2023-03-03 02:34:06,757 D 190 202] core_worker_process.cc:200: Getting system config from raylet, remaining retries = 100
+[2023-03-03 02:34:06,758 D 190 190] ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-03_02-33-52_135349_2\"}}",
+[2023-03-03 02:34:06,797 D 190 190] core_worker.cc:88: Constructing CoreWorker, worker_id: cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:06,797 I 190 190] core_worker.cc:119: Connecting to local Raylet.
+[2023-03-03 02:34:06,797 I 190 190] raylet_client.cc:116: Creating RayletConnection.
+[2023-03-03 02:34:06,798 I 190 190] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-03_02-33-52_135349_2/sockets/raylet 0
+[2023-03-03 02:34:06,799 I 190 190] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-03_02-33-52_135349_2/sockets/raylet 0. OK
+[2023-03-03 02:34:06,800 I 190 190] raylet_client.cc:118: Created RayletConnection.
+[2023-03-03 02:34:06,800 I 190 190] raylet_client.cc:138: Begin AtomicRequestReply RegisterClientRequest
+[2023-03-03 02:34:06,800 I 190 190] raylet_client.cc:141: End AtomicRequestReply RegisterClientRequest. Status: OK
+[2023-03-03 02:34:06,800 I 190 190] core_worker.cc:135: Connected to local Raylet.
+[2023-03-03 02:34:06,800 I 190 190] core_worker.cc:164: Starting GRPC server.
+[2023-03-03 02:34:06,801 I 190 190] grpc_server.cc:105: worker server started, listening on port 44583.
+[2023-03-03 02:34:06,805 I 190 190] core_worker.cc:171: Started GRPC server.
+[2023-03-03 02:34:06,805 I 190 190] core_worker.cc:179: Initializing worker at address: 172.17.0.2:44583, worker ID cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a, raylet d77ad3dd1d2251ae576d5898f689c07b4c62e938a32ccddc13be1703
+[2023-03-03 02:34:06,842 I 190 234] gcs_server_address_updater.cc:32: GCS Server updater thread id: 140413197362944
+[2023-03-03 02:34:06,912 D 190 190] gcs_client.cc:165: GcsClient connected.
+[2023-03-03 02:34:06,912 I 190 190] core_worker.cc:205: GCS client created.
+[2023-03-03 02:34:06,912 I 190 190] core_worker.cc:207: Registered to GCS.
+[2023-03-03 02:34:06,912 D 190 190] subscriber.cc:348: Make a long polling request to 69152729e825c8bf1f1c196c52584a34deeb205993b7d435f697fa40
+[2023-03-03 02:34:06,913 I 190 190] core_worker.cc:267: Creating CoreWorkerPlasmaStoreProvider
+[2023-03-03 02:34:06,913 I 190 190] client.cc:762: Before ConnectSocketRetry
+[2023-03-03 02:34:06,913 I 190 190] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-03_02-33-52_135349_2/sockets/plasma_store 0
+[2023-03-03 02:34:06,913 I 190 190] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-03_02-33-52_135349_2/sockets/plasma_store 0. OK
+[2023-03-03 02:34:06,913 I 190 190] client.cc:764: After ConnectSocketRetry
+[2023-03-03 02:34:06,913 I 190 190] client.cc:766: After new StoreConn
+[2023-03-03 02:34:06,913 I 190 190] client.cc:769: After SendConnectRequest
+[2023-03-03 02:34:06,914 I 190 190] client.cc:772: After PlasmaReceive
+[2023-03-03 02:34:06,914 I 190 190] client.cc:774: After ReadConnectReply
+[2023-03-03 02:34:06,914 D 190 190] client.cc:392: called plasma_create on conn 30 with size 8 and metadata size 0
+[2023-03-03 02:34:06,914 I 190 190] protocol.cc:219: After CreatePlasmaCreateRequest, prepare to send
+[2023-03-03 02:34:06,914 I 190 190] protocol.cc:221: After PlasmaSend, status: 1
+[2023-03-03 02:34:06,914 I 190 190] client.cc:402: After SendCreateRequest
+[2023-03-03 02:34:06,914 I 190 190] client.cc:311: Before PlasmaReceive
+[2023-03-03 02:34:06,914 I 190 190] client.cc:313: After PlasmaReceive buffer size: 160
+[2023-03-03 02:34:06,914 I 190 190] client.cc:327: After RreadCreateReply, retry count: 0
+[2023-03-03 02:34:06,914 I 190 190] client.cc:355: After create PlasmaMutableBuffer
+[2023-03-03 02:34:06,914 I 190 190] client.cc:404: After HandleCreateReply
+[2023-03-03 02:34:06,915 I 190 190] core_worker.cc:277: Created CoreWorkerPlasmaStoreProvider
+[2023-03-03 02:34:06,918 D 190 190] core_worker_process.cc:276: Worker cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a is created.
+[2023-03-03 02:34:06,918 D 190 190] core_worker_process.cc:132: Stats setup in core worker.
+[2023-03-03 02:34:06,918 D 190 190] stats.h:75: Initialized stats
+[2023-03-03 02:34:06,919 I 190 190] io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-03 02:34:06,928 D 190 190] metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:45034
+[2023-03-03 02:34:06,936 I 190 245] core_worker.cc:502: Event stats:
+
+
+Global stats: 16 total (11 active)
+Queueing time: mean = 7.106 ms, max = 23.815 ms, min = 20.944 ms, total = 113.694 ms
+Execution time:  mean = 36.339 us, total = 581.420 us
+Event stats:
+	PeriodicalRunner.RunFnPeriodically - 7 total (2 active, 1 running), CPU time: mean = 83.060 us, total = 581.420 us
+	UNKNOWN - 3 total (3 active), CPU time: mean = 0.000 s, total = 0.000 s
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	CoreWorker.deadline_timer.flush_profiling_events - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsClient.deadline_timer.check_gcs_connection - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-03 02:34:06,958 D 190 245] accessor.cc:487: Getting information of all nodes.
+[2023-03-03 02:34:06,983 I 190 245] accessor.cc:599: Received notification for node id = d77ad3dd1d2251ae576d5898f689c07b4c62e938a32ccddc13be1703, IsAlive = 1
+[2023-03-03 02:34:06,983 D 190 245] accessor.cc:497: Finished getting information of all nodes, status = OK
+[2023-03-03 02:34:06,983 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,018 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_6b6121605cb142b1dab2323232e901000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=4a35ed307ae04382ae7a8c244f8e5f32}, task_id=ffffffffffffffff76dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-03 02:34:07,019 D 190 190] reference_count.cc:242: Add local reference ffffffffffffffff76dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:07,019 D 190 190] reference_count.cc:243: REF ffffffffffffffff76dae783429dfae1d0fc92ac0100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-03 02:34:07,019 I 190 190] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 76dae783429dfae1d0fc92ac01000000
+[2023-03-03 02:34:07,019 D 190 190] direct_actor_task_submitter.cc:169: Connecting to actor 76dae783429dfae1d0fc92ac01000000 at worker cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:07,019 D 190 190] core_worker_client_pool.cc:42: Connected to 172.17.0.2:44583
+[2023-03-03 02:34:07,019 D 190 190] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor 76dae783429dfae1d0fc92ac01000000 from 0 to 0
+[2023-03-03 02:34:07,019 I 190 190] direct_actor_task_submitter.cc:217: Connecting to actor 76dae783429dfae1d0fc92ac01000000 at worker cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:07,019 D 190 190] reference_count.cc:106: Adding borrowed object ffffffffffffffff76dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:07,019 I 190 190] core_worker.cc:2330: Creating actor: 76dae783429dfae1d0fc92ac01000000
+[2023-03-03 02:34:07,736 D 190 190] core_worker.cc:2407: Finished executing task ffffffffffffffff76dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:07,736 I 190 190] direct_actor_transport.cc:144: Actor creation task finished, task_id: ffffffffffffffff76dae783429dfae1d0fc92ac01000000, actor_id: 76dae783429dfae1d0fc92ac01000000
+[2023-03-03 02:34:07,736 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,741 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,741 D 190 190] actor_scheduling_queue.cc:89: Enqueue 0 cur seqno 0
+[2023-03-03 02:34:07,741 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=d02ddf7050b36c7676dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=0}
+[2023-03-03 02:34:07,742 D 190 190] core_worker.cc:2232: Creating return object d02ddf7050b36c7676dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:07,743 D 190 190] core_worker.cc:2424: Sealing return object d02ddf7050b36c7676dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:07,743 D 190 190] core_worker.cc:2407: Finished executing task d02ddf7050b36c7676dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:07,743 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,751 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,751 D 190 190] actor_scheduling_queue.cc:89: Enqueue 1 cur seqno 1
+[2023-03-03 02:34:07,751 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=e1ed4a6e6d9fcec976dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=6, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=1}
+[2023-03-03 02:34:07,751 D 190 190] core_worker.cc:2232: Creating return object e1ed4a6e6d9fcec976dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:07,752 D 190 190] core_worker.cc:2424: Sealing return object e1ed4a6e6d9fcec976dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:07,752 D 190 190] core_worker.cc:2407: Finished executing task e1ed4a6e6d9fcec976dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:07,752 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,756 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:07,756 D 190 190] actor_scheduling_queue.cc:89: Enqueue 2 cur seqno 2
+[2023-03-03 02:34:07,756 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=47702e300dc022d476dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=12, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=2}
+[2023-03-03 02:34:07,936 D 190 245] accessor.cc:784: Adding profile data, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:09,362 D 190 245] profiling.cc:87: Pushed 12 events to GCS.
+[2023-03-03 02:34:09,366 D 190 245] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:13,362 D 190 245] accessor.cc:784: Adding profile data, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:13,363 D 190 245] profiling.cc:87: Pushed 1 events to GCS.
+[2023-03-03 02:34:13,363 D 190 245] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:13,999 D 190 190] core_worker.cc:2232: Creating return object 47702e300dc022d476dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:13,999 D 190 190] core_worker.cc:2424: Sealing return object 47702e300dc022d476dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:13,999 D 190 190] core_worker.cc:2407: Finished executing task 47702e300dc022d476dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,000 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,195 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,196 D 190 190] actor_scheduling_queue.cc:89: Enqueue 3 cur seqno 3
+[2023-03-03 02:34:14,196 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=9c99814c74152b3576dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=16, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=3}
+[2023-03-03 02:34:14,363 D 190 245] accessor.cc:784: Adding profile data, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:14,363 D 190 245] profiling.cc:87: Pushed 3 events to GCS.
+[2023-03-03 02:34:14,364 D 190 245] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:14,467 D 190 190] core_worker.cc:2232: Creating return object 9c99814c74152b3576dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,467 D 190 190] core_worker.cc:2424: Sealing return object 9c99814c74152b3576dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,467 D 190 190] core_worker.cc:2407: Finished executing task 9c99814c74152b3576dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,467 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,471 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,472 D 190 190] actor_scheduling_queue.cc:89: Enqueue 4 cur seqno 4
+[2023-03-03 02:34:14,472 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=0b19126c9e00ff0e76dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=4}
+[2023-03-03 02:34:14,479 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,480 D 190 190] core_worker.cc:2232: Creating return object 0b19126c9e00ff0e76dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,480 D 190 190] core_worker.cc:2424: Sealing return object 0b19126c9e00ff0e76dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,480 D 190 190] core_worker.cc:2407: Finished executing task 0b19126c9e00ff0e76dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,480 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,480 D 190 190] actor_scheduling_queue.cc:89: Enqueue 5 cur seqno 5
+[2023-03-03 02:34:14,480 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=d7f5107d49f0624576dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=5}
+[2023-03-03 02:34:14,481 D 190 190] core_worker.cc:2232: Creating return object d7f5107d49f0624576dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,481 D 190 190] core_worker.cc:2424: Sealing return object d7f5107d49f0624576dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,481 D 190 190] core_worker.cc:2407: Finished executing task d7f5107d49f0624576dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,481 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,490 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,490 D 190 190] actor_scheduling_queue.cc:89: Enqueue 6 cur seqno 6
+[2023-03-03 02:34:14,490 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=f942250962e6c0f776dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=6}
+[2023-03-03 02:34:14,491 D 190 190] core_worker.cc:2232: Creating return object f942250962e6c0f776dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,491 D 190 190] core_worker.cc:2424: Sealing return object f942250962e6c0f776dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,491 D 190 190] core_worker.cc:2407: Finished executing task f942250962e6c0f776dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,491 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,498 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,499 D 190 190] actor_scheduling_queue.cc:89: Enqueue 7 cur seqno 7
+[2023-03-03 02:34:14,499 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=cbae9978d7df95b976dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=7}
+[2023-03-03 02:34:14,499 D 190 190] core_worker.cc:2232: Creating return object cbae9978d7df95b976dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,499 D 190 190] core_worker.cc:2424: Sealing return object cbae9978d7df95b976dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,499 D 190 190] core_worker.cc:2407: Finished executing task cbae9978d7df95b976dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,499 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,507 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:14,507 D 190 190] actor_scheduling_queue.cc:89: Enqueue 8 cur seqno 8
+[2023-03-03 02:34:14,507 D 190 190] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=cb7637d4f0dbb7e476dae783429dfae1d0fc92ac01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=76dae783429dfae1d0fc92ac01000000, actor_caller_id=ffffffffffffffff0600ca0e1c7279f23e8676c901000000, actor_counter=8}
+[2023-03-03 02:34:14,510 D 190 190] core_worker.cc:2232: Creating return object cb7637d4f0dbb7e476dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,510 D 190 190] core_worker.cc:2424: Sealing return object cb7637d4f0dbb7e476dae783429dfae1d0fc92ac0100000001000000
+[2023-03-03 02:34:14,510 D 190 190] core_worker.cc:2407: Finished executing task cb7637d4f0dbb7e476dae783429dfae1d0fc92ac01000000, status=OK
+[2023-03-03 02:34:14,510 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:15,363 D 190 245] accessor.cc:784: Adding profile data, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:15,364 D 190 245] profiling.cc:87: Pushed 23 events to GCS.
+[2023-03-03 02:34:15,365 D 190 245] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = cbe0a064e6ed20c5148e3d9f694123aaa127f638e2d2aa39bad3734a
+[2023-03-03 02:34:15,525 D 190 231] grpc_server.cc:146: Polled event from CQ, thead: 140413188966144::0, status: 1
+[2023-03-03 02:34:15,525 I 190 245] core_worker.cc:3099: Force kill actor request has received. exiting immediately...
+[2023-03-03 02:34:15,525 I 190 245] core_worker.cc:599: Disconnecting to the raylet.
+[2023-03-03 02:34:15,525 I 190 245] raylet_client.cc:166: RayletClient::Disconnect, exit_type=INTENDED_EXIT, has creation_task_exception_pb_bytes=0
+[2023-03-03 02:34:15,526 W 190 245] raylet_client.cc:189: IOError: Broken pipe [RayletClient] Failed to disconnect from raylet. This means the raylet the worker is connected is probably already dead.
+[2023-03-03 02:34:15,526 D 190 245] logging.cc:287: Uninstall signal handlers.

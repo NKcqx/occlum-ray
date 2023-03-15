@@ -1,0 +1,18 @@
+2023-03-02 04:13:37,524	INFO server.py:843 -- Starting Ray Client server on 0.0.0.0:10001
+2023-03-02 04:15:18,628	INFO proxier.py:672 -- New data connection from client d066b2653610482ba63311faa77efa2a: 
+2023-03-02 04:15:18,765	INFO services.py:791 -- Starting process with command: ['/bin/python3.8', '/lib/python3.8/site-packages/ray/workers/setup_worker.py', '-m', 'ray.util.client.server', '--address=172.17.0.2:6379', '--host=0.0.0.0', '--port=23000', '--mode=specific-server', '--language=PYTHON', '--redis-password=5241590000000000', '--serialized-runtime-env-context={"command_prefix": [], "env_vars": {}, "py_executable": "/bin/python3.8", "resources_dir": null, "container": {}}']
+2023-03-02 04:15:19,768	ERROR proxier.py:330 -- SpecificServer startup failed for client: d066b2653610482ba63311faa77efa2a
+2023-03-02 04:15:19,768	INFO proxier.py:338 -- SpecificServer started on port: 23000 with PID: 81 for client: d066b2653610482ba63311faa77efa2a
+2023-03-02 04:15:19,769	ERROR proxier.py:683 -- Server startup failed for client: d066b2653610482ba63311faa77efa2a, using JobConfig: <ray.job_config.JobConfig object at 0x7f3205ec9c70>!
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lib/python3.8/site-packages/ray/util/client/server/proxier.py", line 411, in _check_processes
+    if specific_server.poll() is not None:
+  File "/lib/python3.8/site-packages/ray/util/client/server/proxier.py", line 79, in poll
+    return proc.process.poll()
+AttributeError: 'int' object has no attribute 'poll'
+2023-03-02 04:15:49,771	INFO proxier.py:744 -- d066b2653610482ba63311faa77efa2a last started stream at 1677730518.628326. Current stream started at 1677730518.628326.

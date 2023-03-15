@@ -1,0 +1,49 @@
+[2023-03-01 08:39:51,613 D 21 21] (raylet) gcs_client.h:47: Connect to gcs server via address: 172.17.0.2:6379
+[2023-03-01 08:39:51,715 D 21 21] (raylet) gcs_client.cc:165: GcsClient connected.
+[2023-03-01 08:39:51,735 D 21 21] (raylet) accessor.cc:646: Fetched internal config: {"object_spilling_config": "{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-01_08-39-50_436968_2\"}}", "is_external_storage_type_fs": true}
+[2023-03-01 08:39:51,736 D 21 21] (raylet) ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-01_08-39-50_436968_2\"}}",
+[2023-03-01 08:39:51,736 D 21 21] (raylet) main.cc:174: Starting raylet with static resource configuration: {memory: 230558498820000, node:172.17.0.2: 10000, CPU: 160000, object_store_memory: 28819812350000}
+[2023-03-01 08:39:51,736 D 21 21] (raylet) main.cc:252: Starting object manager with configuration: 
+rpc_service_threads_number = 4, object_chunk_size = 5242880
+[2023-03-01 08:39:51,736 D 21 21] (raylet) stats.h:75: Initialized stats
+[2023-03-01 08:39:51,736 I 21 21] (raylet) io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-01 08:39:51,736 D 21 21] (raylet) metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:62744
+[2023-03-01 08:39:51,737 I 21 21] (raylet) store_runner.cc:32: Allowing the Plasma store to use up to 2.88198GB of memory.
+[2023-03-01 08:39:51,737 I 21 21] (raylet) store_runner.cc:48: Starting object store with directory /tmp, fallback /host/tmp/ray, and huge page support disabled
+[2023-03-01 08:39:51,745 D 21 38] (raylet) store_runner.cc:88: starting server listening on /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store
+[2023-03-01 08:39:51,745 D 21 38] (raylet) plasma_allocator.cc:87: allocating 2881979187
+[2023-03-01 08:39:51,745 I 21 38] (raylet) dlmalloc.cc:154: create_and_mmap_buffer(2882011144, /tmp/plasmaXXXXXX)
+[2023-03-01 08:39:51,745 I 21 21] (raylet) object_manager.cc:152: buffer_pool_store_client_->Connect
+[2023-03-01 08:39:51,745 I 21 21] (raylet) client.cc:762: Before ConnectSocketRetry
+[2023-03-01 08:39:51,745 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 0
+[2023-03-01 08:39:51,745 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 0. IOError: Connection refused
+[2023-03-01 08:39:52,745 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 1
+[2023-03-01 08:39:52,746 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 1. IOError: Connection refused
+[2023-03-01 08:39:52,746 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 1, num_retries = 10)
+[2023-03-01 08:39:53,746 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 2
+[2023-03-01 08:39:53,746 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 2. IOError: Connection refused
+[2023-03-01 08:39:53,746 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 2, num_retries = 10)
+[2023-03-01 08:39:54,746 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 3
+[2023-03-01 08:39:54,747 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 3. IOError: Connection refused
+[2023-03-01 08:39:54,747 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 3, num_retries = 10)
+[2023-03-01 08:39:55,747 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 4
+[2023-03-01 08:39:55,747 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 4. IOError: Connection refused
+[2023-03-01 08:39:55,747 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 4, num_retries = 10)
+[2023-03-01 08:39:56,747 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 5
+[2023-03-01 08:39:56,748 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 5. IOError: Connection refused
+[2023-03-01 08:39:56,748 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 5, num_retries = 10)
+[2023-03-01 08:39:57,748 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 6
+[2023-03-01 08:39:57,748 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 6. IOError: Connection refused
+[2023-03-01 08:39:57,748 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 6, num_retries = 10)
+[2023-03-01 08:39:58,748 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 7
+[2023-03-01 08:39:58,749 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 7. IOError: Connection refused
+[2023-03-01 08:39:58,749 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 7, num_retries = 10)
+[2023-03-01 08:39:59,749 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 8
+[2023-03-01 08:39:59,749 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 8. IOError: Connection refused
+[2023-03-01 08:39:59,749 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 8, num_retries = 10)
+[2023-03-01 08:40:00,749 I 21 21] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 9
+[2023-03-01 08:40:00,750 I 21 21] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store 9. IOError: Connection refused
+[2023-03-01 08:40:00,750 I 21 21] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-01_08-39-50_436968_2/sockets/plasma_store (num_attempts = 9, num_retries = 10)
+[2023-03-01 08:40:01,750 C 21 21] (raylet) object_manager.cc:153:  Check failed: _s.ok() Bad status: IOError: Connection refused
+*** StackTrace Information ***
+

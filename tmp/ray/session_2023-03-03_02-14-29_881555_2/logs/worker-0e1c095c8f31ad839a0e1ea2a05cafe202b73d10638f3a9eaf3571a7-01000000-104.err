@@ -1,0 +1,85 @@
+:actor_name:BackendExecutor
+2023-03-03 02:14:41,071	INFO backend.py:145 -- Start to create PG.
+2023-03-03 02:14:41,071	INFO backend.py:207 -- Prepare to get current PG.
+2023-03-03 02:14:41,071	INFO backend.py:209 -- Current PG: None
+2023-03-03 02:14:41,072	INFO placement_group.py:187 -- calling worker.core_worker.create_placement_group, name: , bundles: [{'CPU': 1, 'GPU': 0}, {'CPU': 1, 'GPU': 0}, {'CPU': 1, 'GPU': 0}], strategy: PACK, detached: False.
+2023-03-03 02:14:41,073	INFO placement_group.py:191 -- created pg id: PlacementGroupID(f8cc11efec794cdf699e2fea49ca01000000), init PG class.
+2023-03-03 02:14:41,073	INFO placement_group.py:193 -- created pg class, return.
+2023-03-03 02:14:41,183	INFO placement_group.py:75 -- sending bundle_reservation_check.options remote task.
+2023-03-03 02:14:41,186	INFO backend.py:236 -- pg_ready, wait
+2023-03-03 02:14:41,186	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:42,846	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(bdcbf9a84abb6a28ffffffffffffffffffffffff0100000001000000)], remaining_ids: []
+2023-03-03 02:14:42,846	INFO backend.py:149 -- Created PG: <ray.util.placement_group.PlacementGroup object at 0x7f03393a51f0>
+2023-03-03 02:14:42,847	INFO backend.py:150 -- Start to create `WorkerGroup`, num_workers: 3, num_cpus_per_worker: 1, pg: <ray.util.placement_group.PlacementGroup object at 0x7f03393a51f0>, 
+2023-03-03 02:14:42,847	INFO worker_group.py:158 -- Init WorkerGroup with config: num_workers: 3, num_cpus_per_worker: 1, additional_resources_per_worker: None, actor_cls: None
+2023-03-03 02:14:42,847	INFO worker_group.py:170 -- Created executable class: <class 'ray.train.worker_group.BaseWorkerMixin'>
+2023-03-03 02:14:42,848	INFO worker_group.py:185 -- Resources are enough, result: <ray.train.worker_group.ActorClass(BaseWorkerMixin) object at 0x7f03393a5430>
+2023-03-03 02:14:45,683	INFO backend.py:166 -- WorkerGroup: <ray.train.worker_group.WorkerGroup object at 0x7f03393b2c40>
+2023-03-03 02:14:45,684	INFO backend.py:182 -- _backend: <ray.train.torch.TorchBackend object at 0x7f03393a5550> calling `on_start`.
+2023-03-03 02:14:52,033	INFO backend.py:184 -- Done calling <ray.train.torch.TorchBackend object at 0x7f03393a5550>'s `on_start`
+2023-03-03 02:14:52,231	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,485	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(75adf2f6698120974a3317ce9c0fa5c2454f95f90100000001000000)], remaining_ids: [ObjectRef(0f02b2593e6a6abb6706d5dfc0b900a9b316d92f0100000001000000), ObjectRef(aac4900c6624ffd5239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,486	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,486	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(aac4900c6624ffd5239770a13c834aca10d8cffc0100000001000000)], remaining_ids: [ObjectRef(0f02b2593e6a6abb6706d5dfc0b900a9b316d92f0100000001000000)]
+2023-03-03 02:14:52,486	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,488	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(0f02b2593e6a6abb6706d5dfc0b900a9b316d92f0100000001000000)], remaining_ids: []
+2023-03-03 02:14:52,500	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,702	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(259f3ad4bc76b8f06706d5dfc0b900a9b316d92f0100000001000000)], remaining_ids: [ObjectRef(63d6d135c68f3a5c4a3317ce9c0fa5c2454f95f90100000001000000), ObjectRef(0294fc5009ed6390239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,703	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,703	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(0294fc5009ed6390239770a13c834aca10d8cffc0100000001000000)], remaining_ids: [ObjectRef(63d6d135c68f3a5c4a3317ce9c0fa5c2454f95f90100000001000000)]
+2023-03-03 02:14:52,703	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,704	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(63d6d135c68f3a5c4a3317ce9c0fa5c2454f95f90100000001000000)], remaining_ids: []
+2023-03-03 02:14:52,710	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,711	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(39ed41cb887cb9716706d5dfc0b900a9b316d92f0100000001000000)], remaining_ids: [ObjectRef(0226d44fede68dae4a3317ce9c0fa5c2454f95f90100000001000000), ObjectRef(76e6a579d5e987c7239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,712	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,712	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(0226d44fede68dae4a3317ce9c0fa5c2454f95f90100000001000000)], remaining_ids: [ObjectRef(76e6a579d5e987c7239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,713	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,713	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(76e6a579d5e987c7239770a13c834aca10d8cffc0100000001000000)], remaining_ids: []
+2023-03-03 02:14:52,719	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,720	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(93bcd53d3dc182986706d5dfc0b900a9b316d92f0100000001000000)], remaining_ids: [ObjectRef(1f69248b51ce12784a3317ce9c0fa5c2454f95f90100000001000000), ObjectRef(9a7584a1bddb5da1239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,721	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,721	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(1f69248b51ce12784a3317ce9c0fa5c2454f95f90100000001000000)], remaining_ids: [ObjectRef(9a7584a1bddb5da1239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,722	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,722	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(9a7584a1bddb5da1239770a13c834aca10d8cffc0100000001000000)], remaining_ids: []
+2023-03-03 02:14:52,728	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:14:52,731	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(202ead5c495bfbc06706d5dfc0b900a9b316d92f0100000001000000)], remaining_ids: [ObjectRef(716f451c56ddd6ec4a3317ce9c0fa5c2454f95f90100000001000000), ObjectRef(c11db179e8f15549239770a13c834aca10d8cffc0100000001000000)]
+2023-03-03 02:14:52,735	ERROR worker.py:94 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::BaseWorkerMixin._BaseWorkerMixin__execute()[39m (pid=191, ip=172.17.0.2, repr=<ray.train.worker_group.BaseWorkerMixin object at 0x7f055d23ef70>)
+  File "/lib/python3.8/site-packages/ray/train/worker_group.py", line 26, in __execute
+    return func(*args, **kwargs)
+  File "/lib/python3.8/site-packages/ray/train/backend.py", line 506, in end_training
+    output = session.finish()
+  File "/lib/python3.8/site-packages/ray/train/session.py", line 118, in finish
+    func_output = self.training_thread.join()
+  File "/lib/python3.8/site-packages/ray/train/utils.py", line 96, in join
+    raise self.exc
+  File "/lib/python3.8/site-packages/ray/train/utils.py", line 89, in run
+    self.ret = self._target(*self._args, **self._kwargs)
+  File "/lib/python3.8/site-packages/ray/train/utils.py", line 138, in <lambda>
+    return lambda: train_func(config)
+  File "/root/pytorch_ray.py", line 108, in train_func
+    train_loader = _prepare_train_data()
+  File "/root/pytorch_ray.py", line 66, in _prepare_train_data
+    train_data = datasets.MNIST(root = "/root/data", # data path in Occlum, instead of the host
+  File "/lib/python3.8/site-packages/torchvision/datasets/mnist.py", line 102, in __init__
+    raise RuntimeError("Dataset not found. You can use download=True to download it")
+RuntimeError: Dataset not found. You can use download=True to download it
+2023-03-03 02:14:52,736	ERROR worker.py:94 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::BaseWorkerMixin._BaseWorkerMixin__execute()[39m (pid=190, ip=172.17.0.2, repr=<ray.train.worker_group.BaseWorkerMixin object at 0x7f056537cf70>)
+  File "/lib/python3.8/site-packages/ray/train/worker_group.py", line 26, in __execute
+    return func(*args, **kwargs)
+  File "/lib/python3.8/site-packages/ray/train/backend.py", line 506, in end_training
+    output = session.finish()
+  File "/lib/python3.8/site-packages/ray/train/session.py", line 118, in finish
+    func_output = self.training_thread.join()
+  File "/lib/python3.8/site-packages/ray/train/utils.py", line 96, in join
+    raise self.exc
+  File "/lib/python3.8/site-packages/ray/train/utils.py", line 89, in run
+    self.ret = self._target(*self._args, **self._kwargs)
+  File "/lib/python3.8/site-packages/ray/train/utils.py", line 138, in <lambda>
+    return lambda: train_func(config)
+  File "/root/pytorch_ray.py", line 108, in train_func
+    train_loader = _prepare_train_data()
+  File "/root/pytorch_ray.py", line 66, in _prepare_train_data
+    train_data = datasets.MNIST(root = "/root/data", # data path in Occlum, instead of the host
+  File "/lib/python3.8/site-packages/torchvision/datasets/mnist.py", line 102, in __init__
+    raise RuntimeError("Dataset not found. You can use download=True to download it")
+RuntimeError: Dataset not found. You can use download=True to download it

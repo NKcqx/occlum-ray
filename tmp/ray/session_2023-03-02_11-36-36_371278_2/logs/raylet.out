@@ -1,0 +1,899 @@
+[2023-03-02 11:36:37,563 D 37 37] (raylet) gcs_client.h:47: Connect to gcs server via address: 172.17.0.2:37154
+[2023-03-02 11:36:37,666 D 37 37] (raylet) gcs_client.cc:165: GcsClient connected.
+[2023-03-02 11:36:37,672 D 37 37] (raylet) accessor.cc:646: Fetched internal config: {"object_spilling_config": "{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-02_11-36-36_371278_2\"}}", "is_external_storage_type_fs": true}
+[2023-03-02 11:36:37,672 D 37 37] (raylet) ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-02_11-36-36_371278_2\"}}",
+[2023-03-02 11:36:37,673 D 37 37] (raylet) main.cc:174: Starting raylet with static resource configuration: {object_store_memory: 5242880000000, CPU: 160000, node:172.17.0.2: 10000, memory: 243537104900000}
+[2023-03-02 11:36:37,673 D 37 37] (raylet) main.cc:252: Starting object manager with configuration: 
+rpc_service_threads_number = 4, object_chunk_size = 5242880
+[2023-03-02 11:36:37,673 D 37 37] (raylet) stats.h:75: Initialized stats
+[2023-03-02 11:36:37,673 I 37 37] (raylet) io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-02 11:36:37,673 D 37 37] (raylet) metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:63501
+[2023-03-02 11:36:37,674 I 37 37] (raylet) store_runner.cc:32: Allowing the Plasma store to use up to 0.524288GB of memory.
+[2023-03-02 11:36:37,674 I 37 37] (raylet) store_runner.cc:48: Starting object store with directory /tmp, fallback /host/tmp/ray, and huge page support disabled
+[2023-03-02 11:36:37,681 D 37 54] (raylet) store_runner.cc:88: starting server listening on /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store
+[2023-03-02 11:36:37,681 D 37 54] (raylet) plasma_allocator.cc:87: allocating 524285952
+[2023-03-02 11:36:37,681 I 37 54] (raylet) dlmalloc.cc:154: create_and_mmap_buffer(524288008, /tmp/plasmaXXXXXX)
+[2023-03-02 11:36:37,681 I 37 37] (raylet) object_manager.cc:152: buffer_pool_store_client_->Connect
+[2023-03-02 11:36:37,681 I 37 37] (raylet) client.cc:762: Before ConnectSocketRetry
+[2023-03-02 11:36:37,682 I 37 37] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 0
+[2023-03-02 11:36:37,682 I 37 37] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 0. IOError: Connection refused
+[2023-03-02 11:36:40,182 I 37 37] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 1
+[2023-03-02 11:36:40,182 I 37 37] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 1. IOError: Connection refused
+[2023-03-02 11:36:40,182 I 37 37] (raylet) client_connection.cc:58: Retrying to connect to socket for endpoint /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store (num_attempts = 1, num_retries = 100)
+[2023-03-02 11:36:41,327 D 37 54] (raylet) dlmalloc.cc:258: 0x7fa24c000008 = fake_mmap(524288008)
+[2023-03-02 11:36:41,327 D 37 54] (raylet) plasma_allocator.cc:89: allocated 524285952 at 0x7fa24c000040
+[2023-03-02 11:36:41,327 I 37 54] (raylet) plasma_allocator.cc:81: Before Free
+[2023-03-02 11:36:41,327 D 37 54] (raylet) plasma_allocator.cc:120: deallocating 524285952 at 0x7fa24c000040
+[2023-03-02 11:36:41,327 D 37 54] (raylet) plasma_allocator.cc:122: deallocated 524285952 at 0x7fa24c000040
+[2023-03-02 11:36:41,327 I 37 54] (raylet) plasma_allocator.cc:83: After Free
+[2023-03-02 11:36:41,327 I 37 54] (raylet) store_runner.cc:93: store_.reset begin
+[2023-03-02 11:36:41,328 I 37 54] (raylet) object_lifecycle_manager.cc:33: ObjectLifecycleManager created
+[2023-03-02 11:36:41,328 I 37 54] (raylet) store.cc:113: PlasmaStore constructor
+[2023-03-02 11:36:41,328 I 37 54] (raylet) store.cc:559: ========== Plasma store: =================
+Current usage: 0 / 0.524288 GB
+- num bytes created total: 0
+0 pending objects of total size 0MB
+- objects spillable: 0
+- bytes spillable: 0
+- objects unsealed: 0
+- bytes unsealed: 0
+- objects in use: 0
+- bytes in use: 0
+- objects evictable: 0
+- bytes evictable: 0
+
+- objects created by worker: 0
+- bytes created by worker: 0
+- objects restored: 0
+- bytes restored: 0
+- objects received: 0
+- bytes received: 0
+- objects errored: 0
+- bytes errored: 0
+
+[2023-03-02 11:36:41,328 I 37 54] (raylet) store.cc:119: PlasmaStore end
+[2023-03-02 11:36:41,328 I 37 54] (raylet) store_runner.cc:103: store_.reset end
+[2023-03-02 11:36:41,328 I 37 54] (raylet) store_runner.cc:105: store_->Start end
+[2023-03-02 11:36:42,683 I 37 37] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 2
+[2023-03-02 11:36:42,683 I 37 37] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 2. OK
+[2023-03-02 11:36:42,683 I 37 37] (raylet) client.cc:764: After ConnectSocketRetry
+[2023-03-02 11:36:42,683 I 37 37] (raylet) client.cc:766: After new StoreConn
+[2023-03-02 11:36:42,683 I 37 37] (raylet) client.cc:769: After SendConnectRequest
+[2023-03-02 11:36:42,683 I 37 54] (raylet) store.cc:365: Received message of type 16
+[2023-03-02 11:36:42,683 I 37 37] (raylet) client.cc:772: After PlasmaReceive
+[2023-03-02 11:36:42,684 I 37 37] (raylet) client.cc:774: After ReadConnectReply
+[2023-03-02 11:36:42,684 I 37 37] (raylet) object_manager.cc:155: buffer_pool_store_client_->Connect end
+[2023-03-02 11:36:42,685 I 37 37] (raylet) grpc_server.cc:105: ObjectManager server started, listening on port 40479.
+[2023-03-02 11:36:42,689 I 37 37] (raylet) node_manager.cc:333: Initializing NodeManager with ID 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:42,689 D 37 37] (raylet) local_resource_manager.cc:36: local resources: {object_store_memory: [5242880000000]/[5242880000000], memory: [243537104900000]/[243537104900000], node:172.17.0.2: [10000]/[10000], CPU: [160000]/[160000]}
+[2023-03-02 11:36:42,689 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, object_store_memory: 5242880000000/5242880000000, CPU: 160000/160000, node:172.17.0.2: 10000/10000}
+[2023-03-02 11:36:42,689 I 37 37] (raylet) client.cc:762: Before ConnectSocketRetry
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 0
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 0. OK
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client.cc:764: After ConnectSocketRetry
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client.cc:766: After new StoreConn
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client.cc:769: After SendConnectRequest
+[2023-03-02 11:36:42,690 I 37 54] (raylet) store.cc:365: Received message of type 16
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client.cc:772: After PlasmaReceive
+[2023-03-02 11:36:42,690 I 37 37] (raylet) client.cc:774: After ReadConnectReply
+[2023-03-02 11:36:42,691 I 37 37] (raylet) grpc_server.cc:105: NodeManager server started, listening on port 43765.
+[2023-03-02 11:36:42,693 D 37 37] (raylet) agent_manager.cc:65: Starting agent process with command: /bin/python3.8 -u /lib/python3.8/site-packages/ray/dashboard/agent.py --node-ip-address=172.17.0.2 --metrics-export-port=62190 --dashboard-agent-port=63501 --listen-port=0 --node-manager-port=43765 --object-store-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet --temp-dir=/host/tmp/ray --session-dir=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2 --runtime-env-dir=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/runtime_resources --log-dir=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/logs --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:37154 --minimal
+[2023-03-02 11:36:42,693 I 37 37] (raylet) process.cc:372: Start to call ProcessFD::spawnvpe
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:180: pipefds[1]: 29
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:182: vfork() return value: 0
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:194: Sending SIGCHLD signal
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:196: After Sent SIGCHLD signal
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:198: decouple ? 0
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:209: I am now the grandchild, pid: 37
+[2023-03-02 11:36:42,693 D 37 37] (raylet) process.cc:211: Calling exec, file image: /bin/python3.8 , argv: 0x7fa20958e140 , envp: 0x7fa209590700
+[2023-03-02 11:36:42,694 D 37 37] (raylet) process.cc:182: vfork() return value: 70
+[2023-03-02 11:36:42,694 D 37 37] (raylet) process.cc:233: Return ProcessFD, pid: 70
+[2023-03-02 11:36:42,694 I 37 37] (raylet) process.cc:374: Created ProcessFD, ec: system:0
+[2023-03-02 11:36:42,695 I 37 37] (raylet) raylet.cc:99: Enter Raylet::Start
+[2023-03-02 11:36:42,695 D 37 37] (raylet) accessor.cc:403: Registering node info, node id = 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, address is = 172.17.0.2
+[2023-03-02 11:36:42,695 I 37 37] (raylet) raylet.cc:101: After Raylet::RegisterGcs. Before Raylet::DoAccept
+[2023-03-02 11:36:42,720 I 37 71] (raylet) agent_manager.cc:88: Monitor agent process with pid 70, register timeout 300000ms.
+[2023-03-02 11:36:42,720 I 37 37] (raylet) raylet.cc:116: Raylet of id, 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 started. Raylet consists of node_manager and object_manager. node_manager address: 172.17.0.2:43765 object_manager address: 172.17.0.2:40479 hostname: 172.17.0.2
+[2023-03-02 11:36:42,721 D 37 37] (raylet) subscriber.cc:348: Make a long polling request to fad9b0403020b3c0238b2777574519653307f796c250bdb2f10ef15d
+[2023-03-02 11:36:42,721 D 37 37] (raylet) accessor.cc:420: Finished registering node info, status = OK, node id = 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:42,724 I 37 37] (raylet) node_manager.cc:538: [state-dump] Event stats:
+[state-dump] 
+[state-dump] 
+[state-dump] Global stats: 19 total (9 active)
+[state-dump] Queueing time: mean = 476.908 ms, max = 5.021 s, min = 16.881 us, total = 9.061 s
+[state-dump] Execution time:  mean = 264.528 ms, total = 5.026 s
+[state-dump] Event stats:
+[state-dump] 	PeriodicalRunner.RunFnPeriodically - 7 total (1 active, 1 running), CPU time: mean = 285.038 us, total = 1.995 ms
+[state-dump] 	GcsClient.deadline_timer.check_gcs_connection - 2 total (1 active), CPU time: mean = 6.008 us, total = 12.016 us
+[state-dump] 	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	RayletWorkerPool.deadline_timer.kill_idle_workers - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	ObjectManager.UpdateAvailableMemory - 1 total (0 active), CPU time: mean = 2.970 us, total = 2.970 us
+[state-dump] 	NodeManager.deadline_timer.debug_state_dump - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	NodeInfoGcsService.grpc_client.RegisterNode - 1 total (0 active), CPU time: mean = 940.885 us, total = 940.885 us
+[state-dump] 	NodeManager.deadline_timer.flush_free_objects - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	UNKNOWN - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	NodeManager.deadline_timer.record_metrics - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	NodeInfoGcsService.grpc_client.GetInternalConfig - 1 total (0 active), CPU time: mean = 5.023 s, total = 5.023 s
+[state-dump] 
+[state-dump] NodeManager:
+[state-dump] Node ID: 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[state-dump] Node name: 172.17.0.2
+[state-dump] InitialConfigResources: {CPU: 160000, object_store_memory: 5242880000000, memory: 243537104900000, node:172.17.0.2: 10000}
+[state-dump] ClusterTaskManager:
+[state-dump] ========== Node: 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 =================
+[state-dump] Infeasible queue length: 0
+[state-dump] Schedule queue length: 0
+[state-dump] Dispatch queue length: 0
+[state-dump] num_waiting_for_resource: 0
+[state-dump] num_waiting_for_plasma_memory: 0
+[state-dump] num_waiting_for_remote_node_resources: 0
+[state-dump] num_worker_not_started_by_job_config_not_exist: 0
+[state-dump] num_worker_not_started_by_registration_timeout: 0
+[state-dump] num_worker_not_started_by_process_rate_limit: 0
+[state-dump] num_tasks_waiting_for_workers: 0
+[state-dump] num_cancelled_tasks: 0
+[state-dump] cluster_resource_scheduler state: 
+[state-dump] Local id: 1488608853212997483 Local resources: {object_store_memory: [5242880000000]/[5242880000000], memory: [243537104900000]/[243537104900000], node:172.17.0.2: [10000]/[10000], CPU: [160000]/[160000]}node id: 1488608853212997483{object_store_memory: 5242880000000/5242880000000, memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, CPU: 160000/160000}
+[state-dump] Waiting tasks size: 0
+[state-dump] Number of executing tasks: 0
+[state-dump] Number of pinned task arguments: 0
+[state-dump] Number of total spilled tasks: 0
+[state-dump] Number of spilled waiting tasks: 0
+[state-dump] Number of spilled unschedulable tasks: 0
+[state-dump] Resource usage {
+[state-dump] }
+[state-dump] Running tasks by scheduling class:
+[state-dump] ==================================================
+[state-dump] 
+[state-dump] ClusterResources:
+[state-dump] LocalObjectManager:
+[state-dump] - num pinned objects: 0
+[state-dump] - pinned objects size: 0
+[state-dump] - num objects pending restore: 0
+[state-dump] - num objects pending spill: 0
+[state-dump] - num bytes pending spill: 0
+[state-dump] - cumulative spill requests: 0
+[state-dump] - cumulative restore requests: 0
+[state-dump] 
+[state-dump] ObjectManager:
+[state-dump] - num local objects: 0
+[state-dump] - num unfulfilled push requests: 0
+[state-dump] - num pull requests: 0
+[state-dump] - num chunks received total: 0
+[state-dump] - num chunks received failed (all): 0
+[state-dump] - num chunks received failed / cancelled: 0
+[state-dump] - num chunks received failed / plasma error: 0
+[state-dump] Event stats:
+[state-dump] Global stats: 0 total (0 active)
+[state-dump] Queueing time: mean = -nan s, max = -0.000 s, min = 9223372036.855 s, total = 0.000 s
+[state-dump] Execution time:  mean = -nan s, total = 0.000 s
+[state-dump] Event stats:
+[state-dump] PushManager:
+[state-dump] - num pushes in flight: 0
+[state-dump] - num chunks in flight: 0
+[state-dump] - num chunks remaining: 0
+[state-dump] - max chunks allowed: 409
+[state-dump] OwnershipBasedObjectDirectory:
+[state-dump] - num listeners: 0
+[state-dump] - cumulative location updates: 0
+[state-dump] - num location updates per second: 0.000
+[state-dump] - num location lookups per second: 0.000
+[state-dump] - num locations added per second: 0.000
+[state-dump] - num locations removed per second: 0.000
+[state-dump] BufferPool:
+[state-dump] - create buffer state map size: 0
+[state-dump] PullManager:
+[state-dump] - num bytes available for pulled objects: 524288000
+[state-dump] - num bytes being pulled (all): 0
+[state-dump] - num bytes being pulled / pinned: 0
+[state-dump] - num get request bundles: 0
+[state-dump] - num wait request bundles: 0
+[state-dump] - num task request bundles: 0
+[state-dump] - first get request bundle: N/A
+[state-dump] - first wait request bundle: N/A
+[state-dump] - first task request bundle: N/A
+[state-dump] - num objects queued: 0
+[state-dump] - num objects actively pulled (all): 0
+[state-dump] - num objects actively pulled / pinned: 0
+[state-dump] - num bundles being pulled: 0
+[state-dump] - num pull retries: 0
+[state-dump] - max timeout seconds: 0
+[state-dump] - max timeout request is already processed. No entry.
+[state-dump] 
+[state-dump] WorkerPool:
+[state-dump] - registered jobs: 0
+[state-dump] - process_failed_job_config_missing: 0
+[state-dump] - process_failed_rate_limited: 0
+[state-dump] - process_failed_pending_registration: 0
+[state-dump] - process_failed_runtime_env_setup_failed: 0
+[state-dump] - num PYTHON workers: 0
+[state-dump] - num PYTHON drivers: 0
+[state-dump] - num object spill callbacks queued: 0
+[state-dump] - num object restore queued: 0
+[state-dump] - num util functions queued: 0
+[state-dump] - num idle workers: 0
+[state-dump] TaskDependencyManager:
+[state-dump] - task deps map size: 0
+[state-dump] - get req map size: 0
+[state-dump] - wait req map size: 0
+[state-dump] - local objects map size: 0
+[state-dump] WaitManager:
+[state-dump] - num active wait requests: 0
+[state-dump] Subscriber:
+[state-dump] Channel WORKER_OBJECT_LOCATIONS_CHANNEL
+[state-dump] - cumulative subscribe requests: 0
+[state-dump] - cumulative unsubscribe requests: 0
+[state-dump] - active subscribed publishers: 0
+[state-dump] - cumulative published messages: 0
+[state-dump] - cumulative processed messages: 0
+[state-dump] Channel WORKER_OBJECT_EVICTION
+[state-dump] - cumulative subscribe requests: 0
+[state-dump] - cumulative unsubscribe requests: 0
+[state-dump] - active subscribed publishers: 0
+[state-dump] - cumulative published messages: 0
+[state-dump] - cumulative processed messages: 0
+[state-dump] Channel WORKER_REF_REMOVED_CHANNEL
+[state-dump] - cumulative subscribe requests: 0
+[state-dump] - cumulative unsubscribe requests: 0
+[state-dump] - active subscribed publishers: 0
+[state-dump] - cumulative published messages: 0
+[state-dump] - cumulative processed messages: 0
+[state-dump] num async plasma notifications: 0
+[state-dump] Remote node managers: 
+[state-dump] Event stats:
+[state-dump] Global stats: 19 total (9 active)
+[state-dump] Queueing time: mean = 476.908 ms, max = 5.021 s, min = 16.881 us, total = 9.061 s
+[state-dump] Execution time:  mean = 264.528 ms, total = 5.026 s
+[state-dump] Event stats:
+[state-dump] 	PeriodicalRunner.RunFnPeriodically - 7 total (1 active, 1 running), CPU time: mean = 285.038 us, total = 1.995 ms
+[state-dump] 	GcsClient.deadline_timer.check_gcs_connection - 2 total (1 active), CPU time: mean = 6.008 us, total = 12.016 us
+[state-dump] 	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	RayletWorkerPool.deadline_timer.kill_idle_workers - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	ObjectManager.UpdateAvailableMemory - 1 total (0 active), CPU time: mean = 2.970 us, total = 2.970 us
+[state-dump] 	NodeManager.deadline_timer.debug_state_dump - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	NodeInfoGcsService.grpc_client.RegisterNode - 1 total (0 active), CPU time: mean = 940.885 us, total = 940.885 us
+[state-dump] 	NodeManager.deadline_timer.flush_free_objects - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	UNKNOWN - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	NodeManager.deadline_timer.record_metrics - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+[state-dump] 	NodeInfoGcsService.grpc_client.GetInternalConfig - 1 total (0 active), CPU time: mean = 5.023 s, total = 5.023 s
+[state-dump] DebugString() time ms: 0
+[state-dump] 
+[state-dump] 
+[2023-03-02 11:36:42,748 D 37 37] (raylet) accessor.cc:487: Getting information of all nodes.
+[2023-03-02 11:36:42,748 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,749 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 160000/160000}
+[2023-03-02 11:36:42,761 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,763 I 37 37] (raylet) accessor.cc:599: Received notification for node id = 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, IsAlive = 1
+[2023-03-02 11:36:42,763 D 37 37] (raylet) node_manager.cc:894: [NodeAdded] Received callback from node id 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:42,763 D 37 37] (raylet) accessor.cc:497: Finished getting information of all nodes, status = OK
+[2023-03-02 11:36:42,763 D 37 37] (raylet) accessor.cc:111: Getting all job info.
+[2023-03-02 11:36:42,764 D 37 37] (raylet) accessor.cc:117: Finished getting all job info.
+[2023-03-02 11:36:42,802 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,802 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,872 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,872 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:42,872 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,902 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,902 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,963 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,964 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,965 I 37 37] (raylet) raylet.cc:138: Enter Raylet::HandleAccept
+[2023-03-02 11:36:42,965 I 37 37] (raylet) raylet.cc:156: ClientConnection::Create
+[2023-03-02 11:36:42,965 I 37 37] (raylet) raylet.cc:165: ClientConnection::Create end
+[2023-03-02 11:36:42,966 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message RegisterClientRequest(4) from worker with PID nil
+[2023-03-02 11:36:42,966 D 37 37] (raylet) accessor.cc:38: Adding job, job id = 01000000, driver pid = 2
+[2023-03-02 11:36:42,966 D 37 37] (raylet) subscriber.cc:365: Long polling request has replied from fad9b0403020b3c0238b2777574519653307f796c250bdb2f10ef15d
+[2023-03-02 11:36:42,967 D 37 37] (raylet) subscriber.cc:348: Make a long polling request to fad9b0403020b3c0238b2777574519653307f796c250bdb2f10ef15d
+[2023-03-02 11:36:42,967 I 37 37] (raylet) node_manager.cc:579: New job has started. Job id 01000000 Driver pid 2 is dead: 0 driver address: 172.17.0.2
+[2023-03-02 11:36:42,967 I 37 37] (raylet) worker_pool.cc:636: Job 01000000 already started in worker pool.
+[2023-03-02 11:36:42,967 D 37 37] (raylet) accessor.cc:48: Finished adding job, status = OK, job id = 01000000, driver pid = 2
+[2023-03-02 11:36:42,976 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,976 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 160000/160000}
+[2023-03-02 11:36:42,976 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:42,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,002 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,002 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,073 I 37 54] (raylet) store.cc:365: Received message of type 16
+[2023-03-02 11:36:43,074 I 37 54] (raylet) store.cc:365: Received message of type 1
+[2023-03-02 11:36:43,074 D 37 54] (raylet) store.cc:401: Received create request for object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 assigned request ID 1, 8 bytes
+[2023-03-02 11:36:43,074 D 37 54] (raylet) object_lifecycle_manager.cc:40: attempting to create object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 size 8
+[2023-03-02 11:36:43,074 D 37 54] (raylet) object_store.cc:28: attempting to create object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 size 8
+[2023-03-02 11:36:43,074 D 37 54] (raylet) plasma_allocator.cc:87: allocating 8
+[2023-03-02 11:36:43,074 D 37 54] (raylet) plasma_allocator.cc:89: allocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:43,074 I 37 54] (raylet) object_store.cc:35: Object store current usage 8e-09 / 0.524288 GB.
+[2023-03-02 11:36:43,074 D 37 54] (raylet) object_store.cc:50: create object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 succeeded
+[2023-03-02 11:36:43,074 D 37 54] (raylet) object_lifecycle_manager.cc:138: Object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 reference has incremented, num bytes in use is now 8
+[2023-03-02 11:36:43,074 D 37 54] (raylet) store.cc:530: Finishing create object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 request ID 1
+[2023-03-02 11:36:43,074 I 37 54] (raylet) store.cc:365: Received message of type 6
+[2023-03-02 11:36:43,074 D 37 54] (raylet) store.cc:286: sealing object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000
+[2023-03-02 11:36:43,074 D 37 37] (raylet) object_manager.cc:194: Object added 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000
+[2023-03-02 11:36:43,074 D 37 37] (raylet) ownership_based_object_directory.cc:126: Object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 does not have owner. ReportObjectAdded becomes a no-op.This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:43,074 I 37 54] (raylet) store.cc:365: Received message of type 10
+[2023-03-02 11:36:43,075 D 37 54] (raylet) store.cc:265: Object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 no longer in use by client
+[2023-03-02 11:36:43,075 D 37 37] (raylet) node_manager.cc:2123: Object local 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks ready
+[2023-03-02 11:36:43,075 D 37 54] (raylet) object_lifecycle_manager.cc:159: Releasing object no longer in use 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000, num bytes in use is now 0
+[2023-03-02 11:36:43,075 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message FreeObjectsInObjectStoreRequest(17) from worker with PID nil
+[2023-03-02 11:36:43,075 I 37 54] (raylet) store.cc:365: Received message of type 12
+[2023-03-02 11:36:43,075 D 37 54] (raylet) plasma_allocator.cc:120: deallocating 8 at 0x7fa24c000040
+[2023-03-02 11:36:43,075 D 37 54] (raylet) plasma_allocator.cc:122: deallocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:43,075 D 37 37] (raylet) ownership_based_object_directory.cc:149: Object 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000 does not have owner. ReportObjectRemoved becomes a no-op. This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:43,075 D 37 37] (raylet) node_manager.cc:2176: Object missing 9a3c8ba933df267f94ed6c758a680e0fdd582dab36b2f7ba00000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks waiting
+[2023-03-02 11:36:43,076 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,077 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:43,077 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,082 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message AnnounceWorkerPort(6) from worker with PID nil
+[2023-03-02 11:36:43,083 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,083 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,128 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,128 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,177 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,177 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 160000/160000}
+[2023-03-02 11:36:43,177 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,202 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,202 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,278 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,278 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:43,278 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,302 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,302 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,379 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,379 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:43,379 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,387 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,387 D 37 37] (raylet) cluster_task_manager.cc:50: Queuing and scheduling task ffffffffffffffffa7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:43,387 D 37 37] (raylet) cluster_task_manager.cc:95: Scheduling pending task ffffffffffffffffa7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:43,387 D 37 37] (raylet) random_scheduling_policy.cc:61: RandomPolicy, best_node = 1488608853212997483, # nodes = 1, resource_request = {}
+[2023-03-02 11:36:43,387 D 37 37] (raylet) local_task_manager.cc:82: No args, task can be dispatched ffffffffffffffffa7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:43,387 D 37 37] (raylet) local_task_manager.cc:647: RayTask ffffffffffffffffa7bd9e5b622e2f9765a3302601000000 has args of size 0
+[2023-03-02 11:36:43,388 D 37 37] (raylet) local_task_manager.cc:649: Size of pinned task args is now 0
+[2023-03-02 11:36:43,388 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 160000/160000}
+[2023-03-02 11:36:43,388 D 37 37] (raylet) worker_pool.cc:1152: Pop worker for task ffffffffffffffffa7bd9e5b622e2f9765a3302601000000 task name {type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=__init__, function_hash=01e7e8a15a3545549c215d0000f1f971}
+[2023-03-02 11:36:43,388 D 37 37] (raylet) worker_pool.cc:266: Starting new worker process of language PYTHON and type WORKER, current pool has 0 workers
+[2023-03-02 11:36:43,388 D 37 37] (raylet) worker_pool.cc:569: Starting worker process with command: /bin/python3.8 /lib/python3.8/site-packages/ray/workers/default_worker.py --node-ip-address=172.17.0.2 --node-manager-port=43765 --object-store-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet --redis-address=None --storage=None --temp-dir=/host/tmp/ray --metrics-agent-port=63501 --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:37154 --redis-password=5241590000000000 --startup-token=0, and the envs: RAY_JOB_ID:01000000, RAY_RAYLET_PID:37, SPT_NOENV:1.
+[2023-03-02 11:36:43,388 D 37 37] (raylet) worker_pool.cc:580: Prepare to start child Process !
+[2023-03-02 11:36:43,388 I 37 37] (raylet) process.cc:372: Start to call ProcessFD::spawnvpe
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:180: pipefds[1]: 38
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:182: vfork() return value: 0
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:194: Sending SIGCHLD signal
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:196: After Sent SIGCHLD signal
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:198: decouple ? 0
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:209: I am now the grandchild, pid: 37
+[2023-03-02 11:36:43,388 D 37 37] (raylet) process.cc:211: Calling exec, file image: /bin/python3.8 , argv: 0x7fa208fa9b60 , envp: 0x7fa209462040
+[2023-03-02 11:36:43,389 D 37 37] (raylet) process.cc:182: vfork() return value: 104
+[2023-03-02 11:36:43,389 D 37 37] (raylet) process.cc:233: Return ProcessFD, pid: 104
+[2023-03-02 11:36:43,389 I 37 37] (raylet) process.cc:374: Created ProcessFD, ec: system:0
+[2023-03-02 11:36:43,389 I 37 37] (raylet) worker_pool.cc:470: Started worker process of 1 worker(s) with pid 104, the token 0
+[2023-03-02 11:36:43,402 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,402 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,479 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,480 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:43,480 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,497 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,497 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,502 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,502 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,580 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,580 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:43,580 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,602 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,603 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,691 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,691 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:43,691 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,702 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,703 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,802 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,802 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:43,802 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,803 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,803 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,902 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,903 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:43,903 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:43,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,003 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,003 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,003 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,003 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:44,003 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,083 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,103 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,103 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,104 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,104 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:44,104 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,203 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,203 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,205 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,205 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:44,205 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,303 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,303 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,305 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,305 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:44,305 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,403 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,403 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,406 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,406 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:44,406 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,419 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,419 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,422 I 37 37] (raylet) raylet.cc:138: Enter Raylet::HandleAccept
+[2023-03-02 11:36:44,422 I 37 37] (raylet) raylet.cc:156: ClientConnection::Create
+[2023-03-02 11:36:44,422 I 37 37] (raylet) raylet.cc:165: ClientConnection::Create end
+[2023-03-02 11:36:44,422 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message RegisterClientRequest(4) from worker with PID nil
+[2023-03-02 11:36:44,422 D 37 37] (raylet) worker_pool.cc:718: Registering worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8 with pid 104, port: 0, register cost: 1034, worker_type: WORKER
+[2023-03-02 11:36:44,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,457 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,457 I 37 37] (raylet) agent_manager.cc:40: HandleRegisterAgent, ip: 172.17.0.2, port: 63501, pid: 70
+[2023-03-02 11:36:44,457 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,497 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,498 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,503 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,503 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,517 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,517 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:44,517 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,531 I 37 54] (raylet) store.cc:365: Received message of type 16
+[2023-03-02 11:36:44,531 I 37 54] (raylet) store.cc:365: Received message of type 1
+[2023-03-02 11:36:44,531 D 37 54] (raylet) store.cc:401: Received create request for object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 assigned request ID 2, 8 bytes
+[2023-03-02 11:36:44,531 D 37 54] (raylet) object_lifecycle_manager.cc:40: attempting to create object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 size 8
+[2023-03-02 11:36:44,531 D 37 54] (raylet) object_store.cc:28: attempting to create object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 size 8
+[2023-03-02 11:36:44,531 D 37 54] (raylet) plasma_allocator.cc:87: allocating 8
+[2023-03-02 11:36:44,532 D 37 54] (raylet) plasma_allocator.cc:89: allocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:44,532 D 37 54] (raylet) object_store.cc:50: create object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 succeeded
+[2023-03-02 11:36:44,532 D 37 54] (raylet) object_lifecycle_manager.cc:138: Object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 reference has incremented, num bytes in use is now 8
+[2023-03-02 11:36:44,532 D 37 54] (raylet) store.cc:530: Finishing create object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 request ID 2
+[2023-03-02 11:36:44,532 I 37 54] (raylet) store.cc:365: Received message of type 6
+[2023-03-02 11:36:44,532 D 37 54] (raylet) store.cc:286: sealing object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000
+[2023-03-02 11:36:44,532 D 37 37] (raylet) object_manager.cc:194: Object added 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000
+[2023-03-02 11:36:44,532 D 37 37] (raylet) ownership_based_object_directory.cc:126: Object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 does not have owner. ReportObjectAdded becomes a no-op.This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:44,532 D 37 37] (raylet) node_manager.cc:2123: Object local 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks ready
+[2023-03-02 11:36:44,532 I 37 54] (raylet) store.cc:365: Received message of type 10
+[2023-03-02 11:36:44,532 D 37 54] (raylet) store.cc:265: Object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 no longer in use by client
+[2023-03-02 11:36:44,532 D 37 54] (raylet) object_lifecycle_manager.cc:159: Releasing object no longer in use 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000, num bytes in use is now 0
+[2023-03-02 11:36:44,532 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message FreeObjectsInObjectStoreRequest(17) from worker with PID 104
+[2023-03-02 11:36:44,533 I 37 54] (raylet) store.cc:365: Received message of type 12
+[2023-03-02 11:36:44,533 D 37 54] (raylet) plasma_allocator.cc:120: deallocating 8 at 0x7fa24c000040
+[2023-03-02 11:36:44,533 D 37 54] (raylet) plasma_allocator.cc:122: deallocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:44,533 D 37 37] (raylet) ownership_based_object_directory.cc:149: Object 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000 does not have owner. ReportObjectRemoved becomes a no-op. This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:44,533 D 37 37] (raylet) node_manager.cc:2176: Object missing 2424cc2d39d53c48aa23072e04694f0f21add9698657e7de00000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks waiting
+[2023-03-02 11:36:44,537 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,537 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,538 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message AnnounceWorkerPort(6) from worker with PID 104
+[2023-03-02 11:36:44,538 D 37 37] (raylet) local_task_manager.cc:519: Dispatching task ffffffffffffffffa7bd9e5b622e2f9765a3302601000000 to worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:44,539 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,558 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message NotifyDirectCallTaskUnblocked(12) from worker with PID 104
+[2023-03-02 11:36:44,558 D 37 37] (raylet) dependency_manager.cc:148: Canceling get request for worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:44,603 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,604 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,618 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,618 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:44,618 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,704 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,704 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,718 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,718 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:44,719 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,804 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,804 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,819 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,819 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:44,819 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,904 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,904 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,920 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,920 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:44,920 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:44,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,004 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,004 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,020 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,020 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:45,021 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,104 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,104 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,121 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,121 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:45,121 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,204 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,204 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,222 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,222 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:45,222 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,304 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,304 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,322 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,322 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:45,323 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,404 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,404 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,423 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,423 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:45,423 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,438 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,498 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,498 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,504 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,504 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,524 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,524 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:45,524 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,537 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,537 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,604 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,605 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,624 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,624 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:45,625 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,704 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,705 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,725 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,725 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:45,725 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,805 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,805 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,826 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,826 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:45,826 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,905 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,905 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,926 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,926 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:45,927 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:45,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,005 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,005 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,027 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,027 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:46,027 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,105 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,105 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,128 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,128 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:46,128 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,205 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,205 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,228 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,228 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:46,229 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,305 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,305 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,329 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,329 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:46,329 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,405 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,405 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,430 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,430 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:46,430 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,498 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,498 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,505 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,505 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,530 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,530 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:46,531 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,537 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,537 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,605 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,606 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,631 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,631 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:46,631 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,705 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,706 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,732 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,732 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:46,732 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,806 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,806 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,832 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,832 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:46,833 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,906 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,906 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,933 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,933 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:46,933 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:46,978 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,006 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,006 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,034 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,034 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU: 160000/160000}
+[2023-03-02 11:36:47,034 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,106 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,106 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,134 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,135 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 160000/160000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,135 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,182 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message TaskDone(2) from worker with PID 104
+[2023-03-02 11:36:47,182 D 37 37] (raylet) node_manager.cc:2071: Finished task ffffffffffffffffa7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:47,182 D 37 37] (raylet) node_manager.cc:2104: Finishing assigned actor creation task
+[2023-03-02 11:36:47,182 D 37 37] (raylet) dependency_manager.cc:148: Canceling get request for worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:47,186 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message NotifyDirectCallTaskUnblocked(12) from worker with PID 104
+[2023-03-02 11:36:47,186 D 37 37] (raylet) dependency_manager.cc:148: Canceling get request for worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:47,188 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,188 D 37 37] (raylet) node_manager.cc:1783: Request to prepare resources for bundles: {placement group id={d64bfeb3542eec58fc1c47dc1f4c01000000}, bundle index={0}},{placement group id={d64bfeb3542eec58fc1c47dc1f4c01000000}, bundle index={1}},{placement group id={d64bfeb3542eec58fc1c47dc1f4c01000000}, bundle index={2}},
+[2023-03-02 11:36:47,189 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, CPU: 150000/160000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:47,189 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, object_store_memory: 5242880000000/5242880000000, CPU: 140000/160000}
+[2023-03-02 11:36:47,189 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:47,189 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,189 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,189 D 37 37] (raylet) node_manager.cc:1799: Request to commit resources for bundles: {placement group id={d64bfeb3542eec58fc1c47dc1f4c01000000}, bundle index={0}},{placement group id={d64bfeb3542eec58fc1c47dc1f4c01000000}, bundle index={1}},{placement group id={d64bfeb3542eec58fc1c47dc1f4c01000000}, bundle index={2}},
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, node:172.17.0.2: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, memory: 243537104900000/243537104900000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, memory: 243537104900000/243537104900000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000000/20000000, node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000000/20000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, memory: 243537104900000/243537104900000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000000/20000000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000/20000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000000/20000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000000/20000000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, node:172.17.0.2: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000000/20000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,190 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000000/30000000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000}
+[2023-03-02 11:36:47,190 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,206 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,206 D 37 37] (raylet) node_manager.cc:1016: [ResourceCreateUpdated] received callback from node id 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 with created or updated resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000}. Updating resource map. skip=1
+[2023-03-02 11:36:47,206 D 37 37] (raylet) node_manager.cc:1016: [ResourceCreateUpdated] received callback from node id 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 with created or updated resources: {bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000}. Updating resource map. skip=1
+[2023-03-02 11:36:47,206 D 37 37] (raylet) node_manager.cc:1016: [ResourceCreateUpdated] received callback from node id 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 with created or updated resources: {bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000}. Updating resource map. skip=1
+[2023-03-02 11:36:47,206 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,235 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,235 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, node:172.17.0.2: 10000/10000, object_store_memory: 5242880000000/5242880000000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000000/30000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,235 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,301 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,301 D 37 37] (raylet) worker_pool.cc:1346: Prestarting 1 workers given task backlog size 1 and available CPUs 13
+[2023-03-02 11:36:47,301 D 37 37] (raylet) worker_pool.cc:266: Starting new worker process of language PYTHON and type WORKER, current pool has 0 workers
+[2023-03-02 11:36:47,301 D 37 37] (raylet) worker_pool.cc:569: Starting worker process with command: /bin/python3.8 /lib/python3.8/site-packages/ray/workers/default_worker.py --node-ip-address=172.17.0.2 --node-manager-port=43765 --object-store-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet --redis-address=None --storage=None --temp-dir=/host/tmp/ray --metrics-agent-port=63501 --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:37154 --redis-password=5241590000000000 --startup-token=1, and the envs: RAY_JOB_ID:01000000, RAY_RAYLET_PID:37, SPT_NOENV:1.
+[2023-03-02 11:36:47,301 D 37 37] (raylet) worker_pool.cc:580: Prepare to start child Process !
+[2023-03-02 11:36:47,301 I 37 37] (raylet) process.cc:372: Start to call ProcessFD::spawnvpe
+[2023-03-02 11:36:47,301 D 37 37] (raylet) process.cc:180: pipefds[1]: 43
+[2023-03-02 11:36:47,302 D 37 37] (raylet) process.cc:182: vfork() return value: 0
+[2023-03-02 11:36:47,302 D 37 37] (raylet) process.cc:194: Sending SIGCHLD signal
+[2023-03-02 11:36:47,302 D 37 37] (raylet) process.cc:196: After Sent SIGCHLD signal
+[2023-03-02 11:36:47,302 D 37 37] (raylet) process.cc:198: decouple ? 0
+[2023-03-02 11:36:47,302 D 37 37] (raylet) process.cc:209: I am now the grandchild, pid: 37
+[2023-03-02 11:36:47,302 D 37 37] (raylet) process.cc:211: Calling exec, file image: /bin/python3.8 , argv: 0x7fa2095a5570 , envp: 0x7fa208ee2800
+[2023-03-02 11:36:47,303 D 37 37] (raylet) process.cc:182: vfork() return value: 137
+[2023-03-02 11:36:47,303 D 37 37] (raylet) process.cc:233: Return ProcessFD, pid: 137
+[2023-03-02 11:36:47,303 I 37 37] (raylet) process.cc:374: Created ProcessFD, ec: system:0
+[2023-03-02 11:36:47,303 I 37 37] (raylet) worker_pool.cc:470: Started worker process of 1 worker(s) with pid 137, the token 1
+[2023-03-02 11:36:47,303 D 37 37] (raylet) cluster_task_manager.cc:50: Queuing and scheduling task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000
+[2023-03-02 11:36:47,303 D 37 37] (raylet) cluster_task_manager.cc:95: Scheduling pending task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000
+[2023-03-02 11:36:47,303 D 37 37] (raylet) hybrid_scheduling_policy.cc:102: Node 1488608853212997483 is available for request {bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10} with critical resource utilization 0.1875 based on local view {CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000000/30000000, memory: 243537104900000/243537104900000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000}
+[2023-03-02 11:36:47,303 D 37 37] (raylet) cluster_resource_scheduler.cc:165: Scheduling decision. forcing spillback: 0. Best node: 1488608853212997483 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, is infeasible: 0
+[2023-03-02 11:36:47,303 D 37 37] (raylet) local_task_manager.cc:82: No args, task can be dispatched 87a0ce08f36820ed7a18a90598646a2479e41f5501000000
+[2023-03-02 11:36:47,303 D 37 37] (raylet) local_task_manager.cc:647: RayTask 87a0ce08f36820ed7a18a90598646a2479e41f5501000000 has args of size 0
+[2023-03-02 11:36:47,303 D 37 37] (raylet) local_task_manager.cc:649: Size of pinned task args is now 0
+[2023-03-02 11:36:47,303 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,303 D 37 37] (raylet) worker_pool.cc:1152: Pop worker for task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000 task name {type=PythonFunctionDescriptor, module_name=ray.util.placement_group, class_name=, function_name=_export_bundle_reservation_check_method_if_needed.<locals>.bundle_reservation_check_func, function_hash=aac9c7b2b17749daafdc3e52c2165b17}
+[2023-03-02 11:36:47,303 D 37 37] (raylet) worker_pool.cc:266: Starting new worker process of language PYTHON and type WORKER, current pool has 0 workers
+[2023-03-02 11:36:47,303 D 37 37] (raylet) worker_pool.cc:569: Starting worker process with command: /bin/python3.8 /lib/python3.8/site-packages/ray/workers/default_worker.py --node-ip-address=172.17.0.2 --node-manager-port=43765 --object-store-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet --redis-address=None --storage=None --temp-dir=/host/tmp/ray --metrics-agent-port=63501 --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:37154 --redis-password=5241590000000000 --startup-token=2, and the envs: RAY_JOB_ID:01000000, RAY_RAYLET_PID:37, SPT_NOENV:1.
+[2023-03-02 11:36:47,303 D 37 37] (raylet) worker_pool.cc:580: Prepare to start child Process !
+[2023-03-02 11:36:47,303 I 37 37] (raylet) process.cc:372: Start to call ProcessFD::spawnvpe
+[2023-03-02 11:36:47,303 D 37 37] (raylet) process.cc:180: pipefds[1]: 44
+[2023-03-02 11:36:47,304 D 37 37] (raylet) process.cc:182: vfork() return value: 0
+[2023-03-02 11:36:47,304 D 37 37] (raylet) process.cc:194: Sending SIGCHLD signal
+[2023-03-02 11:36:47,304 D 37 37] (raylet) process.cc:196: After Sent SIGCHLD signal
+[2023-03-02 11:36:47,304 D 37 37] (raylet) process.cc:198: decouple ? 0
+[2023-03-02 11:36:47,304 D 37 37] (raylet) process.cc:209: I am now the grandchild, pid: 37
+[2023-03-02 11:36:47,304 D 37 37] (raylet) process.cc:211: Calling exec, file image: /bin/python3.8 , argv: 0x7fa2095a85b0 , envp: 0x7fa208ee2800
+[2023-03-02 11:36:47,335 D 37 37] (raylet) process.cc:182: vfork() return value: 138
+[2023-03-02 11:36:47,335 D 37 37] (raylet) process.cc:233: Return ProcessFD, pid: 138
+[2023-03-02 11:36:47,335 I 37 37] (raylet) process.cc:374: Created ProcessFD, ec: system:0
+[2023-03-02 11:36:47,336 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,336 I 37 37] (raylet) worker_pool.cc:470: Started worker process of 1 worker(s) with pid 138, the token 2
+[2023-03-02 11:36:47,336 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,336 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,336 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,336 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,406 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,406 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,447 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,447 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,447 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,498 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,499 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,506 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,506 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,547 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,548 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,548 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,589 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,590 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,606 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,607 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,648 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,648 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU: 130000/160000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:47,649 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,706 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,707 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,759 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,759 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, node:172.17.0.2: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000}
+[2023-03-02 11:36:47,759 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,807 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,807 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,870 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,870 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000}
+[2023-03-02 11:36:47,870 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,907 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,907 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,970 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,970 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, node:172.17.0.2: 10000/10000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000}
+[2023-03-02 11:36:47,971 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,979 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:47,979 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,007 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,007 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,071 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,071 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000}
+[2023-03-02 11:36:48,071 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,084 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,085 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,107 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,107 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,182 W 37 48] (raylet) metric_exporter.cc:207: [1] Export metrics to agent failed: GrpcUnknown: RPC Error message: Method not found!; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-03-02 11:36:48,182 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,182 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {object_store_memory: 5242880000000/5242880000000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, node:172.17.0.2: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:48,183 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,207 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,207 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,293 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,293 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU: 130000/160000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, memory: 243537104900000/243537104900000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000}
+[2023-03-02 11:36:48,293 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,307 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,307 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,393 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,393 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, node:172.17.0.2: 10000/10000, object_store_memory: 5242880000000/5242880000000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:48,394 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,407 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,407 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,439 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,494 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,494 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU: 130000/160000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:48,494 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,499 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,499 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,507 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,507 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,590 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,590 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,605 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,605 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, object_store_memory: 5242880000000/5242880000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000}
+[2023-03-02 11:36:48,605 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,607 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,607 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,706 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,706 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU: 130000/160000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:48,706 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,707 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,708 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,757 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,757 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,758 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,758 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,760 I 37 37] (raylet) raylet.cc:138: Enter Raylet::HandleAccept
+[2023-03-02 11:36:48,760 I 37 37] (raylet) raylet.cc:156: ClientConnection::Create
+[2023-03-02 11:36:48,760 I 37 37] (raylet) raylet.cc:165: ClientConnection::Create end
+[2023-03-02 11:36:48,760 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message RegisterClientRequest(4) from worker with PID nil
+[2023-03-02 11:36:48,760 D 37 37] (raylet) worker_pool.cc:718: Registering worker c29da7d6b589e7b9d8d070fbcef9de7176de4c3854ba11beeb93c59a with pid 137, port: 0, register cost: 1459, worker_type: WORKER
+[2023-03-02 11:36:48,761 I 37 37] (raylet) raylet.cc:138: Enter Raylet::HandleAccept
+[2023-03-02 11:36:48,761 I 37 37] (raylet) raylet.cc:156: ClientConnection::Create
+[2023-03-02 11:36:48,761 I 37 37] (raylet) raylet.cc:165: ClientConnection::Create end
+[2023-03-02 11:36:48,761 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message RegisterClientRequest(4) from worker with PID nil
+[2023-03-02 11:36:48,761 D 37 37] (raylet) worker_pool.cc:718: Registering worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c with pid 138, port: 0, register cost: 1458, worker_type: WORKER
+[2023-03-02 11:36:48,775 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,776 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,787 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,787 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,806 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,806 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, object_store_memory: 5242880000000/5242880000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000}
+[2023-03-02 11:36:48,807 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,807 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,808 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,868 I 37 54] (raylet) store.cc:365: Received message of type 16
+[2023-03-02 11:36:48,869 I 37 54] (raylet) store.cc:365: Received message of type 1
+[2023-03-02 11:36:48,869 D 37 54] (raylet) store.cc:401: Received create request for object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 assigned request ID 3, 8 bytes
+[2023-03-02 11:36:48,869 D 37 54] (raylet) object_lifecycle_manager.cc:40: attempting to create object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 size 8
+[2023-03-02 11:36:48,869 D 37 54] (raylet) object_store.cc:28: attempting to create object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 size 8
+[2023-03-02 11:36:48,869 D 37 54] (raylet) plasma_allocator.cc:87: allocating 8
+[2023-03-02 11:36:48,869 D 37 54] (raylet) plasma_allocator.cc:89: allocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:48,869 D 37 54] (raylet) object_store.cc:50: create object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 succeeded
+[2023-03-02 11:36:48,869 D 37 54] (raylet) object_lifecycle_manager.cc:138: Object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 reference has incremented, num bytes in use is now 8
+[2023-03-02 11:36:48,869 D 37 54] (raylet) store.cc:530: Finishing create object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 request ID 3
+[2023-03-02 11:36:48,869 I 37 54] (raylet) store.cc:365: Received message of type 6
+[2023-03-02 11:36:48,869 D 37 54] (raylet) store.cc:286: sealing object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000
+[2023-03-02 11:36:48,869 D 37 37] (raylet) object_manager.cc:194: Object added ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000
+[2023-03-02 11:36:48,869 D 37 37] (raylet) ownership_based_object_directory.cc:126: Object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 does not have owner. ReportObjectAdded becomes a no-op.This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:48,869 D 37 37] (raylet) node_manager.cc:2123: Object local ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks ready
+[2023-03-02 11:36:48,869 I 37 54] (raylet) store.cc:365: Received message of type 10
+[2023-03-02 11:36:48,869 D 37 54] (raylet) store.cc:265: Object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 no longer in use by client
+[2023-03-02 11:36:48,870 D 37 54] (raylet) object_lifecycle_manager.cc:159: Releasing object no longer in use ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000, num bytes in use is now 0
+[2023-03-02 11:36:48,870 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message FreeObjectsInObjectStoreRequest(17) from worker with PID 137
+[2023-03-02 11:36:48,870 I 37 54] (raylet) store.cc:365: Received message of type 16
+[2023-03-02 11:36:48,870 I 37 54] (raylet) store.cc:365: Received message of type 12
+[2023-03-02 11:36:48,870 D 37 54] (raylet) plasma_allocator.cc:120: deallocating 8 at 0x7fa24c000040
+[2023-03-02 11:36:48,870 D 37 54] (raylet) plasma_allocator.cc:122: deallocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:48,870 D 37 37] (raylet) ownership_based_object_directory.cc:149: Object ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000 does not have owner. ReportObjectRemoved becomes a no-op. This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:48,870 I 37 54] (raylet) store.cc:365: Received message of type 1
+[2023-03-02 11:36:48,870 D 37 37] (raylet) node_manager.cc:2176: Object missing ae68d251f4a58605a9cd4c7d7dabefda822172dee04bcd2a00000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks waiting
+[2023-03-02 11:36:48,870 D 37 54] (raylet) store.cc:401: Received create request for object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 assigned request ID 4, 8 bytes
+[2023-03-02 11:36:48,870 D 37 54] (raylet) object_lifecycle_manager.cc:40: attempting to create object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 size 8
+[2023-03-02 11:36:48,870 D 37 54] (raylet) object_store.cc:28: attempting to create object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 size 8
+[2023-03-02 11:36:48,870 D 37 54] (raylet) plasma_allocator.cc:87: allocating 8
+[2023-03-02 11:36:48,870 D 37 54] (raylet) plasma_allocator.cc:89: allocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:48,870 D 37 54] (raylet) object_store.cc:50: create object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 succeeded
+[2023-03-02 11:36:48,870 D 37 54] (raylet) object_lifecycle_manager.cc:138: Object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 reference has incremented, num bytes in use is now 8
+[2023-03-02 11:36:48,870 D 37 54] (raylet) store.cc:530: Finishing create object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 request ID 4
+[2023-03-02 11:36:48,871 I 37 54] (raylet) store.cc:365: Received message of type 6
+[2023-03-02 11:36:48,871 D 37 54] (raylet) store.cc:286: sealing object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000
+[2023-03-02 11:36:48,871 D 37 37] (raylet) object_manager.cc:194: Object added a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000
+[2023-03-02 11:36:48,871 D 37 37] (raylet) ownership_based_object_directory.cc:126: Object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 does not have owner. ReportObjectAdded becomes a no-op.This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:48,871 D 37 37] (raylet) node_manager.cc:2123: Object local a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks ready
+[2023-03-02 11:36:48,871 I 37 54] (raylet) store.cc:365: Received message of type 10
+[2023-03-02 11:36:48,871 D 37 54] (raylet) store.cc:265: Object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 no longer in use by client
+[2023-03-02 11:36:48,871 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message FreeObjectsInObjectStoreRequest(17) from worker with PID 138
+[2023-03-02 11:36:48,871 D 37 54] (raylet) object_lifecycle_manager.cc:159: Releasing object no longer in use a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000, num bytes in use is now 0
+[2023-03-02 11:36:48,871 I 37 54] (raylet) store.cc:365: Received message of type 12
+[2023-03-02 11:36:48,871 D 37 54] (raylet) plasma_allocator.cc:120: deallocating 8 at 0x7fa24c000040
+[2023-03-02 11:36:48,871 D 37 54] (raylet) plasma_allocator.cc:122: deallocated 8 at 0x7fa24c000040
+[2023-03-02 11:36:48,871 D 37 37] (raylet) ownership_based_object_directory.cc:149: Object a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000 does not have owner. ReportObjectRemoved becomes a no-op. This should only happen for Plasma store warmup objects.
+[2023-03-02 11:36:48,871 D 37 37] (raylet) node_manager.cc:2176: Object missing a06aaaf7e183c12d32f95763522c70f8745e1c293843d25800000000,  on 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, 0 tasks waiting
+[2023-03-02 11:36:48,877 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message AnnounceWorkerPort(6) from worker with PID 137
+[2023-03-02 11:36:48,882 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,883 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,883 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message AnnounceWorkerPort(6) from worker with PID 138
+[2023-03-02 11:36:48,883 D 37 37] (raylet) local_task_manager.cc:519: Dispatching task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000 to worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c
+[2023-03-02 11:36:48,883 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,907 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,907 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {memory: 243537104900000/243537104900000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU: 130000/160000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 29999990/30000000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000}
+[2023-03-02 11:36:48,908 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,921 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,922 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,936 D 37 37] (raylet) node_manager.cc:1108: [Worker] Message NotifyDirectCallTaskUnblocked(12) from worker with PID 138
+[2023-03-02 11:36:48,936 D 37 37] (raylet) dependency_manager.cc:148: Canceling get request for worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c
+[2023-03-02 11:36:48,940 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,940 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000000/30000000, memory: 243537104900000/243537104900000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000}
+[2023-03-02 11:36:48,941 D 37 37] (raylet) node_manager.cc:2071: Finished task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000
+[2023-03-02 11:36:48,941 D 37 37] (raylet) dependency_manager.cc:94: Canceling wait request for worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c
+[2023-03-02 11:36:48,941 D 37 37] (raylet) dependency_manager.cc:148: Canceling get request for worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c
+[2023-03-02 11:36:48,941 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,953 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1
+[2023-03-02 11:36:48,953 D 37 37] (raylet) cluster_task_manager.cc:50: Queuing and scheduling task ffffffffffffffff2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,953 D 37 37] (raylet) cluster_task_manager.cc:95: Scheduling pending task ffffffffffffffff2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,953 D 37 37] (raylet) hybrid_scheduling_policy.cc:102: Node 1488608853212997483 is available for request {CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000} with critical resource utilization 0.1875 based on local view {bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, node:172.17.0.2: 10000/10000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000/30000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000000/30000000, memory: 243537104900000/243537104900000}
+[2023-03-02 11:36:48,953 D 37 37] (raylet) cluster_resource_scheduler.cc:165: Scheduling decision. forcing spillback: 0. Best node: 1488608853212997483 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, is infeasible: 0
+[2023-03-02 11:36:48,954 D 37 37] (raylet) local_task_manager.cc:82: No args, task can be dispatched ffffffffffffffff2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,954 D 37 37] (raylet) local_task_manager.cc:647: RayTask ffffffffffffffff2371ce94bef0ec8867d4c11c01000000 has args of size 0
+[2023-03-02 11:36:48,954 D 37 37] (raylet) local_task_manager.cc:649: Size of pinned task args is now 0
+[2023-03-02 11:36:48,954 D 37 37] (raylet) cluster_resource_manager.cc:38: Update node info, node_id: 1488608853212997483, node_resources: {node:172.17.0.2: 10000/10000, bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 30000000/30000000, bundle_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, memory: 243537104900000/243537104900000, object_store_memory: 5242880000000/5242880000000, CPU_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, bundle_group_0_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000, CPU_group_1_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000/10000, CPU: 130000/160000, CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 20000/30000, bundle_group_2_d64bfeb3542eec58fc1c47dc1f4c01000000: 10000000/10000000}
+[2023-03-02 11:36:48,954 D 37 37] (raylet) worker_pool.cc:1152: Pop worker for task ffffffffffffffff2371ce94bef0ec8867d4c11c01000000 task name {type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=0ceea7ca28fd43f4b1106a1945b42a18}
+[2023-03-02 11:36:48,954 D 37 37] (raylet) worker_pool.cc:266: Starting new worker process of language PYTHON and type WORKER, current pool has 2 workers
+[2023-03-02 11:36:48,954 D 37 37] (raylet) worker_pool.cc:569: Starting worker process with command: /bin/python3.8 /lib/python3.8/site-packages/ray/workers/default_worker.py --node-ip-address=172.17.0.2 --node-manager-port=43765 --object-store-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store --raylet-name=/host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet --redis-address=None --storage=None --temp-dir=/host/tmp/ray --metrics-agent-port=63501 --logging-rotate-bytes=536870912 --logging-rotate-backup-count=5 --gcs-address=172.17.0.2:37154 --redis-password=5241590000000000 --startup-token=3, and the envs: RAY_JOB_ID:01000000, RAY_RAYLET_PID:37, SPT_NOENV:1.
+[2023-03-02 11:36:48,954 D 37 37] (raylet) worker_pool.cc:580: Prepare to start child Process !
+[2023-03-02 11:36:48,954 I 37 37] (raylet) process.cc:372: Start to call ProcessFD::spawnvpe
+[2023-03-02 11:36:48,954 D 37 37] (raylet) process.cc:180: pipefds[1]: 52
+[2023-03-02 11:36:48,954 D 37 69] (raylet) grpc_server.cc:146: Polled event from CQ, thead: 140334621280000::0, status: 1

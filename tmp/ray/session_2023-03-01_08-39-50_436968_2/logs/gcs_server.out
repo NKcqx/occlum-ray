@@ -1,0 +1,418 @@
+[2023-03-01 08:39:50,543 D 3 3] (gcs_server) ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-01_08-39-50_436968_2\"}}",
+[2023-03-01 08:39:50,543 D 3 3] (gcs_server) stats.h:75: Initialized stats
+[2023-03-01 08:39:50,543 I 3 3] (gcs_server) io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-01 08:39:50,551 D 3 3] (gcs_server) metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:62744
+[2023-03-01 08:39:50,558 I 3 3] (gcs_server) gcs_server.cc:56: GCS storage type is memory
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:44: Loading job table data.
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:56: Loading node table data.
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:68: Loading cluster resources table data.
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:95: Loading actor table data.
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:108: Loading actor task spec table data.
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:81: Loading placement group table data.
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:48: Finished loading job table data, size = 0
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:60: Finished loading node table data, size = 0
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:72: Finished loading cluster resources table data, size = 0
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:99: Finished loading actor table data, size = 0
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:112: Finished loading actor task spec table data, size = 0
+[2023-03-01 08:39:50,559 I 3 3] (gcs_server) gcs_init_data.cc:86: Finished loading placement group table data, size = 0
+[2023-03-01 08:39:50,559 D 3 3] (gcs_server) local_resource_manager.cc:36: local resources: {}
+[2023-03-01 08:39:50,560 I 3 3] (gcs_server) gcs_heartbeat_manager.cc:31: GcsHeartbeatManager start, num_heartbeats_timeout=30
+[2023-03-01 08:39:50,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:50,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:50,561 D 3 3] (gcs_server) gcs_actor_manager.cc:1242: The number of registered actors is 0, and the number of created actors is 0
+[2023-03-01 08:39:50,570 I 3 3] (gcs_server) grpc_server.cc:105: GcsServer server started, listening on port 6379.
+[2023-03-01 08:39:50,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:50,574 I 3 3] (gcs_server) gcs_server.cc:181: GcsNodeManager: 
+- RegisterNode request count: 0
+- DrainNode request count: 0
+- GetAllNodeInfo request count: 0
+- GetInternalConfig request count: 0
+
+GcsActorManager: 
+- RegisterActor request count: 0
+- CreateActor request count: 0
+- GetActorInfo request count: 0
+- GetNamedActorInfo request count: 0
+- GetAllActorInfo request count: 0
+- KillActor request count: 0
+- ListNamedActors request count: 0
+- Registered actors count: 0
+- Destroyed actors count: 0
+- Named actors count: 0
+- Unresolved actors count: 0
+- Pending actors count: 0
+- Created actors count: 0
+- owners_: 0
+- actor_to_register_callbacks_: 0
+- actor_to_create_callbacks_: 0
+- sorted_destroyed_actor_list_: 0
+
+GcsResourceManager: 
+- GetResources request count: 0
+- GetAllAvailableResources request count0
+- UpdateResources request count: 0
+- DeleteResources request count: 0
+- ReportResourceUsage request count: 0
+- GetAllResourceUsage request count: 0
+
+GcsPlacementGroupManager: 
+- CreatePlacementGroup request count: 0
+- RemovePlacementGroup request count: 0
+- GetPlacementGroup request count: 0
+- GetAllPlacementGroup request count: 0
+- WaitPlacementGroupUntilReady request count: 0
+- GetNamedPlacementGroup request count: 0
+- Scheduling pending placement group count: 0
+- Registered placement groups count: 0
+- Named placement group count: 0
+- Pending placement groups count: 0
+- Infeasible placement groups count: 0
+
+GcsPublisher {}
+
+[runtime env manager] ID to URIs table:
+[runtime env manager] URIs reference table:
+
+GrpcBasedResourceBroadcaster:
+- Tracked nodes: 0
+[2023-03-01 08:39:50,574 I 3 3] (gcs_server) gcs_server.cc:660: Event stats:
+
+
+Global stats: 13 total (4 active)
+Queueing time: mean = 2.239 ms, max = 14.105 ms, min = 9.672 us, total = 29.109 ms
+Execution time:  mean = 1.118 ms, total = 14.536 ms
+Event stats:
+	GcsInMemoryStore.GetAll - 6 total (0 active), CPU time: mean = 2.393 ms, total = 14.357 ms
+	PeriodicalRunner.RunFnPeriodically - 4 total (2 active, 1 running), CPU time: mean = 42.920 us, total = 171.682 us
+	RayletLoadPulled - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	RaySyncer.deadline_timer.report_resource_report - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsInMemoryStore.Put - 1 total (0 active), CPU time: mean = 7.362 us, total = 7.362 us
+
+
+[2023-03-01 08:39:51,515 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,521 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,522 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,522 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,523 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,523 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,523 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,523 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:51,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:51,717 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,718 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,735 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,735 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,818 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,819 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,920 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:51,920 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,020 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,021 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,121 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,121 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,222 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,222 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,323 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,323 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,424 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,424 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,524 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,525 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:52,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:52,625 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,625 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,726 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,726 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,827 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,827 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,927 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:52,928 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,028 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,028 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,129 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,129 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,230 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,230 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,331 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,331 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,432 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,432 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,532 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,533 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:53,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:53,633 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,633 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,734 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,734 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,835 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,835 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,935 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:53,936 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,036 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,036 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,137 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,137 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,238 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,238 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,338 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,338 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,439 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,439 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,540 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,540 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:54,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:54,641 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,641 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,742 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,742 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,842 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,843 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,943 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:54,943 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,044 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,044 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,145 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,145 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,246 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,246 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,346 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,346 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,447 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,447 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,548 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,548 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:55,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:55,649 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,649 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,749 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,750 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,850 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,850 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,951 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:55,951 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,052 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,052 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,152 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,152 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,253 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,253 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,354 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,354 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,454 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,455 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,555 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,555 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:56,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:56,656 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,656 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,757 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,757 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,858 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,858 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,958 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:56,958 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,059 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,059 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,160 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,160 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,260 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,261 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,361 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,361 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,462 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,462 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:57,563 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,563 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:57,663 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,664 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,764 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,764 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,865 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,865 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,966 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:57,966 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,067 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,067 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,167 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,167 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,268 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,268 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,369 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,369 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,469 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,470 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,561 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:58,570 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,570 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,574 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:58,671 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,671 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,772 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,772 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,872 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,872 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,973 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:58,973 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,074 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,074 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,174 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,175 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,275 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,275 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,376 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,376 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,476 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,477 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,562 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:39:59,575 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:39:59,577 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,577 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,678 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,678 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,779 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,779 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,879 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,880 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,980 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:39:59,980 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,081 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,081 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,182 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,182 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,282 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,283 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,383 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,383 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,484 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,484 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,560 W 3 7] (gcs_server) metric_exporter.cc:207: [1] Export metrics to agent failed: GrpcUnavailable: RPC Error message: failed to connect to all addresses; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-03-01 08:40:00,562 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:40:00,575 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:40:00,585 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,585 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,685 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,686 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,786 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,786 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,887 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,887 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,988 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:00,988 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,088 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,089 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,189 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,189 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,290 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,290 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,391 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,391 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,491 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,492 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,562 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:40:01,575 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:40:01,592 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,592 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,693 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,693 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,794 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,795 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,896 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,896 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,997 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:01,998 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,099 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,100 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,201 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,201 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,302 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,303 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,404 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,405 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,506 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,506 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,562 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:40:02,575 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:40:02,607 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,608 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,709 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,709 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,811 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,812 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,912 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:02,913 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,014 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,015 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,115 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,116 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,217 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,218 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,319 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,319 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,420 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,421 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,522 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,523 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,562 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:40:03,575 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:40:03,624 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,624 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,725 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,726 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,827 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,828 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,929 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:03,931 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,033 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,037 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,180 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,181 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,295 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,295 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,397 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,397 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,498 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,499 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,562 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:40:04,575 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:40:04,600 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,600 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,701 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,702 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,803 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,803 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,904 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:04,905 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,006 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,006 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,107 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,107 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,209 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,209 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,310 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,310 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,411 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,412 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,513 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,513 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,563 D 3 3] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-01 08:40:05,576 I 3 3] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-01 08:40:05,614 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,615 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,716 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,716 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,817 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,818 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,919 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:05,919 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:06,021 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:06,022 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:06,122 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1
+[2023-03-01 08:40:06,123 D 3 19] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140469284656896::0, status: 1

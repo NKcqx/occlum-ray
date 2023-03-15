@@ -1,0 +1,6 @@
+:task_name:foo
+[mutex.cc : 926] RAW: pthread_getschedparam failed: 1
+[symbolize_elf.inc : 979] RAW: /proc/self/task/89/maps: errno=2
+[2023-03-01 08:36:57,511 C 89 131] gcs_client.cc:300: Couldn't reconnect to GCS server. The last attempted GCS server address was 172.17.0.2:60805
+*** StackTrace Information ***
+

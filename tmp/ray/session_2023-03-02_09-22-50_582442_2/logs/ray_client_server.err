@@ -1,0 +1,44 @@
+2023-03-02 09:23:03,369	INFO server.py:843 -- Starting Ray Client server on 0.0.0.0:10001
+2023-03-02 09:56:51,634	INFO proxier.py:684 -- New data connection from client 8d935927326c4ea98df11618679e4239: 
+2023-03-02 09:56:51,778	INFO services.py:791 -- Starting process with command: ['/bin/python3.8', '/lib/python3.8/site-packages/ray/workers/setup_worker.py', '-m', 'ray.util.client.server', '--address=172.17.0.2:6379', '--host=0.0.0.0', '--port=23000', '--mode=specific-server', '--language=PYTHON', '--redis-password=5241590000000000', '--serialized-runtime-env-context={"command_prefix": [], "env_vars": {}, "py_executable": "/bin/python3.8", "resources_dir": null, "container": {}}']
+2023-03-02 09:56:52,781	ERROR proxier.py:342 -- SpecificServer startup failed for client: 8d935927326c4ea98df11618679e4239
+2023-03-02 09:56:52,781	INFO proxier.py:350 -- SpecificServer started on port: 23000 with PID: 81 for client: 8d935927326c4ea98df11618679e4239
+2023-03-02 09:57:59,514	INFO proxier.py:756 -- 8d935927326c4ea98df11618679e4239 last started stream at 1677751011.6344962. Current stream started at 1677751011.6344962.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_common.py", line 442, in wrapper
+    ret = self._cache[fun]
+AttributeError: _cache
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lib/python3.8/site-packages/ray/util/client/server/proxier.py", line 423, in _check_processes
+    if specific_server.poll() is not None:
+  File "/lib/python3.8/site-packages/ray/util/client/server/proxier.py", line 83, in poll
+    p = psutil.Process(proc.process)
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/__init__.py", line 332, in __init__
+    self._init(pid)
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/__init__.py", line 361, in _init
+    self.create_time()
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/__init__.py", line 714, in create_time
+    self._create_time = self._proc.create_time()
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_pslinux.py", line 1642, in wrapper
+    return fun(self, *args, **kwargs)
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_pslinux.py", line 1852, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_pslinux.py", line 1642, in wrapper
+    return fun(self, *args, **kwargs)
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_common.py", line 445, in wrapper
+    return fun(self)
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_pslinux.py", line 1684, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_common.py", line 775, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+  File "/lib/python3.8/site-packages/ray/thirdparty_files/psutil/_common.py", line 764, in cat
+    return f.read()
+FileNotFoundError: [Errno 2] No such file or directory

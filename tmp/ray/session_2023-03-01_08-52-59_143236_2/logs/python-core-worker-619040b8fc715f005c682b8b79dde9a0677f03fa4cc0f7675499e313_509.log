@@ -1,0 +1,150 @@
+[2023-03-01 08:53:23,390 I 509 509] core_worker_process.cc:120: Constructing CoreWorkerProcess. pid: 509
+[2023-03-01 08:53:23,414 D 509 513] core_worker_process.cc:200: Getting system config from raylet, remaining retries = 100
+[2023-03-01 08:53:23,415 D 509 509] ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-01_08-52-59_143236_2\"}}",
+[2023-03-01 08:53:23,415 D 509 509] core_worker.cc:88: Constructing CoreWorker, worker_id: 619040b8fc715f005c682b8b79dde9a0677f03fa4cc0f7675499e313
+[2023-03-01 08:53:23,416 I 509 509] core_worker.cc:119: Connecting to local Raylet.
+[2023-03-01 08:53:23,416 I 509 509] raylet_client.cc:116: Creating RayletConnection.
+[2023-03-01 08:53:23,416 I 509 509] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-52-59_143236_2/sockets/raylet 0
+[2023-03-01 08:53:23,416 I 509 509] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-52-59_143236_2/sockets/raylet 0. OK
+[2023-03-01 08:53:23,416 I 509 509] raylet_client.cc:118: Created RayletConnection.
+[2023-03-01 08:53:23,416 I 509 509] raylet_client.cc:138: Begin AtomicRequestReply RegisterClientRequest
+[2023-03-01 08:53:23,417 I 509 509] raylet_client.cc:141: End AtomicRequestReply RegisterClientRequest. Status: OK
+[2023-03-01 08:53:23,417 I 509 509] core_worker.cc:135: Connected to local Raylet.
+[2023-03-01 08:53:23,417 I 509 509] core_worker.cc:164: Starting GRPC server.
+[2023-03-01 08:53:23,417 I 509 509] grpc_server.cc:105: worker server started, listening on port 45191.
+[2023-03-01 08:53:23,419 I 509 509] core_worker.cc:171: Started GRPC server.
+[2023-03-01 08:53:23,419 I 509 509] core_worker.cc:179: Initializing worker at address: 172.17.0.2:45191, worker ID 619040b8fc715f005c682b8b79dde9a0677f03fa4cc0f7675499e313, raylet 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6
+[2023-03-01 08:53:23,426 I 509 524] gcs_server_address_updater.cc:32: GCS Server updater thread id: 140065166595840
+[2023-03-01 08:53:23,521 D 509 509] gcs_client.cc:165: GcsClient connected.
+[2023-03-01 08:53:23,521 I 509 509] core_worker.cc:205: GCS client created.
+[2023-03-01 08:53:23,521 I 509 509] core_worker.cc:207: Registered to GCS.
+[2023-03-01 08:53:23,522 D 509 509] subscriber.cc:348: Make a long polling request to a89c0b57884f5056dfa464e445b477e5d097f54aa5b08028b2ee0437
+[2023-03-01 08:53:23,522 I 509 509] core_worker.cc:267: Creating CoreWorkerPlasmaStoreProvider
+[2023-03-01 08:53:23,522 I 509 509] client.cc:762: Before ConnectSocketRetry
+[2023-03-01 08:53:23,522 I 509 509] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-01_08-52-59_143236_2/sockets/plasma_store 0
+[2023-03-01 08:53:23,523 I 509 509] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-01_08-52-59_143236_2/sockets/plasma_store 0. OK
+[2023-03-01 08:53:23,523 I 509 509] client.cc:764: After ConnectSocketRetry
+[2023-03-01 08:53:23,523 I 509 509] client.cc:766: After new StoreConn
+[2023-03-01 08:53:23,523 I 509 509] client.cc:769: After SendConnectRequest
+[2023-03-01 08:53:23,523 I 509 509] client.cc:772: After PlasmaReceive
+[2023-03-01 08:53:23,523 I 509 509] client.cc:774: After ReadConnectReply
+[2023-03-01 08:53:23,523 D 509 509] client.cc:392: called plasma_create on conn 30 with size 8 and metadata size 0
+[2023-03-01 08:53:23,523 I 509 509] protocol.cc:219: After CreatePlasmaCreateRequest, prepare to send
+[2023-03-01 08:53:23,523 I 509 509] protocol.cc:221: After PlasmaSend, status: 1
+[2023-03-01 08:53:23,523 I 509 509] client.cc:402: After SendCreateRequest
+[2023-03-01 08:53:23,523 I 509 509] client.cc:311: Before PlasmaReceive
+[2023-03-01 08:53:23,523 I 509 509] client.cc:313: After PlasmaReceive buffer size: 160
+[2023-03-01 08:53:23,523 I 509 509] client.cc:327: After RreadCreateReply, retry count: 0
+[2023-03-01 08:53:23,523 I 509 509] client.cc:355: After create PlasmaMutableBuffer
+[2023-03-01 08:53:23,523 I 509 509] client.cc:404: After HandleCreateReply
+[2023-03-01 08:53:23,524 I 509 509] core_worker.cc:277: Created CoreWorkerPlasmaStoreProvider
+[2023-03-01 08:53:23,524 D 509 509] core_worker_process.cc:276: Worker 619040b8fc715f005c682b8b79dde9a0677f03fa4cc0f7675499e313 is created.
+[2023-03-01 08:53:23,524 D 509 509] core_worker_process.cc:132: Stats setup in core worker.
+[2023-03-01 08:53:23,524 D 509 509] stats.h:75: Initialized stats
+[2023-03-01 08:53:23,531 I 509 509] io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-01 08:53:23,531 D 509 527] accessor.cc:487: Getting information of all nodes.
+[2023-03-01 08:53:23,532 D 509 509] metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:53224
+[2023-03-01 08:53:23,532 I 509 527] core_worker.cc:502: Event stats:
+
+
+Global stats: 17 total (10 active)
+Queueing time: mean = 3.524 ms, max = 9.838 ms, min = 7.453 ms, total = 59.906 ms
+Execution time:  mean = 61.005 us, total = 1.037 ms
+Event stats:
+	PeriodicalRunner.RunFnPeriodically - 7 total (2 active, 1 running), CPU time: mean = 79.751 us, total = 558.257 us
+	UNKNOWN - 3 total (3 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsClient.deadline_timer.check_gcs_connection - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeInfoGcsService.grpc_client.GetAllNodeInfo - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (0 active), CPU time: mean = 441.528 us, total = 441.528 us
+	CoreWorker.deadline_timer.flush_profiling_events - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (0 active), CPU time: mean = 37.308 us, total = 37.308 us
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-01 08:53:23,532 I 509 527] accessor.cc:599: Received notification for node id = 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6, IsAlive = 1
+[2023-03-01 08:53:23,532 D 509 527] accessor.cc:497: Finished getting information of all nodes, status = OK
+[2023-03-01 08:53:23,536 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,546 D 509 509] core_worker.cc:2273: Executing task, task info = Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=demo, class_name=Owner, function_name=__init__, function_hash=d53e27c2aec24b19818adc56c4f900e7}, task_id=ffffffffffffffff7f905cb89a73fc89537d48a301000000, task_name=Owner.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=7f905cb89a73fc89537d48a301000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-01 08:53:23,546 D 509 509] reference_count.cc:242: Add local reference ffffffffffffffff7f905cb89a73fc89537d48a30100000001000000
+[2023-03-01 08:53:23,546 D 509 509] reference_count.cc:243: REF ffffffffffffffff7f905cb89a73fc89537d48a30100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-01 08:53:23,546 I 509 509] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 7f905cb89a73fc89537d48a301000000
+[2023-03-01 08:53:23,546 D 509 509] direct_actor_task_submitter.cc:169: Connecting to actor 7f905cb89a73fc89537d48a301000000 at worker 619040b8fc715f005c682b8b79dde9a0677f03fa4cc0f7675499e313
+[2023-03-01 08:53:23,546 D 509 509] core_worker_client_pool.cc:42: Connected to 172.17.0.2:45191
+[2023-03-01 08:53:23,546 D 509 509] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor 7f905cb89a73fc89537d48a301000000 from 0 to 0
+[2023-03-01 08:53:23,546 I 509 509] direct_actor_task_submitter.cc:217: Connecting to actor 7f905cb89a73fc89537d48a301000000 at worker 619040b8fc715f005c682b8b79dde9a0677f03fa4cc0f7675499e313
+[2023-03-01 08:53:23,546 D 509 509] reference_count.cc:106: Adding borrowed object ffffffffffffffff7f905cb89a73fc89537d48a30100000001000000
+[2023-03-01 08:53:23,546 I 509 509] core_worker.cc:2330: Creating actor: 7f905cb89a73fc89537d48a301000000
+[2023-03-01 08:53:23,548 D 509 509] core_worker.cc:2407: Finished executing task ffffffffffffffff7f905cb89a73fc89537d48a301000000, status=OK
+[2023-03-01 08:53:23,548 I 509 509] direct_actor_transport.cc:144: Actor creation task finished, task_id: ffffffffffffffff7f905cb89a73fc89537d48a301000000, actor_id: 7f905cb89a73fc89537d48a301000000
+[2023-03-01 08:53:23,548 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,551 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,551 D 509 509] actor_scheduling_queue.cc:89: Enqueue 0 cur seqno 0
+[2023-03-01 08:53:23,551 D 509 509] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {CPU: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=demo, class_name=Owner, function_name=warmup, function_hash=}, task_id=a02c24b8b7fc0a317f905cb89a73fc89537d48a301000000, task_name=Owner.warmup(), job_id=01000000, num_args=0, num_returns=2, depth=0, actor_task_spec={actor_id=7f905cb89a73fc89537d48a301000000, actor_caller_id=ffffffffffffffffffffffffffffffffffffffff01000000, actor_counter=0}
+[2023-03-01 08:53:23,552 D 509 509] reference_count.cc:183: Adding owned object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,552 D 509 509] reference_count.cc:1164: Adding location 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6 for object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,552 D 509 509] reference_count.cc:1367: Published message for 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000, 1 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 21, and primary node ID: 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6, pending creation? 0
+[2023-03-01 08:53:23,552 D 509 509] client.cc:392: called plasma_create on conn 30 with size 16 and metadata size 5
+[2023-03-01 08:53:23,552 I 509 509] protocol.cc:219: After CreatePlasmaCreateRequest, prepare to send
+[2023-03-01 08:53:23,553 I 509 509] protocol.cc:221: After PlasmaSend, status: 1
+[2023-03-01 08:53:23,553 I 509 509] client.cc:402: After SendCreateRequest
+[2023-03-01 08:53:23,553 I 509 509] client.cc:311: Before PlasmaReceive
+[2023-03-01 08:53:23,553 I 509 509] client.cc:313: After PlasmaReceive buffer size: 160
+[2023-03-01 08:53:23,553 I 509 509] client.cc:327: After RreadCreateReply, retry count: 0
+[2023-03-01 08:53:23,553 I 509 509] client.cc:355: After create PlasmaMutableBuffer
+[2023-03-01 08:53:23,553 I 509 509] client.cc:360: Before metadata memcpy, start address:  + 16, metadata size: 5
+[2023-03-01 08:53:23,553 I 509 509] client.cc:363: After metadata memcpy
+[2023-03-01 08:53:23,553 I 509 509] client.cc:404: After HandleCreateReply
+[2023-03-01 08:53:23,553 D 509 509] core_worker.cc:1069: Pinning sealed object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] memory_store.cc:201: Putting object into memory store. objectid is 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:108: Before parsing metadata: 0x7f63ee040030
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:112: After parsing metadata: 4
+[2023-03-01 08:53:23,554 D 509 509] core_worker.cc:1111: 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 in plasma, doing fetch-and-get
+[2023-03-01 08:53:23,554 D 509 509] core_worker.cc:1126: Plasma GET timeout -1
+[2023-03-01 08:53:23,554 D 509 509] plasma_store_provider.cc:196: plasma_results[0].data: 0x7f63ef037780 , data size: 16 , content: 
+[2023-03-01 08:53:23,554 D 509 509] plasma_store_provider.cc:206: plasma_results[0].metadata: 0x7f63ef034c50 , metadata size: 5 , content: XLANG is: 2XLANG
+[2023-03-01 08:53:23,554 D 509 509] plasma_store_provider.cc:211: After parsing, data: 0x7f63ee155830 and metadata: 0x7f63ef034c50
+[2023-03-01 08:53:23,554 D 509 509] plasma_store_provider.cc:214: Result object: 0x7f63eefdf650
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:108: Before parsing metadata: 0x7f63ef034c50
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:108: Before parsing metadata: 0x7f63ef034c50
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:112: After parsing metadata: XLANG
+[2023-03-01 08:53:23,554 D 509 509] reference_count.cc:299: Remove local reference 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] reference_count.cc:300: REF 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-01 08:53:23,554 D 509 509] reference_count.cc:525: Attempting to delete object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] reference_count.cc:531: REF 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-01 08:53:23,554 D 509 509] reference_count.cc:568: Deleting Reference to object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] reference_count.cc:387: Releasing lineage for object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] task_manager.cc:534: No lineage for object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:108: Before parsing metadata: 0x7f63ee040030
+[2023-03-01 08:53:23,554 D 509 509] ray_object.cc:112: After parsing metadata: 4
+[2023-03-01 08:53:23,555 D 509 509] core_worker.cc:2232: Creating return object a02c24b8b7fc0a317f905cb89a73fc89537d48a30100000001000000
+[2023-03-01 08:53:23,555 D 509 509] core_worker.cc:2424: Sealing return object a02c24b8b7fc0a317f905cb89a73fc89537d48a30100000001000000
+[2023-03-01 08:53:23,555 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,555 D 509 509] core_worker.cc:2407: Finished executing task a02c24b8b7fc0a317f905cb89a73fc89537d48a301000000, status=OK
+[2023-03-01 08:53:23,555 D 509 527] reference_count.cc:1153: Tried to add an object location for an object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 that doesn't exist in the reference table. It can happen if the object is already evicted.
+[2023-03-01 08:53:23,555 D 509 527] core_worker.cc:2959: Object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 not found
+[2023-03-01 08:53:23,555 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,555 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,555 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,555 D 509 527] core_worker.cc:2803: Object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 is deleted. Unpinning the object.
+[2023-03-01 08:53:23,555 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,555 D 509 527] core_worker.cc:2831: Reference for object 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000 has already been freed.
+[2023-03-01 08:53:23,555 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,556 D 509 527] core_worker.cc:2880: Got a long polling request from a node 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6
+[2023-03-01 08:53:23,556 D 509 527] publisher.cc:322: Long polling connection initiated by 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6
+[2023-03-01 08:53:23,556 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,556 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,556 W 509 527] reference_count.cc:1415: Object locations requested for 002c24b8b7fc0a317f905cb89a73fc89537d48a30100000003000000, but ref already removed. This may be a bug in the distributed reference counting protocol.
+[2023-03-01 08:53:23,557 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,557 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,557 D 509 527] core_worker.cc:2880: Got a long polling request from a node 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6
+[2023-03-01 08:53:23,557 D 509 527] publisher.cc:322: Long polling connection initiated by 4a4945bff6276379d414ec4e6f5d96857dd1944a4bb5611fcbea55f6
+[2023-03-01 08:53:23,557 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,557 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,557 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,559 D 509 522] grpc_server.cc:146: Polled event from CQ, thead: 140065120937728::0, status: 1
+[2023-03-01 08:53:23,559 I 509 527] core_worker.cc:3099: Force kill actor request has received. exiting immediately...
+[2023-03-01 08:53:23,559 I 509 527] core_worker.cc:599: Disconnecting to the raylet.
+[2023-03-01 08:53:23,559 I 509 527] raylet_client.cc:166: RayletClient::Disconnect, exit_type=INTENDED_EXIT, has creation_task_exception_pb_bytes=0
+[2023-03-01 08:53:23,559 D 509 527] logging.cc:287: Uninstall signal handlers.

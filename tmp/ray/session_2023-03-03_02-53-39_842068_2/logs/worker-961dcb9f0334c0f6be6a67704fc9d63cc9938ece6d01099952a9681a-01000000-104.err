@@ -1,0 +1,27 @@
+:actor_name:BackendExecutor
+2023-03-03 02:53:51,003	INFO backend.py:145 -- Start to create PG.
+2023-03-03 02:53:51,003	INFO backend.py:207 -- Prepare to get current PG.
+2023-03-03 02:53:51,003	INFO backend.py:209 -- Current PG: None
+2023-03-03 02:53:51,003	INFO placement_group.py:187 -- calling worker.core_worker.create_placement_group, name: , bundles: [{'CPU': 1, 'GPU': 0}, {'CPU': 1, 'GPU': 0}, {'CPU': 1, 'GPU': 0}], strategy: PACK, detached: False.
+2023-03-03 02:53:51,004	INFO placement_group.py:191 -- created pg id: PlacementGroupID(ac4954484388251a94d8820fca1a01000000), init PG class.
+2023-03-03 02:53:51,005	INFO placement_group.py:193 -- created pg class, return.
+2023-03-03 02:53:51,113	INFO placement_group.py:75 -- sending bundle_reservation_check.options remote task.
+2023-03-03 02:53:51,116	INFO backend.py:236 -- pg_ready, wait
+2023-03-03 02:53:51,116	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:53:52,749	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(fb63804cbf27174effffffffffffffffffffffff0100000001000000)], remaining_ids: []
+2023-03-03 02:53:52,750	INFO backend.py:149 -- Created PG: <ray.util.placement_group.PlacementGroup object at 0x7f43335b51f0>
+2023-03-03 02:53:52,750	INFO backend.py:150 -- Start to create `WorkerGroup`, num_workers: 3, num_cpus_per_worker: 1, pg: <ray.util.placement_group.PlacementGroup object at 0x7f43335b51f0>, 
+2023-03-03 02:53:52,750	INFO worker_group.py:158 -- Init WorkerGroup with config: num_workers: 3, num_cpus_per_worker: 1, additional_resources_per_worker: None, actor_cls: None
+2023-03-03 02:53:52,750	INFO worker_group.py:170 -- Created executable class: <class 'ray.train.worker_group.BaseWorkerMixin'>
+2023-03-03 02:53:52,751	INFO worker_group.py:185 -- Resources are enough, result: <ray.train.worker_group.ActorClass(BaseWorkerMixin) object at 0x7f43335b5430>
+[mutex.cc : 926] RAW: pthread_getschedparam failed: 1
+2023-03-03 02:53:55,680	INFO backend.py:166 -- WorkerGroup: <ray.train.worker_group.WorkerGroup object at 0x7f43335c2c40>
+2023-03-03 02:53:55,680	INFO backend.py:182 -- _backend: <ray.train.torch.TorchBackend object at 0x7f43335b5550> calling `on_start`.
+2023-03-03 02:54:01,042	INFO backend.py:184 -- Done calling <ray.train.torch.TorchBackend object at 0x7f43335b5550>'s `on_start`
+2023-03-03 02:54:01,240	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:54:01,468	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(02a3df899b8667a9a09871af71412d5d245868770100000001000000)], remaining_ids: [ObjectRef(70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000), ObjectRef(626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000)]
+2023-03-03 02:54:01,468	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:54:01,506	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(626d839cc22fbcd92b63d5db96840938040a30cf0100000001000000)], remaining_ids: [ObjectRef(70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000)]
+2023-03-03 02:54:01,506	INFO worker.py:1963 -- ray.wait
+2023-03-03 02:54:01,507	INFO worker.py:2029 -- wait returned, ready_ids: [ObjectRef(70149b2bcd79fb33be0a4a6dd72f131d298155130100000001000000)], remaining_ids: []
+2023-03-03 02:54:01,519	INFO worker.py:1963 -- ray.wait

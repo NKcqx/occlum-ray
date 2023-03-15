@@ -1,0 +1,318 @@
+[2023-03-02 11:31:22,562 D 19 19] (gcs_server) ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-02_11-31-22_425351_2\"}}",
+[2023-03-02 11:31:22,562 D 19 19] (gcs_server) stats.h:75: Initialized stats
+[2023-03-02 11:31:22,562 I 19 19] (gcs_server) io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-02 11:31:22,570 D 19 19] (gcs_server) metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:62255
+[2023-03-02 11:31:22,572 I 19 19] (gcs_server) gcs_server.cc:56: GCS storage type is memory
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:44: Loading job table data.
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:56: Loading node table data.
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:68: Loading cluster resources table data.
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:95: Loading actor table data.
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:108: Loading actor task spec table data.
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:81: Loading placement group table data.
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:48: Finished loading job table data, size = 0
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:60: Finished loading node table data, size = 0
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:72: Finished loading cluster resources table data, size = 0
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:99: Finished loading actor table data, size = 0
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:112: Finished loading actor task spec table data, size = 0
+[2023-03-02 11:31:22,573 I 19 19] (gcs_server) gcs_init_data.cc:86: Finished loading placement group table data, size = 0
+[2023-03-02 11:31:22,573 D 19 19] (gcs_server) local_resource_manager.cc:36: local resources: {}
+[2023-03-02 11:31:22,574 I 19 19] (gcs_server) gcs_heartbeat_manager.cc:31: GcsHeartbeatManager start, num_heartbeats_timeout=30
+[2023-03-02 11:31:22,574 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:22,574 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:22,574 D 19 19] (gcs_server) gcs_actor_manager.cc:1242: The number of registered actors is 0, and the number of created actors is 0
+[2023-03-02 11:31:22,580 I 19 19] (gcs_server) grpc_server.cc:105: GcsServer server started, listening on port 50740.
+[2023-03-02 11:31:22,584 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:22,584 I 19 19] (gcs_server) gcs_server.cc:181: GcsNodeManager: 
+- RegisterNode request count: 0
+- DrainNode request count: 0
+- GetAllNodeInfo request count: 0
+- GetInternalConfig request count: 0
+
+GcsActorManager: 
+- RegisterActor request count: 0
+- CreateActor request count: 0
+- GetActorInfo request count: 0
+- GetNamedActorInfo request count: 0
+- GetAllActorInfo request count: 0
+- KillActor request count: 0
+- ListNamedActors request count: 0
+- Registered actors count: 0
+- Destroyed actors count: 0
+- Named actors count: 0
+- Unresolved actors count: 0
+- Pending actors count: 0
+- Created actors count: 0
+- owners_: 0
+- actor_to_register_callbacks_: 0
+- actor_to_create_callbacks_: 0
+- sorted_destroyed_actor_list_: 0
+
+GcsResourceManager: 
+- GetResources request count: 0
+- GetAllAvailableResources request count0
+- UpdateResources request count: 0
+- DeleteResources request count: 0
+- ReportResourceUsage request count: 0
+- GetAllResourceUsage request count: 0
+
+GcsPlacementGroupManager: 
+- CreatePlacementGroup request count: 0
+- RemovePlacementGroup request count: 0
+- GetPlacementGroup request count: 0
+- GetAllPlacementGroup request count: 0
+- WaitPlacementGroupUntilReady request count: 0
+- GetNamedPlacementGroup request count: 0
+- Scheduling pending placement group count: 0
+- Registered placement groups count: 0
+- Named placement group count: 0
+- Pending placement groups count: 0
+- Infeasible placement groups count: 0
+
+GcsPublisher {}
+
+[runtime env manager] ID to URIs table:
+[runtime env manager] URIs reference table:
+
+GrpcBasedResourceBroadcaster:
+- Tracked nodes: 0
+[2023-03-02 11:31:22,584 I 19 19] (gcs_server) gcs_server.cc:660: Event stats:
+
+
+Global stats: 13 total (4 active)
+Queueing time: mean = 1.774 ms, max = 10.556 ms, min = 9.990 us, total = 23.068 ms
+Execution time:  mean = 847.933 us, total = 11.023 ms
+Event stats:
+	GcsInMemoryStore.GetAll - 6 total (0 active), CPU time: mean = 1.806 ms, total = 10.838 ms
+	PeriodicalRunner.RunFnPeriodically - 4 total (2 active, 1 running), CPU time: mean = 44.482 us, total = 177.927 us
+	RayletLoadPulled - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsInMemoryStore.Put - 1 total (0 active), CPU time: mean = 7.239 us, total = 7.239 us
+	RaySyncer.deadline_timer.report_resource_report - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-02 11:31:23,547 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,547 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,548 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,548 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,548 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,549 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,549 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,549 D 19 35] (gcs_server) grpc_server.cc:146: Polled event from CQ, thead: 140195565790976::0, status: 1
+[2023-03-02 11:31:23,574 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:23,584 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:24,574 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:24,584 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:25,575 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:25,584 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:26,575 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:26,584 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:27,575 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:27,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:28,575 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:28,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:29,575 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:29,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:30,576 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:30,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:31,576 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:31,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:32,576 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:32,578 W 19 23] (gcs_server) metric_exporter.cc:207: [1] Export metrics to agent failed: GrpcUnavailable: RPC Error message: failed to connect to all addresses; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-03-02 11:31:32,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:33,576 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:33,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:34,576 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:34,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:35,576 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:35,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:36,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:36,585 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:37,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:37,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:38,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:38,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:39,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:39,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:40,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:40,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:41,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:41,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:42,577 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:42,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:43,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:43,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:44,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:44,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:45,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:45,586 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:46,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:46,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:47,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:47,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:48,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:48,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:49,578 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:49,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:50,579 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:50,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:51,579 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:51,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:52,579 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:52,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:53,579 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:53,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:54,579 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:54,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:55,579 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:55,587 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:56,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:56,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:57,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:57,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:58,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:58,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:31:59,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:31:59,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:00,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:00,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:01,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:01,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:02,580 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:02,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:03,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:03,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:04,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:04,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:05,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:05,588 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:06,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:06,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:07,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:07,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:08,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:08,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:09,581 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:09,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:10,582 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:10,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:11,582 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:11,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:12,582 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:12,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:13,582 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:13,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:14,582 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:14,589 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:15,582 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:15,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:16,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:16,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:17,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:17,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:18,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:18,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:19,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:19,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:20,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:20,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:21,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:21,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:22,583 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:22,584 I 19 19] (gcs_server) gcs_server.cc:181: GcsNodeManager: 
+- RegisterNode request count: 0
+- DrainNode request count: 0
+- GetAllNodeInfo request count: 0
+- GetInternalConfig request count: 0
+
+GcsActorManager: 
+- RegisterActor request count: 0
+- CreateActor request count: 0
+- GetActorInfo request count: 0
+- GetNamedActorInfo request count: 0
+- GetAllActorInfo request count: 0
+- KillActor request count: 0
+- ListNamedActors request count: 0
+- Registered actors count: 0
+- Destroyed actors count: 0
+- Named actors count: 0
+- Unresolved actors count: 0
+- Pending actors count: 0
+- Created actors count: 0
+- owners_: 0
+- actor_to_register_callbacks_: 0
+- actor_to_create_callbacks_: 0
+- sorted_destroyed_actor_list_: 0
+
+GcsResourceManager: 
+- GetResources request count: 0
+- GetAllAvailableResources request count0
+- UpdateResources request count: 0
+- DeleteResources request count: 0
+- ReportResourceUsage request count: 0
+- GetAllResourceUsage request count: 0
+
+GcsPlacementGroupManager: 
+- CreatePlacementGroup request count: 0
+- RemovePlacementGroup request count: 0
+- GetPlacementGroup request count: 0
+- GetAllPlacementGroup request count: 0
+- WaitPlacementGroupUntilReady request count: 0
+- GetNamedPlacementGroup request count: 0
+- Scheduling pending placement group count: 0
+- Registered placement groups count: 0
+- Named placement group count: 0
+- Pending placement groups count: 0
+- Infeasible placement groups count: 0
+
+GcsPublisher {}
+
+[runtime env manager] ID to URIs table:
+[runtime env manager] URIs reference table:
+
+GrpcBasedResourceBroadcaster:
+- Tracked nodes: 0
+[2023-03-02 11:32:22,584 I 19 19] (gcs_server) gcs_server.cc:660: Event stats:
+
+
+Global stats: 686 total (4 active)
+Queueing time: mean = 89.997 us, max = 10.556 ms, min = 9.819 us, total = 61.738 ms
+Execution time:  mean = 60.716 us, total = 41.651 ms
+Event stats:
+	RaySyncer.deadline_timer.report_resource_report - 600 total (1 active), CPU time: mean = 39.547 us, total = 23.728 ms
+	RayletLoadPulled - 60 total (1 active), CPU time: mean = 53.527 us, total = 3.212 ms
+	GcsInMemoryStore.GetAll - 6 total (0 active), CPU time: mean = 1.806 ms, total = 10.838 ms
+	GCSServer.deadline_timer.debug_state_dump - 6 total (1 active), CPU time: mean = 363.723 us, total = 2.182 ms
+	GcsInMemoryStore.Put - 5 total (0 active), CPU time: mean = 80.844 us, total = 404.222 us
+	InternalKVGcsService.grpc_server.InternalKVPut - 4 total (0 active), CPU time: mean = 13.402 us, total = 53.606 us
+	PeriodicalRunner.RunFnPeriodically - 4 total (0 active), CPU time: mean = 308.250 us, total = 1.233 ms
+	GCSServer.deadline_timer.debug_state_event_stats_print - 1 total (1 active, 1 running), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-02 11:32:22,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:23,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:23,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:24,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:24,590 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:25,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:25,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:26,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:26,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:27,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:27,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:28,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:28,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:29,584 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:29,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:30,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:30,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:31,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:31,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:32,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:32,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:33,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:33,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:34,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:34,591 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:35,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:35,592 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0
+[2023-03-02 11:32:36,585 D 19 19] (gcs_server) gcs_placement_group_manager.cc:327: No additional placement groups to schedule. Stop scheduling.
+[2023-03-02 11:32:36,592 I 19 19] (gcs_server) gcs_server.cc:261: All alived nodes number: 0

@@ -1,0 +1,206 @@
+[2023-03-02 11:36:44,402 I 104 104] core_worker_process.cc:120: Constructing CoreWorkerProcess. pid: 104
+[2023-03-02 11:36:44,419 D 104 112] core_worker_process.cc:200: Getting system config from raylet, remaining retries = 100
+[2023-03-02 11:36:44,420 D 104 104] ray_config.cc:70: RayConfig is initialized with: is_external_storage_type_fs=true,object_spilling_config="{\"type\": \"filesystem\", \"params\": {\"directory_path\": \"/host/tmp/ray/session_2023-03-02_11-36-36_371278_2\"}}",
+[2023-03-02 11:36:44,420 D 104 104] core_worker.cc:88: Constructing CoreWorker, worker_id: ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:44,421 I 104 104] core_worker.cc:119: Connecting to local Raylet.
+[2023-03-02 11:36:44,421 I 104 104] raylet_client.cc:116: Creating RayletConnection.
+[2023-03-02 11:36:44,421 I 104 104] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet 0
+[2023-03-02 11:36:44,422 I 104 104] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/raylet 0. OK
+[2023-03-02 11:36:44,422 I 104 104] raylet_client.cc:118: Created RayletConnection.
+[2023-03-02 11:36:44,422 I 104 104] raylet_client.cc:138: Begin AtomicRequestReply RegisterClientRequest
+[2023-03-02 11:36:44,422 I 104 104] raylet_client.cc:141: End AtomicRequestReply RegisterClientRequest. Status: OK
+[2023-03-02 11:36:44,422 I 104 104] core_worker.cc:135: Connected to local Raylet.
+[2023-03-02 11:36:44,422 I 104 104] core_worker.cc:164: Starting GRPC server.
+[2023-03-02 11:36:44,423 I 104 104] grpc_server.cc:105: worker server started, listening on port 38591.
+[2023-03-02 11:36:44,424 I 104 104] core_worker.cc:171: Started GRPC server.
+[2023-03-02 11:36:44,424 I 104 104] core_worker.cc:179: Initializing worker at address: 172.17.0.2:38591, worker ID ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8, raylet 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:44,437 I 104 123] gcs_server_address_updater.cc:32: GCS Server updater thread id: 140338870097664
+[2023-03-02 11:36:44,529 D 104 104] gcs_client.cc:165: GcsClient connected.
+[2023-03-02 11:36:44,529 I 104 104] core_worker.cc:205: GCS client created.
+[2023-03-02 11:36:44,530 I 104 104] core_worker.cc:207: Registered to GCS.
+[2023-03-02 11:36:44,530 D 104 104] subscriber.cc:348: Make a long polling request to 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:44,530 I 104 104] core_worker.cc:267: Creating CoreWorkerPlasmaStoreProvider
+[2023-03-02 11:36:44,530 I 104 104] client.cc:762: Before ConnectSocketRetry
+[2023-03-02 11:36:44,530 I 104 104] client_connection.cc:47: ConnectSocketRetry begin /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 0
+[2023-03-02 11:36:44,531 I 104 104] client_connection.cc:51: ConnectSocketRetry end /host/tmp/ray/session_2023-03-02_11-36-36_371278_2/sockets/plasma_store 0. OK
+[2023-03-02 11:36:44,531 I 104 104] client.cc:764: After ConnectSocketRetry
+[2023-03-02 11:36:44,531 I 104 104] client.cc:766: After new StoreConn
+[2023-03-02 11:36:44,531 I 104 104] client.cc:769: After SendConnectRequest
+[2023-03-02 11:36:44,531 I 104 104] client.cc:772: After PlasmaReceive
+[2023-03-02 11:36:44,531 I 104 104] client.cc:774: After ReadConnectReply
+[2023-03-02 11:36:44,531 D 104 104] client.cc:392: called plasma_create on conn 30 with size 8 and metadata size 0
+[2023-03-02 11:36:44,531 I 104 104] protocol.cc:219: After CreatePlasmaCreateRequest, prepare to send
+[2023-03-02 11:36:44,531 I 104 104] protocol.cc:221: After PlasmaSend, status: 1
+[2023-03-02 11:36:44,531 I 104 104] client.cc:402: After SendCreateRequest
+[2023-03-02 11:36:44,531 I 104 104] client.cc:311: Before PlasmaReceive
+[2023-03-02 11:36:44,532 I 104 104] client.cc:313: After PlasmaReceive buffer size: 160
+[2023-03-02 11:36:44,532 I 104 104] client.cc:327: After RreadCreateReply, retry count: 0
+[2023-03-02 11:36:44,532 I 104 104] client.cc:355: After create PlasmaMutableBuffer
+[2023-03-02 11:36:44,532 I 104 104] client.cc:404: After HandleCreateReply
+[2023-03-02 11:36:44,532 I 104 104] core_worker.cc:277: Created CoreWorkerPlasmaStoreProvider
+[2023-03-02 11:36:44,532 D 104 104] core_worker_process.cc:276: Worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8 is created.
+[2023-03-02 11:36:44,532 D 104 104] core_worker_process.cc:132: Stats setup in core worker.
+[2023-03-02 11:36:44,532 D 104 104] stats.h:75: Initialized stats
+[2023-03-02 11:36:44,533 I 104 104] io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-03-02 11:36:44,536 D 104 104] metrics_agent_client.h:41: Initiate the metrics client of address:127.0.0.1 port:63501
+[2023-03-02 11:36:44,537 I 104 126] core_worker.cc:502: Event stats:
+
+
+Global stats: 16 total (11 active)
+Queueing time: mean = 1.704 ms, max = 6.584 ms, min = 3.579 ms, total = 27.268 ms
+Execution time:  mean = 80.186 us, total = 1.283 ms
+Event stats:
+	PeriodicalRunner.RunFnPeriodically - 7 total (2 active, 1 running), CPU time: mean = 183.281 us, total = 1.283 ms
+	UNKNOWN - 3 total (3 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberCommandBatch - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	WorkerInfoGcsService.grpc_client.AddWorkerInfo - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	NodeManagerService.grpc_client.ReportWorkerBacklog - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	InternalPubSubGcsService.grpc_client.GcsSubscriberPoll - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsClient.deadline_timer.check_gcs_connection - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	CoreWorker.deadline_timer.flush_profiling_events - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-03-02 11:36:44,538 D 104 126] accessor.cc:487: Getting information of all nodes.
+[2023-03-02 11:36:44,540 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:36:44,544 I 104 126] accessor.cc:599: Received notification for node id = 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8, IsAlive = 1
+[2023-03-02 11:36:44,544 D 104 126] accessor.cc:497: Finished getting information of all nodes, status = OK
+[2023-03-02 11:36:44,557 D 104 104] core_worker.cc:2273: Executing task, task info = Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=__init__, function_hash=01e7e8a15a3545549c215d0000f1f971}, task_id=ffffffffffffffffa7bd9e5b622e2f9765a3302601000000, task_name=BackendExecutor.__init__(), job_id=01000000, num_args=12, num_returns=1, depth=1, actor_creation_task_spec={actor_id=a7bd9e5b622e2f9765a3302601000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-02 11:36:44,557 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffffa7bd9e5b622e2f9765a330260100000001000000
+[2023-03-02 11:36:44,557 D 104 104] reference_count.cc:243: REF ffffffffffffffffa7bd9e5b622e2f9765a330260100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-02 11:36:44,558 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor a7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:44,558 D 104 104] direct_actor_task_submitter.cc:169: Connecting to actor a7bd9e5b622e2f9765a3302601000000 at worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:44,558 D 104 104] core_worker_client_pool.cc:42: Connected to 172.17.0.2:38591
+[2023-03-02 11:36:44,558 D 104 104] sequential_actor_submit_queue.cc:86: Resetting caller starts at for actor a7bd9e5b622e2f9765a3302601000000 from 0 to 0
+[2023-03-02 11:36:44,558 I 104 104] direct_actor_task_submitter.cc:217: Connecting to actor a7bd9e5b622e2f9765a3302601000000 at worker ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:44,558 D 104 104] reference_count.cc:106: Adding borrowed object ffffffffffffffffa7bd9e5b622e2f9765a330260100000001000000
+[2023-03-02 11:36:44,558 I 104 104] core_worker.cc:2330: Creating actor: a7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:47,182 D 104 104] core_worker.cc:2407: Finished executing task ffffffffffffffffa7bd9e5b622e2f9765a3302601000000, status=OK
+[2023-03-02 11:36:47,182 I 104 104] direct_actor_transport.cc:144: Actor creation task finished, task_id: ffffffffffffffffa7bd9e5b622e2f9765a3302601000000, actor_id: a7bd9e5b622e2f9765a3302601000000
+[2023-03-02 11:36:47,182 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:36:47,186 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:36:47,186 D 104 104] actor_scheduling_queue.cc:89: Enqueue 0 cur seqno 0
+[2023-03-02 11:36:47,186 D 104 104] core_worker.cc:2273: Executing task, task info = Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.backend, class_name=BackendExecutor, function_name=start, function_hash=}, task_id=16310a0f0a45af5ca7bd9e5b622e2f9765a3302601000000, task_name=BackendExecutor.start(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=a7bd9e5b622e2f9765a3302601000000, actor_caller_id=ffffffffffffffffffffffffffffffffffffffff01000000, actor_counter=0}
+[2023-03-02 11:36:47,187 I 104 104] core_worker.cc:1907: Submitting Placement Group creation to GCS: d64bfeb3542eec58fc1c47dc1f4c01000000
+[2023-03-02 11:36:47,187 D 104 104] accessor.cc:929: Sending SyncCreatePlacementGroup.
+[2023-03-02 11:36:47,188 D 104 104] accessor.cc:933: Finished registering placement group. placement group id = d64bfeb3542eec58fc1c47dc1f4c01000000
+[2023-03-02 11:36:47,296 D 104 104] gcs_client.cc:165: GcsClient connected.
+[2023-03-02 11:36:47,296 D 104 104] accessor.cc:955: Getting placement group info, placement group id = d64bfeb3542eec58fc1c47dc1f4c01000000
+[2023-03-02 11:36:47,297 D 104 135] accessor.cc:968: Finished getting placement group info, placement group id = d64bfeb3542eec58fc1c47dc1f4c01000000
+[2023-03-02 11:36:47,300 D 104 104] core_worker.cc:1705: Submitting normal task Type=NORMAL_TASK, Language=PYTHON, Resources: {bundle_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 0.001, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.util.placement_group, class_name=, function_name=_export_bundle_reservation_check_method_if_needed.<locals>.bundle_reservation_check_func, function_hash=aac9c7b2b17749daafdc3e52c2165b17}, task_id=939b81be313fc141ffffffffffffffffffffffff01000000, task_name=bundle_reservation_check_func(), job_id=01000000, num_args=2, num_returns=1, depth=1
+[2023-03-02 11:36:47,300 D 104 104] task_manager.cc:36: Adding pending task 939b81be313fc141ffffffffffffffffffffffff01000000 with 3 retries
+[2023-03-02 11:36:47,300 D 104 104] reference_count.cc:183: Adding owned object 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:47,300 D 104 126] direct_task_transport.cc:23: Submit task 939b81be313fc141ffffffffffffffffffffffff01000000
+[2023-03-02 11:36:47,301 D 104 126] direct_task_transport.cc:34: Task dependencies resolved 939b81be313fc141ffffffffffffffffffffffff01000000
+[2023-03-02 11:36:47,301 D 104 126] direct_task_transport.cc:358: Requesting lease from raylet 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 for task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000
+[2023-03-02 11:36:47,301 I 104 104] core_worker.cc:1245: Calling memory_store_->Wait
+[2023-03-02 11:36:47,536 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:47,583 D 104 126] profiling.cc:87: Pushed 6 events to GCS.
+[2023-03-02 11:36:47,589 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:48,884 D 104 126] direct_task_transport.cc:450: Lease granted to task 87a0ce08f36820ed7a18a90598646a2479e41f5501000000 from raylet 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8 with worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c
+[2023-03-02 11:36:48,884 D 104 126] core_worker_client_pool.cc:42: Connected to 172.17.0.2:46413
+[2023-03-02 11:36:48,884 D 104 126] direct_task_transport.cc:527: Pushing task 939b81be313fc141ffffffffffffffffffffffff01000000 to worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c of raylet 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:48,884 D 104 126] direct_task_transport.cc:214: Task queue is empty; canceling lease request
+[2023-03-02 11:36:48,940 D 104 126] direct_task_transport.cc:551: Task 939b81be313fc141ffffffffffffffffffffffff01000000 finished from worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c of raylet 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:48,940 D 104 126] direct_task_transport.cc:132: Returning worker 306b73eb925d4f5cbd76e6f8242e8012bb4abcc02ece83095290172c to raylet 4d231dd263cecb5a210721d8111b91e627129a1e02269ace1e1800e8
+[2023-03-02 11:36:48,940 D 104 126] task_manager.cc:217: Completing task 939b81be313fc141ffffffffffffffffffffffff01000000
+[2023-03-02 11:36:48,940 D 104 126] reference_count.cc:1367: Published message for 939b81be313fc141ffffffffffffffffffffffff0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 244, and primary node ID: NIL_ID, pending creation? 1
+[2023-03-02 11:36:48,940 D 104 126] task_manager.cc:240: Task return object 939b81be313fc141ffffffffffffffffffffffff0100000001000000 has size 244
+[2023-03-02 11:36:48,940 D 104 126] memory_store.cc:201: Putting object into memory store. objectid is 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:48,940 D 104 126] task_manager.cc:305: Task 939b81be313fc141ffffffffffffffffffffffff01000000 returned direct object 939b81be313fc141ffffffffffffffffffffffff0100000001000000, now has 1 plasma returns in scope
+[2023-03-02 11:36:48,940 D 104 126] task_manager.cc:311: Task 939b81be313fc141ffffffffffffffffffffffff01000000 now has 0 plasma returns in scope
+[2023-03-02 11:36:48,940 I 104 104] core_worker.cc:1252: memory_store_->Wait returned, ready num: 1
+[2023-03-02 11:36:48,940 D 104 126] reference_count.cc:1367: Published message for 939b81be313fc141ffffffffffffffffffffffff0100000001000000, 0 locations, spilled url: [], spilled node ID: NIL_ID, and object size: 244, and primary node ID: NIL_ID, pending creation? 0
+[2023-03-02 11:36:48,941 I 104 104] core_worker.cc:1280: Return OK
+[2023-03-02 11:36:48,941 D 104 104] reference_count.cc:299: Remove local reference 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:48,941 D 104 104] reference_count.cc:300: REF 939b81be313fc141ffffffffffffffffffffffff0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-02 11:36:48,941 D 104 104] reference_count.cc:525: Attempting to delete object 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:48,941 D 104 104] reference_count.cc:531: REF 939b81be313fc141ffffffffffffffffffffffff0100000001000000 borrowers: 0 local_ref_count: 0 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-02 11:36:48,941 D 104 104] reference_count.cc:568: Deleting Reference to object 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:48,941 D 104 104] reference_count.cc:387: Releasing lineage for object 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:48,941 D 104 104] task_manager.cc:534: No lineage for object 939b81be313fc141ffffffffffffffffffffffff0100000001000000
+[2023-03-02 11:36:48,941 D 104 104] ray_object.cc:108: Before parsing metadata: 0x7fa34401ec90
+[2023-03-02 11:36:48,941 D 104 104] ray_object.cc:112: After parsing metadata: PYTHON
+[2023-03-02 11:36:48,947 D 104 104] reference_count.cc:183: Adding owned object ffffffffffffffff2371ce94bef0ec8867d4c11c0100000001000000
+[2023-03-02 11:36:48,947 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffff2371ce94bef0ec8867d4c11c0100000001000000
+[2023-03-02 11:36:48,947 D 104 104] reference_count.cc:243: REF ffffffffffffffff2371ce94bef0ec8867d4c11c0100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-02 11:36:48,947 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,947 D 104 104] accessor.cc:327: Subscribing update operations of actor, actor id = 2371ce94bef0ec8867d4c11c01000000, job id = 01000000
+[2023-03-02 11:36:48,947 D 104 104] core_worker.cc:1825: Submitting actor creation task Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=0ceea7ca28fd43f4b1106a1945b42a18}, task_id=ffffffffffffffff2371ce94bef0ec8867d4c11c01000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=2371ce94bef0ec8867d4c11c01000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-02 11:36:48,947 D 104 104] task_manager.cc:36: Adding pending task ffffffffffffffff2371ce94bef0ec8867d4c11c01000000 with 3 retries
+[2023-03-02 11:36:48,948 D 104 126] util.h:287: First accessed in thread worker.io
+[2023-03-02 11:36:48,948 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=e5ac384b998045512371ce94bef0ec8867d4c11c01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=2371ce94bef0ec8867d4c11c01000000, actor_caller_id=ffffffffffffffffa7bd9e5b622e2f9765a3302601000000, actor_counter=0}
+[2023-03-02 11:36:48,948 D 104 104] task_manager.cc:36: Adding pending task e5ac384b998045512371ce94bef0ec8867d4c11c01000000 with 0 retries
+[2023-03-02 11:36:48,948 D 104 104] reference_count.cc:183: Adding owned object e5ac384b998045512371ce94bef0ec8867d4c11c0100000001000000
+[2023-03-02 11:36:48,948 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff2371ce94bef0ec8867d4c11c0100000001000000
+[2023-03-02 11:36:48,948 D 104 104] direct_actor_task_submitter.cc:71: Submitting task e5ac384b998045512371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,948 D 104 104] reference_count.cc:183: Adding owned object ffffffffffffffff109b28492a90c5e59c4f524c0100000001000000
+[2023-03-02 11:36:48,948 D 104 126] accessor.cc:140: Getting actor info, actor id = 2371ce94bef0ec8867d4c11c01000000, job id = 01000000
+[2023-03-02 11:36:48,948 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffff109b28492a90c5e59c4f524c0100000001000000
+[2023-03-02 11:36:48,948 D 104 104] reference_count.cc:243: REF ffffffffffffffff109b28492a90c5e59c4f524c0100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-02 11:36:48,948 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 109b28492a90c5e59c4f524c01000000
+[2023-03-02 11:36:48,948 D 104 104] accessor.cc:327: Subscribing update operations of actor, actor id = 109b28492a90c5e59c4f524c01000000, job id = 01000000
+[2023-03-02 11:36:48,949 D 104 104] core_worker.cc:1825: Submitting actor creation task Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=0ceea7ca28fd43f4b1106a1945b42a18}, task_id=ffffffffffffffff109b28492a90c5e59c4f524c01000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=109b28492a90c5e59c4f524c01000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-02 11:36:48,949 D 104 104] task_manager.cc:36: Adding pending task ffffffffffffffff109b28492a90c5e59c4f524c01000000 with 3 retries
+[2023-03-02 11:36:48,949 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=009a544406cfc483109b28492a90c5e59c4f524c01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=109b28492a90c5e59c4f524c01000000, actor_caller_id=ffffffffffffffffa7bd9e5b622e2f9765a3302601000000, actor_counter=0}
+[2023-03-02 11:36:48,949 D 104 104] task_manager.cc:36: Adding pending task 009a544406cfc483109b28492a90c5e59c4f524c01000000 with 0 retries
+[2023-03-02 11:36:48,949 D 104 104] reference_count.cc:183: Adding owned object 009a544406cfc483109b28492a90c5e59c4f524c0100000001000000
+[2023-03-02 11:36:48,949 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff109b28492a90c5e59c4f524c0100000001000000
+[2023-03-02 11:36:48,949 D 104 104] direct_actor_task_submitter.cc:71: Submitting task 009a544406cfc483109b28492a90c5e59c4f524c01000000
+[2023-03-02 11:36:48,949 D 104 126] accessor.cc:140: Getting actor info, actor id = 109b28492a90c5e59c4f524c01000000, job id = 01000000
+[2023-03-02 11:36:48,949 D 104 104] reference_count.cc:183: Adding owned object ffffffffffffffff5bd3e3f8a4982e94674a40cb0100000001000000
+[2023-03-02 11:36:48,949 D 104 104] reference_count.cc:242: Add local reference ffffffffffffffff5bd3e3f8a4982e94674a40cb0100000001000000
+[2023-03-02 11:36:48,950 D 104 104] reference_count.cc:243: REF ffffffffffffffff5bd3e3f8a4982e94674a40cb0100000001000000 borrowers: 0 local_ref_count: 1 submitted_count: 0 contained_in_owned: 0 contained_in_borrowed: 0 contains: 0 stored_in: 0 lineage_ref_count: 0
+[2023-03-02 11:36:48,950 I 104 104] direct_actor_task_submitter.cc:33: Set max pending calls to -1 for actor 5bd3e3f8a4982e94674a40cb01000000
+[2023-03-02 11:36:48,950 D 104 104] accessor.cc:327: Subscribing update operations of actor, actor id = 5bd3e3f8a4982e94674a40cb01000000, job id = 01000000
+[2023-03-02 11:36:48,950 D 104 104] core_worker.cc:1825: Submitting actor creation task Type=ACTOR_CREATION_TASK, Language=PYTHON, Resources: {CPU_group_d64bfeb3542eec58fc1c47dc1f4c01000000: 1, }, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=__init__, function_hash=0ceea7ca28fd43f4b1106a1945b42a18}, task_id=ffffffffffffffff5bd3e3f8a4982e94674a40cb01000000, task_name=BaseWorkerMixin.__init__(), job_id=01000000, num_args=0, num_returns=1, depth=1, actor_creation_task_spec={actor_id=5bd3e3f8a4982e94674a40cb01000000, max_restarts=0, max_concurrency=1, is_asyncio_actor=0, is_detached=0}
+[2023-03-02 11:36:48,950 D 104 104] task_manager.cc:36: Adding pending task ffffffffffffffff5bd3e3f8a4982e94674a40cb01000000 with 3 retries
+[2023-03-02 11:36:48,950 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:36:48,950 D 104 104] core_worker.cc:2013: Submitting actor task Type=ACTOR_TASK, Language=PYTHON, Resources: {}, function_descriptor={type=PythonFunctionDescriptor, module_name=ray.train.worker_group, class_name=BaseWorkerMixin, function_name=_BaseWorkerMixin__execute, function_hash=}, task_id=c8f7e18663c8c4f25bd3e3f8a4982e94674a40cb01000000, task_name=BaseWorkerMixin._BaseWorkerMixin__execute(), job_id=01000000, num_args=2, num_returns=2, depth=0, actor_task_spec={actor_id=5bd3e3f8a4982e94674a40cb01000000, actor_caller_id=ffffffffffffffffa7bd9e5b622e2f9765a3302601000000, actor_counter=0}
+[2023-03-02 11:36:48,950 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:36:48,950 D 104 104] task_manager.cc:36: Adding pending task c8f7e18663c8c4f25bd3e3f8a4982e94674a40cb01000000 with 0 retries
+[2023-03-02 11:36:48,950 D 104 104] reference_count.cc:183: Adding owned object c8f7e18663c8c4f25bd3e3f8a4982e94674a40cb0100000001000000
+[2023-03-02 11:36:48,950 D 104 104] reference_count.cc:318: Increment ref count for submitted task argument ffffffffffffffff5bd3e3f8a4982e94674a40cb0100000001000000
+[2023-03-02 11:36:48,950 D 104 104] direct_actor_task_submitter.cc:71: Submitting task c8f7e18663c8c4f25bd3e3f8a4982e94674a40cb01000000
+[2023-03-02 11:36:48,951 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 2371ce94bef0ec8867d4c11c01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,951 D 104 126] accessor.cc:152: Finished getting actor info, status = OK, actor id = 2371ce94bef0ec8867d4c11c01000000, job id = 01000000
+[2023-03-02 11:36:48,951 D 104 126] subscriber.cc:365: Long polling request has replied from 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,952 D 104 126] subscriber.cc:348: Make a long polling request to 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,952 D 104 126] direct_task_transport.cc:23: Submit task ffffffffffffffff2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,952 D 104 126] direct_task_transport.cc:34: Task dependencies resolved ffffffffffffffff2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,952 D 104 126] direct_task_transport.cc:42: Creating actor via GCS actor id = : 2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,953 D 104 126] core_worker.cc:2794: Received HandleWaitForActorOutOfScope for 2371ce94bef0ec8867d4c11c01000000
+[2023-03-02 11:36:48,953 D 104 126] accessor.cc:140: Getting actor info, actor id = 5bd3e3f8a4982e94674a40cb01000000, job id = 01000000
+[2023-03-02 11:36:48,953 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:36:48,953 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 109b28492a90c5e59c4f524c01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,953 D 104 126] accessor.cc:152: Finished getting actor info, status = OK, actor id = 109b28492a90c5e59c4f524c01000000, job id = 01000000
+[2023-03-02 11:36:48,953 D 104 126] direct_task_transport.cc:23: Submit task ffffffffffffffff109b28492a90c5e59c4f524c01000000
+[2023-03-02 11:36:48,953 D 104 126] direct_task_transport.cc:34: Task dependencies resolved ffffffffffffffff109b28492a90c5e59c4f524c01000000
+[2023-03-02 11:36:48,953 D 104 126] direct_task_transport.cc:42: Creating actor via GCS actor id = : 109b28492a90c5e59c4f524c01000000
+[2023-03-02 11:36:48,953 D 104 126] core_worker.cc:2789: Received HandleWaitForActorOutOfScope for 109b28492a90c5e59c4f524c01000000
+[2023-03-02 11:36:48,953 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 2371ce94bef0ec8867d4c11c01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,953 D 104 126] subscriber.cc:365: Long polling request has replied from 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,953 D 104 126] subscriber.cc:348: Make a long polling request to 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,954 D 104 126] direct_task_transport.cc:23: Submit task ffffffffffffffff5bd3e3f8a4982e94674a40cb01000000
+[2023-03-02 11:36:48,954 D 104 126] direct_task_transport.cc:34: Task dependencies resolved ffffffffffffffff5bd3e3f8a4982e94674a40cb01000000
+[2023-03-02 11:36:48,954 D 104 126] direct_task_transport.cc:42: Creating actor via GCS actor id = : 5bd3e3f8a4982e94674a40cb01000000
+[2023-03-02 11:36:48,954 D 104 126] core_worker.cc:2794: Received HandleWaitForActorOutOfScope for 5bd3e3f8a4982e94674a40cb01000000
+[2023-03-02 11:36:48,954 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 109b28492a90c5e59c4f524c01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,954 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 5bd3e3f8a4982e94674a40cb01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,954 D 104 126] accessor.cc:152: Finished getting actor info, status = OK, actor id = 5bd3e3f8a4982e94674a40cb01000000, job id = 01000000
+[2023-03-02 11:36:48,954 D 104 126] subscriber.cc:365: Long polling request has replied from 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,954 D 104 126] subscriber.cc:348: Make a long polling request to 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,955 I 104 126] actor_manager.cc:246: received notification on actor, state: DEPENDENCIES_UNREADY, actor_id: 5bd3e3f8a4982e94674a40cb01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,955 I 104 126] actor_manager.cc:246: received notification on actor, state: PENDING_CREATION, actor_id: 2371ce94bef0ec8867d4c11c01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,955 I 104 126] actor_manager.cc:246: received notification on actor, state: PENDING_CREATION, actor_id: 109b28492a90c5e59c4f524c01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:48,955 D 104 126] subscriber.cc:365: Long polling request has replied from 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,955 D 104 126] subscriber.cc:348: Make a long polling request to 8888e69f9a7e33516a662fefe75f31be23479fb042965b98fbdd93d3
+[2023-03-02 11:36:48,955 I 104 126] actor_manager.cc:246: received notification on actor, state: PENDING_CREATION, actor_id: 5bd3e3f8a4982e94674a40cb01000000, ip address: , port: 0, worker_id: NIL_ID, raylet_id: NIL_ID, num_restarts: 0, death context type=CONTEXT_NOT_SET
+[2023-03-02 11:36:49,583 D 104 126] accessor.cc:784: Adding profile data, component type = worker, node id = ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:49,583 D 104 126] profiling.cc:87: Pushed 6 events to GCS.
+[2023-03-02 11:36:49,584 D 104 126] accessor.cc:795: Finished adding profile data, status = OK, component type = worker, node id = ec72be338db247db90650f6db4925f631e8132d54084b804d0f3fdf8
+[2023-03-02 11:36:54,556 W 104 127] metric_exporter.cc:207: [1] Export metrics to agent failed: GrpcUnknown: RPC Error message: Method not found!; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-03-02 11:37:18,513 D 104 121] grpc_server.cc:146: Polled event from CQ, thead: 140338320664320::0, status: 1
+[2023-03-02 11:37:18,514 I 104 126] core_worker.cc:3099: Force kill actor request has received. exiting immediately...
+[2023-03-02 11:37:18,514 I 104 126] core_worker.cc:599: Disconnecting to the raylet.
+[2023-03-02 11:37:18,514 I 104 126] raylet_client.cc:166: RayletClient::Disconnect, exit_type=INTENDED_EXIT, has creation_task_exception_pb_bytes=0
+[2023-03-02 11:37:18,514 D 104 126] logging.cc:287: Uninstall signal handlers.
