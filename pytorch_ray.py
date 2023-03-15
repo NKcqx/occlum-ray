@@ -63,7 +63,7 @@ def _prepare_train_data():
     print("[torch-ray]Start to download train data")
     transform = transforms.Compose([transforms.ToTensor(),
                                transforms.Normalize(mean=[0.5],std=[0.5])])
-    train_data = datasets.MNIST(root = "/root/data", # data path in Occlum, instead of the host
+    train_data = datasets.MNIST(root = "/root/data/", # data path in Occlum, instead of the host
                                 transform=transform,
                                 train = True,
                                 download = False)
