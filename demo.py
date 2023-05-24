@@ -1,10 +1,12 @@
 import ray
+import sys
 
 print("Calling ray.init")
 ray.init(
-    object_store_memory=100 * 1024 * 1024,
+    address='172.17.0.6:6379',
+    # object_store_memory=100 * 1024 * 1024,
     _temp_dir="/host/tmp/ray",
-    _plasma_directory="/tmp"
+    _plasma_directory="/tmp",
 )
 
 @ray.remote
@@ -14,11 +16,15 @@ def foo(x):
 @ray.remote
 class Owner:
     def warmup(self):
-        return ray.get(ray.put("warmup"))
+        print("STDOUT from Owner")
+        sys.stderr.write("STDERR from Owner")
+        return ray.put("warmup")
 
 @ray.remote
 class Borrower:
     def borrow(self, obj_ref):
+        print("STDOUT from Borrower")
+        sys.stderr.write("STDERR from Borrower")
         self.obj = ray.get(obj_ref)
         return self.obj
 
